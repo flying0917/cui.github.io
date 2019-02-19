@@ -30,38 +30,38 @@
 			background-color:white;
 		}
 		/*加载插件*/
-		.loading-content
+		.cui-loading-content
 		{
 			height:1rem;
 			text-align: center;
 			font-size:14px;
 		}
-		.loading-content img
+		.cui-loading-content img
 		{
 			height:100%;
 			margin-right:5px;
 		}
 		/*下拉刷新插件*/
-		.refresh-content
+		.cui-refresh-content
 		{
 			height:100%;
 			width:100%;
 			position:relative;
 			background-color: #f9f9f9;
 		}
-		.refresh-content .refresh-header
+		.cui-refresh-content .cui-refresh-header
 		{
 			position:absolute;
 			width:100%;
 			text-align: center;
 		}
-		.refresh-header img
+		.cui-refresh-header img
 		{
 			height:100%;
 			vertical-align: middle;
 			margin-right:5px;
 		}
-		.refresh-wrap
+		.cui-refresh-wrap
 		{
 			min-height:100%;
 		}
@@ -73,6 +73,20 @@
 			height:10rem;
 			background-color:red;
 			white-space: nowrap;
+			position:relative;
+		}
+		.cui-swiper-content .cui-swiper-wrap
+		{
+			white-space: nowrap;
+			margin-left:0;
+			width:100%;
+			font-size:0;
+			-webkit-transition: margin-left .5s;
+			-moz-transition: margin-left .5s;
+			-ms-transition: margin-left .5s;
+			-o-transition: margin-left .5s;
+			transition: margin-left .5s;
+
 		}
 		.cui-swiper-content .cui-swiper-slide
 		{
@@ -81,6 +95,9 @@
 			display:inline-block;
 			vertical-align: top;
 			background-color:blue;
+			text-align: center;
+			line-height: 10rem;
+			font-size:1rem;
 		}
 	</style>
 </head>
@@ -89,15 +106,48 @@
 
 		<ul id="po">
 			<li>
+				<input type="button" value="test" onclick="test()">
+			</li>
+			<li>
 				<div class="cui-swiper-content">
-					<div class="cui-swiper-slide"></div>
-					<div class="cui-swiper-slide"></div>
-					<div class="cui-swiper-slide"></div>
-					<div class="cui-swiper-slide"></div>
+					<div class="cui-swiper-wrap" id="swiper-content">
+						<div class="cui-swiper-slide">1</div>
+						<div class="cui-swiper-slide">2</div>
+						<div class="cui-swiper-slide">3</div>
+						<div class="cui-swiper-slide">4</div>
+					</div>
 				</div>
 			</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
+			<li>234</li>
 		</ul>
-		<div class="loading-content">
+		<div class="cui-loading-content">
 
 		</div>
 </div>
@@ -105,9 +155,17 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 
-	//轮播图
-	function swiper()
+	var now=0;
+	function test()
 	{
+		var dom=document.getElementById("swiper-content");
+		now+=360;
+		dom.style.marginLeft="-"+now+"px";
+	}
+	//轮播图
+	function cuiSwiper(param)
+	{
+	    this.domStr=param.doStr?param.doStr:".swiper-content";
 	    this.init=function()
 		{
 
@@ -115,12 +173,14 @@
 	}
 
 	//下拉刷新插件  @todo 王榕 这个可能复杂点 搞了一天了 嘻嘻
-	function pullRefresh(param,fn)
+	function cuiPullRefresh(param,fn)
 	{
 	    //是否开始
 	    this.start=false;
 	    //从手指触到屏幕时的Y坐标
 	    this.startPageY=0;
+        //从手指触到屏幕时的Y坐标
+        this.startPageX=0;
 	    //刷新头的高度
 	    this.refreshHeaderHeight=50;
 	    //容器里面的html字符串
@@ -149,7 +209,12 @@
 		    return false;
 		}
 		//获取容器
-	    this.refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".refresh-content");
+	    this.refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".cui-refresh-content");
+	    if(!this.refresContentDom)
+		{
+            console.log("缺少容器选择字符串");
+            return false;
+		}
 	    //初始化
 	    this.init=function()
 		{
@@ -173,14 +238,14 @@
 	    this.renderContent=function()
 		{
 		    var temHtml="";
-		    this.addClass(this.refresContentDom,"refresh-content");
+		    this.addClass(this.refresContentDom,"cui-refresh-content");
 		    this.contentHtml=this.refresContentDom.innerHTML;
-		    temHtml='<div class="refresh-wrap" style="-webkit-transform: translateY(0px);\n' +
+		    temHtml='<div class="cui-refresh-wrap" style="-webkit-transform: translateY(0px);\n' +
                 '\t\t\t-moz-transform: translateY(0px);\n' +
                 '\t\t\t-ms-transform: translateY(0px);\n' +
                 '\t\t\t-o-transform: translateY(0px);\n' +
                 '\t\t\ttransform: translateY(0px);">' +
-                		'<div class="refresh-header" style="line-height:'+this.refreshHeaderHeight+'px;height:'+this.refreshHeaderHeight+'px;top:-'+this.refreshHeaderHeight+'px">' +
+                		'<div class="cui-refresh-header" style="line-height:'+this.refreshHeaderHeight+'px;height:'+this.refreshHeaderHeight+'px;top:-'+this.refreshHeaderHeight+'px">' +
 							'<img src="'+this.contentdownIcon+'">'+
 							'<span>'+this.contentdown+'</span>' +
 						'</div>'
@@ -206,6 +271,7 @@
 				{
                     that.start=true;//开始
                     that.startPageY=e.changedTouches[0].pageY;//从手指触到屏幕时的Y坐标的赋值
+                    that.startPageX=e.changedTouches[0].pageX;//从手指触到屏幕时的X坐标的赋值
 				}
 			});
             that.wrapContentDom.addEventListener("touchmove",function(e)
@@ -213,8 +279,11 @@
                 if(!that.isRefreshing&&that.refresContentDom.scrollTop===0)//当容器的滚动条滚动距离为0和不是在刷新状态时调用
 				{
 				    //手指滑动的Y长度
-                    that.offsetTop=e.changedTouches[0].pageY-that.startPageY-that.refreshHeaderHeight;
-                    if(that.start&&that.offsetTop>-that.refreshHeaderHeight)
+                    that.offsetTop=e.changedTouches[0].pageY-that.startPageY;
+                    //手指滑动的X长度
+                    that.offsetLeft=e.changedTouches[0].pageX-that.startPageX;
+
+                    if(that.start&&that.offsetTop>0&&Math.abs(that.offsetTop/that.offsetLeft)>1.5)//下划角度超过45度时不干活
                     {
                         //下拉的动画
                         that.wrapContentDom.style.transform=that.wrapContentDom.style.webkitTransform="translateY("+that.offsetTop+"px)";
@@ -278,14 +347,17 @@
 		//完成刷新回调
 	    this.refreshDone=function()
 		{
-            this.headerTextDom.innerText=this.contentdone;
-            this.headerImgDom.src=this.contentdoneIcon;
-            this.closeRefresh();
+		    var that=this;
+            that.headerTextDom.innerText=that.contentdone;
+            that.headerImgDom.src=that.contentdoneIcon;
+            setTimeout(function(){
+                that.closeRefresh();
+			},500);
 		};
 	    this.init();
 	}
 	//下拉刷新用法
-    var refresh=new pullRefresh({domStr:".test"},function()
+    var refresh=new cuiPullRefresh({domStr:".test"},function()
     {
         $("#po").html("");
         p=1;
@@ -296,7 +368,7 @@
     });
     Scroll(".test",message);
     //实例一个loading对象
-    var load=new loading({domStr:".loading-content"});
+    var load=new cuiLoading({domStr:".cui-loading-content"});
     var timeout="";
     var p=1;
     var length=20;
@@ -324,7 +396,7 @@
         });
     }
     function message(cb){
-        var callback=cb;
+        var callback=cb&&(typeof cb==="function")?cb:function(){};
         //显示加载中
         load.showloading();
         var url="http://www.paishowtong.com/?r=item/housinginfo/SearchTwoHouse&page="+p+"&page_length="+length+"&sort_type=&sort_order="
@@ -354,22 +426,40 @@
     }
 
     /*加载插件*/
-    function loading(param)
+    function cuiLoading(param)
     {
         //获取加载图标的容器字符串
         this.domStr=param.domStr?param.domStr:"";
         if(this.domStr)
         {
             //获取加载图标的容器dom
-            this.contentDom=document.querySelector(this.domStr);
+            this.contentDom=this.domStr?document.querySelector(this.domStr):document.querySelector(".cui-loading-content");
+            if(!this.contentDom)
+			{
+                console.log("没找到容器");
+                return false;
+			}
+
             this.type=param.type?param.type:"";
             //初始化
             this.init=function()
             {
+                this.addClass(this.contentDom,".cui-loading-content");
                 //往容器中添加img标签
-                this.contentDom.innerHTML='<img src="https://file.digitaling.com/eImg/uimages/20150908/1441704518179024.gif"><span class="loading-text">加载更多</span>'
+                this.contentDom.innerHTML='<img src="https://file.digitaling.com/eImg/uimages/20150908/1441704518179024.gif"><span class="cui-loading-text">加载更多</span>'
                 //获取容器中的文本提示标签
-                this.textDom=document.querySelector(this.domStr+" .loading-text");
+                this.textDom=document.querySelector(this.domStr+" .cui-loading-text");
+            };
+            //添加类的公用函数
+            this.addClass=function(dom,clsName)
+            {
+                var nowClsName=dom.className;
+                if(nowClsName.indexOf(clsName)===-1)
+                {
+                    dom.className=nowClsName+" "+clsName;
+                }
+                return false;
+
             };
             //显示加载中的插件
             this.showloading=function()
