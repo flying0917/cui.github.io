@@ -27,7 +27,7 @@
         that.contentover=param.contentover?param.contentover:"松开刷新";
         //刷新时
         that.contentrefreshIcon=param.contentrefreshIcon?param.contentrefreshIcon:"http://static.oschina.net/uploads/img/201409/26074001_bzCh.gif";
-        that.contentrefresh=param.contentrefresh?param.contentrefresh:"刷新中";
+        that.contentrefresh=param.contentrefresh?param.contentrefresh:"刷新中...";
         //完成刷新时
         that.contentdoneIcon="http://static.oschina.net/uploads/img/201409/26074001_bzCh.gif";
         that.contentdone=param.contentdone?param.contentdone:"完成刷新";
@@ -154,7 +154,7 @@
             });
         };
         //收起刷新的动画
-        this.closeRefresh=function()
+        that.closeRefresh=function()
         {
             //改变状态（不在刷新）
             isRefreshing=false;
@@ -166,7 +166,7 @@
             },500)
         };
         //完成刷新回调
-        this.refreshDone=function()
+        that.refreshDone=function()
         {
             that.headerTextDom.innerText=that.contentdone;
             that.headerImgDom.src=that.contentdoneIcon;

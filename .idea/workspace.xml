@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-pullrefresh.js" afterPath="$PROJECT_DIR$/js/cui-pullrefresh.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +36,11 @@
       <file leaf-file-name="cui-pullrefresh.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="151" column="21" lean-forward="true" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
+            <state relative-caret-position="632">
+              <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
               <folding>
-                <marker date="1550595469596" expanded="true" signature="2436:2707" ph="..." />
-                <marker date="1550595469596" expanded="true" signature="2769:2870" ph="..." />
+                <marker date="1550595750390" expanded="true" signature="2439:2710" ph="..." />
+                <marker date="1550595750390" expanded="true" signature="2772:2873" ph="..." />
               </folding>
             </state>
           </provider>
@@ -180,12 +179,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550591908410</updated>
-      <workItem from="1550591909661" duration="3629000" />
+      <workItem from="1550591909661" duration="3917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3629000" />
+    <option name="totallyTimeSpent" value="3917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -247,11 +246,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="151" column="21" lean-forward="true" selection-start-line="151" selection-start-column="21" selection-end-line="151" selection-end-column="21" />
+        <state relative-caret-position="632">
+          <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
           <folding>
-            <marker date="1550595469596" expanded="true" signature="2436:2707" ph="..." />
-            <marker date="1550595469596" expanded="true" signature="2769:2870" ph="..." />
+            <marker date="1550595750390" expanded="true" signature="2439:2710" ph="..." />
+            <marker date="1550595750390" expanded="true" signature="2772:2873" ph="..." />
           </folding>
         </state>
       </provider>
