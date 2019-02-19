@@ -1,7 +1,7 @@
 //下拉刷新插件  @todo 王榕 这个可能复杂点 嘻嘻
 (function(){
     "use strict";
-    cuiPullRefresh=function(param,fn)
+    var cuiPullRefresh=function(param,fn)
     {
         //是否开始
         this.start=false;
