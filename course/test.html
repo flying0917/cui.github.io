@@ -71,7 +71,7 @@
 		{
 			width:100%;
 			height:10rem;
-			background-color:red;
+			background-color:white;
 			white-space: nowrap;
 			position:relative;
 		}
@@ -81,11 +81,11 @@
 			margin-left:0;
 			width:100%;
 			font-size:0;
-			-webkit-transition: margin-left .5s;
+			/*-webkit-transition: margin-left .5s;
 			-moz-transition: margin-left .5s;
 			-ms-transition: margin-left .5s;
 			-o-transition: margin-left .5s;
-			transition: margin-left .5s;
+			transition: margin-left .5s;*/
 
 		}
 		.cui-swiper-content .cui-swiper-slide
@@ -111,10 +111,10 @@
 			<li>
 				<div class="cui-swiper-content">
 					<div class="cui-swiper-wrap" id="swiper-content">
-						<div class="cui-swiper-slide">1</div>
-						<div class="cui-swiper-slide">2</div>
-						<div class="cui-swiper-slide">3</div>
-						<div class="cui-swiper-slide">4</div>
+						<div class="cui-swiper-slide" style="background-color:red;">1</div>
+						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
+						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
+						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
 					</div>
 				</div>
 			</li>
@@ -156,13 +156,49 @@
 <script src="../js/cui-pullrefresh.js"></script>
 <script type="text/javascript">
 
-	var now=0;
+	var now=0,
+		startX=0
+	    moveX=0
+        nowX=0,
+            ismoving=false;
 	function test()
 	{
 		var dom=document.getElementById("swiper-content");
 		now+=360;
 		dom.style.marginLeft="-"+now+"px";
 	}
+	$(document).on("touchstart",".cui-swiper-content",function(e){
+	    if(ismoving===false)
+        {
+            startX=e.changedTouches[0].pageX;
+            $("#swiper-content").css({"transition":""})
+        }
+	});
+    $(document).on("touchmove",".cui-swiper-content",function(e){
+
+        moveX=e.changedTouches[0].pageX-startX;
+		$("#swiper-content").css({"margin-left":(nowX+moveX)+"px","transition":""})
+    });
+    $(document).on("touchend",".cui-swiper-content",function(e){
+         if(Math.abs(moveX)>60)
+		 {
+		     moveX>0?(now+=360):(now-=360);
+             ismoving=true;
+             $("#swiper-content").css({"margin-left":now+"px","transition":"all .5s"});
+             setTimeout(function(){
+                 ismoving=false;
+                 nowX=parseInt($("#swiper-content").css("margin-left"));
+             },500)
+		 }
+		 else
+         {
+             ismoving=true;
+             $("#swiper-content").css({"margin-left":nowX+"px","transition":"all .5s"});
+             setTimeout(function(){
+                 ismoving=false;
+             },500)
+         }
+    });
 	//轮播图
 	function cuiSwiper(param)
 	{
