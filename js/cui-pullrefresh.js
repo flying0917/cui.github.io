@@ -15,8 +15,21 @@
         contentHtml="",
         //是否在刷新
         isRefreshing=false,
-            //cuiPUllRefresh
-            that=this;
+        //cuiPUllRefresh
+        that=this,
+        refresContentDom,
+        //要拖动的容器
+        wrapContentDom,
+        //刷新的头
+        headerContentDom,
+        //刷新文本提示
+        headerTextDom,
+        //刷新提示图标
+        headerImgDom,
+            //手指滑动的Y长度
+        offsetTop,
+        //手指滑动的X长度
+        offsetLeft;
         //下拉的距离的触发点
         that.triggerDistance=parseInt(param.triggerDistance)?parseInt(param.triggerDistance):200;
         //下拉时
@@ -27,7 +40,7 @@
         that.contentover=param.contentover?param.contentover:"松开刷新";
         //刷新时
         that.contentrefreshIcon=param.contentrefreshIcon?param.contentrefreshIcon:"http://static.oschina.net/uploads/img/201409/26074001_bzCh.gif";
-        that.contentrefresh=param.contentrefresh?param.contentrefresh:"刷新中...";
+        that.contentrefresh=param.contentrefresh?param.contentrefresh:"刷新中";
         //完成刷新时
         that.contentdoneIcon="http://static.oschina.net/uploads/img/201409/26074001_bzCh.gif";
         that.contentdone=param.contentdone?param.contentdone:"完成刷新";
@@ -39,8 +52,8 @@
             return false;
         }
         //获取容器
-        that.refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".cui-refresh-content");
-        if(!that.refresContentDom)
+        refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".cui-refresh-content");
+        if(!refresContentDom)
         {
             console.log("缺少容器选择字符串");
             return false;
@@ -60,8 +73,8 @@
         var renderContent=function()
         {
             var temHtml="";
-            that.addClass(that.refresContentDom,"cui-refresh-content");
-            contentHtml=that.refresContentDom.innerHTML;
+            that.addClass(refresContentDom,"cui-refresh-content");
+            contentHtml=refresContentDom.innerHTML;
             temHtml='<div class="cui-refresh-wrap" style="-webkit-transform: translateY(0px);\n' +
                 '\t\t\t-moz-transform: translateY(0px);\n' +
                 '\t\t\t-ms-transform: translateY(0px);\n' +
@@ -73,73 +86,72 @@
                 '</div>'
                 +contentHtml+
                 '</div>';
-            that.refresContentDom.innerHTML=temHtml;
+            refresContentDom.innerHTML=temHtml;
             //要拖动的容器
-            that.wrapContentDom=that.refresContentDom.children[0];
+            wrapContentDom=refresContentDom.children[0];
             //刷新的头
-            that.headerContentDom=that.wrapContentDom.children[0];
+            headerContentDom=wrapContentDom.children[0];
             //刷新文本提示
-            that.headerTextDom=that.headerContentDom.children[1];
+            headerTextDom=headerContentDom.children[1];
             //刷新提示图标
-            that.headerImgDom=that.headerContentDom.children[0];
+            headerImgDom=headerContentDom.children[0];
         };
         //绑定事件
         var bindEvent=function()
         {
-            that.wrapContentDom.addEventListener("touchstart",function(e)
+            wrapContentDom.addEventListener("touchstart",function(e)
             {
-                if(!isRefreshing&&that.refresContentDom.scrollTop===0)//当容器的滚动条滚动距离为0和不是在刷新状态时调用
+                if(!isRefreshing&&refresContentDom.scrollTop===0)//当容器的滚动条滚动距离为0和不是在刷新状态时调用
                 {
                     start=true;//开始
                     startPageY=e.changedTouches[0].pageY;//从手指触到屏幕时的Y坐标的赋值
                     startPageX=e.changedTouches[0].pageX;//从手指触到屏幕时的X坐标的赋值
-                    console.log(startPageX)
                 }
             });
-            that.wrapContentDom.addEventListener("touchmove",function(e)
+            wrapContentDom.addEventListener("touchmove",function(e)
             {
-                if(!isRefreshing&&that.refresContentDom.scrollTop===0)//当容器的滚动条滚动距离为0和不是在刷新状态时调用
+                if(!isRefreshing&&refresContentDom.scrollTop===0)//当容器的滚动条滚动距离为0和不是在刷新状态时调用
                 {
                     //手指滑动的Y长度
-                    that.offsetTop=e.changedTouches[0].pageY-startPageY;
+                    offsetTop=e.changedTouches[0].pageY-startPageY;
                     //手指滑动的X长度
-                    that.offsetLeft=e.changedTouches[0].pageX-startPageX;
+                    offsetLeft=e.changedTouches[0].pageX-startPageX;
 
-                    if(start&&that.offsetTop>0&&Math.abs(that.offsetTop/that.offsetLeft)>1.5)//下划角度超过45度时不干活
+                    if(start&&offsetTop>0&&Math.abs(offsetTop/offsetLeft)>1.5)//下划角度超过45度时不干活
                     {
                         //下拉的动画
-                        that.wrapContentDom.style.transform=that.wrapContentDom.style.webkitTransform="translateY("+that.offsetTop+"px)";
+                        wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY("+offsetTop+"px)";
                         //是否大于下拉的距离的触发点
-                        if(that.offsetTop>that.triggerDistance)
+                        if(offsetTop>that.triggerDistance)
                         {
-                            that.headerTextDom.innerText=that.contentover;
-                            that.headerImgDom.src=that.contentoverIcon;
+                            headerTextDom.innerText=that.contentover;
+                            headerImgDom.src=that.contentoverIcon;
                         }
                         else
                         {
-                            that.headerTextDom.innerText=that.contentdown;
-                            that.headerImgDom.src=that.contentdownIcon;
+                            headerTextDom.innerText=that.contentdown;
+                            headerImgDom.src=that.contentdownIcon;
                         }
                     }
                 }
             });
-            that.wrapContentDom.addEventListener("touchend",function(e)
+            wrapContentDom.addEventListener("touchend",function(e)
             {
-                if(!isRefreshing&&start&&that.offsetTop>-refreshHeaderHeight)
+                if(!isRefreshing&&start&&offsetTop>-refreshHeaderHeight)
                 {
                     start=false;
-                    that.wrapContentDom.style.transition=that.wrapContentDom.style.webkitTransition="all .5s";
+                    wrapContentDom.style.transition=wrapContentDom.style.webkitTransition="all .5s";
                     //是否大于下拉的距离的触发点
-                    if(that.offsetTop>that.triggerDistance)
+                    if(offsetTop>that.triggerDistance)
                     {
                         //显示刷新中的动画
-                        that.wrapContentDom.style.transform=that.wrapContentDom.style.webkitTransform="translateY("+refreshHeaderHeight+"px)";
+                        wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY("+refreshHeaderHeight+"px)";
                         setTimeout(function(){
-                            that.wrapContentDom.style.transition=that.wrapContentDom.style.webkitTransition="";
+                            wrapContentDom.style.transition=wrapContentDom.style.webkitTransition="";
                             //改变状态（正在刷新）
                             isRefreshing=true;
-                            that.headerTextDom.innerText=that.contentrefresh;
-                            that.headerImgDom.src=that.contentrefreshIcon;
+                            headerTextDom.innerText=that.contentrefresh;
+                            headerImgDom.src=that.contentrefreshIcon;
                             //开始回调
                             that.callback();
                         },500)
@@ -158,18 +170,18 @@
         {
             //改变状态（不在刷新）
             isRefreshing=false;
-            that.wrapContentDom.style.transition=that.wrapContentDom.style.webkitTransition="all .5s";
-            that.wrapContentDom.style.transform=that.wrapContentDom.style.webkitTransform="translateY(0px)";
+            wrapContentDom.style.transition=wrapContentDom.style.webkitTransition="all .5s";
+            wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY(0px)";
             setTimeout(function(){
                 //清除动画
-                that.wrapContentDom.style.transition=that.wrapContentDom.style.webkitTransition="";
+                wrapContentDom.style.transition=wrapContentDom.style.webkitTransition="";
             },500)
         };
         //完成刷新回调
         that.refreshDone=function()
         {
-            that.headerTextDom.innerText=that.contentdone;
-            that.headerImgDom.src=that.contentdoneIcon;
+            headerTextDom.innerText=that.contentdone;
+            headerImgDom.src=that.contentdoneIcon;
             setTimeout(function(){
                 that.closeRefresh();
             },500);
