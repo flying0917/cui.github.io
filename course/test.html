@@ -106,10 +106,7 @@
 
 		<ul id="po">
 			<li>
-				<input type="button" value="test" onclick="test()">
-			</li>
-			<li>
-				<div class="cui-swiper-content">
+				<div class="cui-swiper-content aa bb" id="tt">
 					<div class="cui-swiper-wrap" id="swiper-content">
 						<div class="cui-swiper-slide" style="background-color:red;">1</div>
 						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
@@ -118,34 +115,26 @@
 					</div>
 				</div>
 			</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
-			<li>234</li>
+			<li>
+				<div class="cui-swiper-content" id="tt2">
+					<div class="cui-swiper-wrap" id="swiper-content2">
+						<div class="cui-swiper-slide" style="background-color:red;">1</div>
+						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
+						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
+						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="cui-swiper-content" id="tt3">
+					<div class="cui-swiper-wrap" id="swiper-content3">
+						<div class="cui-swiper-slide" style="background-color:red;">1</div>
+						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
+						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
+						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
+					</div>
+				</div>
+			</li>
 		</ul>
 		<div class="cui-loading-content">
 
@@ -154,9 +143,10 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="../js/cui-pullrefresh.js"></script>
+<script src="../js/cui-swiper.js"></script>
 <script type="text/javascript">
 
-	var now=0,
+	/*var now=0,
 		startX=0
 	    moveX=0
         nowX=0,
@@ -168,46 +158,51 @@
 		dom.style.marginLeft="-"+now+"px";
 	}
 	$(document).on("touchstart",".cui-swiper-content",function(e){
-	    if(ismoving===false)
-        {
+
             startX=e.changedTouches[0].pageX;
             $("#swiper-content").css({"transition":""})
-        }
 	});
     $(document).on("touchmove",".cui-swiper-content",function(e){
-
-        moveX=e.changedTouches[0].pageX-startX;
-		$("#swiper-content").css({"margin-left":(nowX+moveX)+"px","transition":""})
+        if(ismoving===false)
+		{
+            moveX=e.changedTouches[0].pageX-startX;
+            $("#swiper-content").css({"margin-left":(nowX+moveX)+"px","transition":""})
+		}
     });
     $(document).on("touchend",".cui-swiper-content",function(e){
-         if(Math.abs(moveX)>60)
-		 {
-		     moveX>0?(now+=360):(now-=360);
-             ismoving=true;
-             $("#swiper-content").css({"margin-left":now+"px","transition":"all .5s"});
-             setTimeout(function(){
-                 ismoving=false;
-                 nowX=parseInt($("#swiper-content").css("margin-left"));
-             },500)
-		 }
-		 else
-         {
-             ismoving=true;
-             $("#swiper-content").css({"margin-left":nowX+"px","transition":"all .5s"});
-             setTimeout(function(){
-                 ismoving=false;
-             },500)
-         }
-    });
-	//轮播图
-	function cuiSwiper(param)
+        if(ismoving===false)
+		{
+            if(Math.abs(moveX)>60)
+            {
+                moveX>0?(now+=360):(now-=360);
+                ismoving=true;
+                $("#swiper-content").css({"margin-left":now+"px","transition":"all .3s"});
+                setTimeout(function(){
+                    ismoving=false;
+                    nowX=parseInt($("#swiper-content").css("margin-left"));
+                    $("#swiper-content").css({"transition":""});
+                },500)
+            }
+            else
+            {
+                ismoving=true;
+                $("#swiper-content").css({"margin-left":nowX+"px","transition":"all .3s"});
+                setTimeout(function(){
+                    ismoving=false;
+                },500)
+            }
+		}
+
+    });*/
+
+	/*function cuiSwiper(param)
 	{
 	    this.domStr=param.doStr?param.doStr:".swiper-content";
 	    this.init=function()
 		{
 
 		}
-	}
+	}*/
 
 	//下拉刷新用法
     var refresh=new cuiPullRefresh({domStr:".test"},function()
@@ -219,6 +214,10 @@
             refresh.refreshDone()
 		})
     });
+    //轮播图
+    var sw=new cuiSwiper({domStr:"#tt"});
+    var sw2=new cuiSwiper({domStr:"#tt2"});
+    var sw3=new cuiSwiper({domStr:"#tt3"});
     Scroll(".test",message);
     //实例一个loading对象
     var load=new cuiLoading({domStr:".cui-loading-content"});
