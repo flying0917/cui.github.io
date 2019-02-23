@@ -15,8 +15,11 @@
                 speed:0.5,//滑动速度以秒为单位
                 pagination:"",//分页容器选择字符
                 change:function(a){
+
+                },//切换轮播图回调事件
+                beforeChange:function(a){
                     console.log(a);
-                },//改变轮播图回调事件
+                },//改变之前要干的事
             },
             that=this,
             contentDom=null,//容器
@@ -171,6 +174,8 @@
                     {
                         direct>0?(now+=parseInt(defaults.height)):(now-=parseInt(defaults.height));
                         ismoving=true;
+                        //触发改变之前要干的事
+                        defaults.beforeChange(index);
                         wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
                         wrapDom.style.marginTop=now+"px";
                         setTimeout(function(){
@@ -195,8 +200,9 @@
                                 that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
                                 that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
                             }
-                            //触发改变事件回调
-                            defaults.change(index);
+                            //触发切换轮播图回调事件
+                            var nowIndex=defaults.noop?index-1:index;
+                            defaults.change(nowIndex);
 
                         },parseFloat(defaults.speed)*1000)
                     }
@@ -230,6 +236,8 @@
                     {
                         direct>0?(now+=parseInt(defaults.width)):(now-=parseInt(defaults.width));
                         ismoving=true;
+                        //触发改变之前要干的事
+                        defaults.beforeChange(index);
                         wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
                         wrapDom.style.marginLeft=now+"px";
                         setTimeout(function(){
@@ -254,8 +262,9 @@
                                 that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
                                 that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
                             }
-                            //触发改变事件回调
-                            defaults.change(index);
+                            //触发切换轮播图回调事件
+                            var nowIndex=defaults.noop?index-1:index;
+                            defaults.change(nowIndex);
                         },500)
                     }
                     else
@@ -309,9 +318,14 @@
         //定时器
         that.setAutoplay=function()
         {
+            var autoplayInterval=null;
             if(defaults.autoplay)
             {
-                setInterval(function(){
+                autoplayInterval=setInterval(function(){
+                    if(!defaults.noop&&index===count-1)
+                    {
+                        clearInterval(autoplayInterval);
+                    }
                     that.move(parseInt("-"+(defaults.triggerDistance+1)));
                 },parseInt(defaults.autoplay));
             }
