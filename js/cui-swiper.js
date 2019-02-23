@@ -6,14 +6,14 @@
         //默认值
         var defaults={
                 domStr:"",
-                triggerDistance:80,//滑动距离触发点
+                triggerDistance:100,//滑动距离触发点
                 width:0,
                 height:0,
                 noop:true,//是否可循环 bool
                 direction: 'horizontal',//（默认）水平 horizontal， 垂直 vertical   string
-                autoplay:0,//自动播放 默认0 不自动播放
+                autoplay:5000,//自动播放 默认0 不自动播放
                 speed:0.5,//滑动速度以秒为单位
-                pagination:"",//
+                pagination:"",//分页容器选择字符
             },
             that=this,
             contentDom=null,//容器
@@ -76,13 +76,21 @@
 
         };
         defaults=that.extend(defaults,param);
+
+        if(defaults.pagination)
+        {
+            var paginationDom=null;
+        }
         //函数绑定
-        this.bindEvent=function()
+        that.bindEvent=function()
         {
             contentDom.addEventListener("touchstart",function(e)
             {
                 startX=e.changedTouches[0].pageX;
                 startY=e.changedTouches[0].pageY;
+
+                moveX=0;
+                moveY=0;
                 wrapDom.style.transition=wrapDom.style.webkitTransition="";
             });
             contentDom.addEventListener("touchmove",function(e)
@@ -177,7 +185,15 @@
                             {
                                 that.nextInitStatus();
                             }
-                        },500)
+
+                            //分页状态
+                            if(defaults.pagination&&paginationDom)
+                            {
+                                that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
+                                that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
+                            }
+
+                        },parseFloat(defaults.speed)*1000)
                     }
                     else
                     {
@@ -186,7 +202,7 @@
                         wrapDom.style.marginTop=nowY+"px";
                         setTimeout(function(){
                             ismoving=false;
-                        },500)
+                        },parseFloat(defaults.speed)*1000)
                     }
                 }
             }
@@ -225,6 +241,13 @@
                             if(defaults.noop&&index===0&&direct>0)
                             {
                                 that.nextInitStatus();
+                            }
+
+                            //分页状态
+                            if(defaults.pagination&&paginationDom)
+                            {
+                                that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
+                                that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
                             }
                         },500)
                     }
@@ -277,7 +300,7 @@
         };
 
         //定时器
-        that.seAutoplay=function()
+        that.setAutoplay=function()
         {
             if(defaults.autoplay)
             {
@@ -326,16 +349,56 @@
                 beforeNoopDom=wrapDom.children[count-1];
                 that.preInitStatus();
                 count=wrapDom.children.length;
-                that.addClass(wrapDom.children[1],"cui-swiper-active")
+                that.addClass(wrapDom.children[1],"cui-swiper-active");
             }
             else
             {
                 that.addClass(wrapDom.children[0],"cui-swiper-active")
             }
+
+            //分页
+            if(defaults.pagination)
+            {
+                var paginationHtmlStr="";
+                if(paginationDom=document.querySelector(defaults.pagination))
+                {
+                    for(var y=0;y<count;y++)
+                    {
+                        if(defaults.noop)
+                        {
+                            if(y===0)
+                            {
+                                paginationHtmlStr+="<span style='display:none;'></span>";
+                                continue;
+                            }
+                            else if(y===1)
+                            {
+                                paginationHtmlStr+="<span class='cui-swiper-pagination-acitve'></span>";
+                                continue;
+                            }
+                            else if(y===count-1)
+                            {
+                                paginationHtmlStr+="<span style='display:none;'></span>";
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            if(y===0)
+                            {
+                                paginationHtmlStr+="<span class='cui-swiper-pagination-acitve'></span>";
+                                continue;
+                            }
+                        }
+                        paginationHtmlStr+="<span></span>";
+                    }
+                    paginationDom.innerHTML=paginationHtmlStr;
+                }
+            }
             that.bindEvent();
         };
         that.init();
-        that.seAutoplay();
+        that.setAutoplay();
 
     };
     window.cuiSwiper=cuiSwiper
