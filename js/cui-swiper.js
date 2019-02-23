@@ -9,11 +9,14 @@
                 triggerDistance:100,//滑动距离触发点
                 width:0,
                 height:0,
-                noop:true,//是否可循环 bool
+                noop:false,//是否可循环 bool
                 direction: 'horizontal',//（默认）水平 horizontal， 垂直 vertical   string
                 autoplay:5000,//自动播放 默认0 不自动播放
                 speed:0.5,//滑动速度以秒为单位
                 pagination:"",//分页容器选择字符
+                change:function(a){
+                    console.log(a);
+                },//改变轮播图回调事件
             },
             that=this,
             contentDom=null,//容器
@@ -192,6 +195,8 @@
                                 that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
                                 that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
                             }
+                            //触发改变事件回调
+                            defaults.change(index);
 
                         },parseFloat(defaults.speed)*1000)
                     }
@@ -249,6 +254,8 @@
                                 that.removeClass(paginationDom.children,"cui-swiper-pagination-acitve");
                                 that.addClass(paginationDom.children[index],"cui-swiper-pagination-acitve");
                             }
+                            //触发改变事件回调
+                            defaults.change(index);
                         },500)
                     }
                     else
