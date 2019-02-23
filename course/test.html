@@ -74,13 +74,15 @@
 			background-color:white;
 			white-space: nowrap;
 			position:relative;
+			overflow:hidden;
 		}
 		.cui-swiper-content .cui-swiper-wrap
 		{
-			white-space: nowrap;
+			white-space: inherit;
 			margin-left:0;
 			width:100%;
 			font-size:0;
+            height:100%
 			/*-webkit-transition: margin-left .5s;
 			-moz-transition: margin-left .5s;
 			-ms-transition: margin-left .5s;
@@ -96,44 +98,27 @@
 			vertical-align: top;
 			background-color:blue;
 			text-align: center;
-			line-height: 10rem;
 			font-size:1rem;
+		}
+		.cui-swiper-content-v
+		{
+			white-space:normal !important;
 		}
 	</style>
 </head>
 <body>
+<div class="cui-swiper-content aa bb" id="tt" style="height:100%;">
+	<div class="cui-swiper-wrap" id="swiper-content">
+		<div class="cui-swiper-slide" style="background-color:red;">1</div>
+		<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
+		<div class="cui-swiper-slide" style="background-color:pink;">3</div>
+		<div class="cui-swiper-slide" style="background-color:purple;">4</div>
+	</div>
+</div>
 <div class="test">
 
 		<ul id="po">
 			<li>
-				<div class="cui-swiper-content aa bb" id="tt">
-					<div class="cui-swiper-wrap" id="swiper-content">
-						<div class="cui-swiper-slide" style="background-color:red;">1</div>
-						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
-						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
-						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="cui-swiper-content" id="tt2">
-					<div class="cui-swiper-wrap" id="swiper-content2">
-						<div class="cui-swiper-slide" style="background-color:red;">1</div>
-						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
-						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
-						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="cui-swiper-content" id="tt3">
-					<div class="cui-swiper-wrap" id="swiper-content3">
-						<div class="cui-swiper-slide" style="background-color:red;">1</div>
-						<div class="cui-swiper-slide" style="background-color:yellow;">2</div>
-						<div class="cui-swiper-slide" style="background-color:pink;">3</div>
-						<div class="cui-swiper-slide" style="background-color:purple;">4</div>
-					</div>
-				</div>
 			</li>
 		</ul>
 		<div class="cui-loading-content">
@@ -205,7 +190,7 @@
 	}*/
 
 	//下拉刷新用法
-    var refresh=new cuiPullRefresh({domStr:".test"},function()
+   /* var refresh=new cuiPullRefresh({domStr:".test"},function()
     {
         $("#po").html("");
         p=1;
@@ -213,11 +198,10 @@
 		{
             refresh.refreshDone()
 		})
-    });
+    });*/
     //轮播图
     var sw=new cuiSwiper({domStr:"#tt"});
-    var sw2=new cuiSwiper({domStr:"#tt2"});
-    var sw3=new cuiSwiper({domStr:"#tt3"});
+
     Scroll(".test",message);
     //实例一个loading对象
     var load=new cuiLoading({domStr:".cui-loading-content"});

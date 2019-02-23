@@ -6,10 +6,14 @@
         //默认值
         var defaults={
                 domStr:"",
-                triggerDistance:80,
-                width:"",
-                height:"200px",
-                noop:false,
+                triggerDistance:80,//滑动距离触发点
+                width:0,
+                height:0,
+                noop:true,//是否可循环 bool
+                direction: 'horizontal',//（默认）水平 horizontal， 垂直 vertical   string
+                autoplay:0,//自动播放 默认0 不自动播放
+                speed:0.5,//滑动速度以秒为单位
+                pagination:"",//
             },
             that=this,
             contentDom=null,//容器
@@ -20,6 +24,7 @@
             startY=0,
             moveY=0,
             nowX=0,
+            nowY=0,
             count=0,//slide数量
             index=0,//目前展示的slide索引
             ismoving=false,
@@ -86,58 +91,89 @@
                 {
                     moveX=e.changedTouches[0].pageX-startX;
                     moveY=e.changedTouches[0].pageY-startY;
-                    if(Math.abs(moveX/moveY)>1.5)
+                    if(defaults.direction==="vertical")//垂直
                     {
-                        if(!defaults.noop)
+                        if(Math.abs(moveY/moveX)>1.5)//垂直滑动角度超过45度不干活
                         {
-                            if(index===0&&moveX>0)
+                            if(!defaults.noop)
                             {
-                                return false;
+                                if(index===0&&moveY>0)
+                                {
+                                    return false;
+                                }
+                                if(index===(count-1)&&moveY<0)
+                                {
+                                    return false;
+                                }
                             }
-                            if(index===(count-1)&&moveX<0)
-                            {
-                                return false;
-                            }
+                            wrapDom.style.transition=wrapDom.style.webkitTransition="";
+                            wrapDom.style.marginTop=(nowY+moveY)+"px";
                         }
-                        wrapDom.style.transition=wrapDom.style.webkitTransition="";
-                        wrapDom.style.marginLeft=(nowX+moveX)+"px";
+                    }
+                    else//水平
+                    {
+                        if(Math.abs(moveX/moveY)>1.5)//水平滑动角度超过45度不干活
+                        {
+                            if(!defaults.noop)
+                            {
+                                if(index===0&&moveX>0)
+                                {
+                                    return false;
+                                }
+                                if(index===(count-1)&&moveX<0)
+                                {
+                                    return false;
+                                }
+                            }
+                            wrapDom.style.transition=wrapDom.style.webkitTransition="";
+                            wrapDom.style.marginLeft=(nowX+moveX)+"px";
+                        }
                     }
                 }
             });
             contentDom.addEventListener("touchend",function(e)
             {
+                var direct=defaults.direction==="vertical"?moveY:moveX;
+                //开始移动
+                that.move(direct);
+            });
+        };
+        //移动 (direct >0 )后退  (direct < 0 )前进
+        that.move=function(direct)
+        {
+            if(defaults.direction==="vertical")//垂直
+            {
                 if(!defaults.noop)
                 {
-                    if(index===0&&moveX>0)
+                    if(index===0&&direct>0)
                     {
                         return false;
                     }
-                    if(index===(count-1)&&moveX<0)
+                    if(index===(count-1)&&direct<0)
                     {
                         return false;
                     }
                 }
                 if(ismoving===false)
                 {
-                    if(Math.abs(moveX)>defaults.triggerDistance)
+                    if(Math.abs(direct)>defaults.triggerDistance)
                     {
-                        moveX>0?(now+=parseInt(defaults.width)):(now-=parseInt(defaults.width));
+                        direct>0?(now+=parseInt(defaults.height)):(now-=parseInt(defaults.height));
                         ismoving=true;
-                        wrapDom.style.transition=wrapDom.style.webkitTransition="all .3s";
-                        wrapDom.style.marginLeft=now+"px";
+                        wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
+                        wrapDom.style.marginTop=now+"px";
                         setTimeout(function(){
                             ismoving=false;
-                            nowX=parseInt(wrapDom.style.marginLeft);
+                            nowY=parseInt(wrapDom.style.marginTop);
                             wrapDom.style.transition=wrapDom.style.webkitTransition="";
-                            moveX>0?(index--):(index++);
+                            direct>0?(index--):(index++);
                             that.removeClass(wrapDom.children,"cui-swiper-active");
                             wrapDom.children[index]?that.addClass(wrapDom.children[index],"cui-swiper-active"):"";
-                            console.log(index)
-                            if(defaults.noop&&index===(count-1)&&moveX<0)
+                            if(defaults.noop&&index===(count-1)&&direct<0)
                             {
                                 that.preInitStatus();
                             }
-                            if(defaults.noop&&index===0&&moveX>0)
+                            if(defaults.noop&&index===0&&direct>0)
                             {
                                 that.nextInitStatus();
                             }
@@ -146,20 +182,78 @@
                     else
                     {
                         ismoving=true;
-                        wrapDom.style.transition=wrapDom.style.webkitTransition="all .3s";
+                        wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
+                        wrapDom.style.marginTop=nowY+"px";
+                        setTimeout(function(){
+                            ismoving=false;
+                        },500)
+                    }
+                }
+            }
+            else
+            {
+                if(!defaults.noop)
+                {
+                    if(index===0&&direct>0)
+                    {
+                        return false;
+                    }
+                    if(index===(count-1)&&direct<0)
+                    {
+                        return false;
+                    }
+                }
+                if(ismoving===false)
+                {
+                    if(Math.abs(direct)>defaults.triggerDistance)
+                    {
+                        direct>0?(now+=parseInt(defaults.width)):(now-=parseInt(defaults.width));
+                        ismoving=true;
+                        wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
+                        wrapDom.style.marginLeft=now+"px";
+                        setTimeout(function(){
+                            ismoving=false;
+                            nowX=parseInt(wrapDom.style.marginLeft);
+                            wrapDom.style.transition=wrapDom.style.webkitTransition="";
+                            direct>0?(index--):(index++);
+                            that.removeClass(wrapDom.children,"cui-swiper-active");
+                            wrapDom.children[index]?that.addClass(wrapDom.children[index],"cui-swiper-active"):"";
+                            if(defaults.noop&&index===(count-1)&&direct<0)
+                            {
+                                that.preInitStatus();
+                            }
+                            if(defaults.noop&&index===0&&direct>0)
+                            {
+                                that.nextInitStatus();
+                            }
+                        },500)
+                    }
+                    else
+                    {
+                        ismoving=true;
+                        wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
                         wrapDom.style.marginLeft=nowX+"px";
                         setTimeout(function(){
                             ismoving=false;
                         },500)
                     }
                 }
-            });
+            }
         };
         //开始的初始状态（可循环时）
         that.preInitStatus=function()
         {
-            wrapDom.style.marginLeft="-"+defaults.width+"px";
-            now=nowX=parseInt("-"+defaults.width);
+            if(defaults.direction==="vertical")
+            {
+                wrapDom.style.marginTop="-"+defaults.height+"px";
+                now=nowY=parseInt("-"+defaults.height);
+                console.log(232)
+            }
+            else
+            {
+                wrapDom.style.marginLeft="-"+defaults.width+"px";
+                now=nowX=parseInt("-"+defaults.width);
+            }
             index=1;
             that.removeClass(wrapDom.children,"cui-swiper-active");
             wrapDom.children[index]?that.addClass(wrapDom.children[index],"cui-swiper-active"):"";
@@ -167,11 +261,30 @@
         //结束的初始状态（可循环时）
         that.nextInitStatus=function()
         {
-            wrapDom.style.marginLeft="-"+(defaults.width*(count-2))+"px";
-            now=nowX=parseInt("-"+(defaults.width*(count-2)));
+            if(defaults.direction==="vertical")
+            {
+                wrapDom.style.marginTop="-"+(defaults.height*(count-2))+"px";
+                now=nowY=parseInt("-"+(defaults.height*(count-2)));
+            }
+            else
+            {
+                wrapDom.style.marginLeft="-"+(defaults.width*(count-2))+"px";
+                now=nowX=parseInt("-"+(defaults.width*(count-2)));
+            }
             index=count-2;
             that.removeClass(wrapDom.children,"cui-swiper-active");
             wrapDom.children[index]?that.addClass(wrapDom.children[index],"cui-swiper-active"):"";
+        };
+
+        //定时器
+        that.seAutoplay=function()
+        {
+            if(defaults.autoplay)
+            {
+                setInterval(function(){
+                    that.move(parseInt("-"+(defaults.triggerDistance+1)));
+                },parseInt(defaults.autoplay));
+            }
         };
 
         //初始化
@@ -179,6 +292,10 @@
         {
             //获取容器
             contentDom=document.querySelector(defaults.domStr);
+            if(defaults.direction==="vertical")
+            {
+                that.addClass(contentDom,"cui-swiper-content-v");
+            }
             wrapDom=contentDom.children[0];
             //slider的数量
             count=wrapDom.children.length;
@@ -198,7 +315,7 @@
             }
             else
             {
-                contentDom.style.height=defaults.height;
+                contentDom.style.height=defaults.height+"px";
             }
             //是否可以循环
             if(defaults.noop)
@@ -218,6 +335,7 @@
             that.bindEvent();
         };
         that.init();
+        that.seAutoplay();
 
     };
     window.cuiSwiper=cuiSwiper

@@ -52,7 +52,14 @@
             return false;
         }
         //获取容器
-        refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".cui-refresh-content");
+        if(typeof param.domStr==="string")
+        {
+            refresContentDom=param.domStr?document.querySelector(param.domStr):document.querySelector(".cui-refresh-content");
+        }
+        else if(typeof param.domStr==="object")
+        {
+            refresContentDom=param.domStr;
+        }
         if(!refresContentDom)
         {
             console.log("缺少容器选择字符串");
