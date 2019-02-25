@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉刷新例子</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../css/cui.css">
+	<style type="text/css">
+		.test{
+			height: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		#po
+		{
+			background-color:white;
+			text-align: center;
+		}
+		#po li{
+			height:50px;
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+<div class="test">
+		<ul id="po">
+			<li>
+				<p>
+					下拉拖动添加
+				</p>
+			</li>
+
+		</ul>
+</div>
+</body>
+<script src="../js/cui-pullrefresh.js"></script>
+<script type="text/javascript">
+	var index=1,
+        poDom=document.querySelector("#po");
+	//下拉刷新用法
+   var refresh=new cuiPullRefresh({domStr:".test"},function() {
+
+       setTimeout(function () {
+           document.querySelector("#po").innerHTML='<li><p>'+index+'</p></li><li><p>'+index+'</p></li><li><p>'+index+'</p></li>'+document.querySelector("#po").innerHTML;
+           refresh.refreshDone();
+           index++;
+       },2000);
+   });
+</script>
+</html>

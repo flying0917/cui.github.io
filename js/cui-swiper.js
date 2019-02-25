@@ -9,17 +9,17 @@
                 triggerDistance:100,//滑动距离触发点
                 width:0,
                 height:0,
-                noop:false,//是否可循环 bool
+                noop:true,//是否可循环 bool 默认 true
                 direction: 'horizontal',//（默认）水平 horizontal， 垂直 vertical   string
-                autoplay:5000,//自动播放 默认0 不自动播放
+                autoplay:0,//自动播放 默认0 不自动播放
                 speed:0.5,//滑动速度以秒为单位
                 pagination:"",//分页容器选择字符
                 change:function(a){
-
+                    console.log("change===="+a)
                 },//切换轮播图回调事件
                 beforeChange:function(a){
-                    console.log(a);
-                },//改变之前要干的事
+                    console.log("beforChange==="+a);
+                }//改变之前要干的事
             },
             that=this,
             contentDom=null,//容器
@@ -350,7 +350,7 @@
             }
             else
             {
-                contentDom.style.width=defaults.width;
+                contentDom.style.width=defaults.width+"px";
             }
             //获取容器的高度
             if(!defaults.height)

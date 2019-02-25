@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scroll loading例子</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<style type="text/css">
+		li
+		{
+			list-style: none;
+		}
+		div,body,html,ul,li
+		{
+			margin:0;
+			padding:0;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+
+			overflow: hidden;
+		}
+		.test{
+			height: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		#po
+		{
+			background-color:white;
+		}
+		/*加载插件*/
+		.cui-loading-content
+		{
+			height:1rem;
+			text-align: center;
+			font-size:14px;
+		}
+		.cui-loading-content img
+		{
+			height:100%;
+			margin-right:5px;
+		}
+		/*下拉刷新插件*/
+		.cui-refresh-content
+		{
+			height:100%;
+			width:100%;
+			position:relative;
+			background-color: #f9f9f9;
+		}
+		.cui-refresh-content .cui-refresh-header
+		{
+			position:absolute;
+			width:100%;
+			text-align: center;
+		}
+		.cui-refresh-header img
+		{
+			height:100%;
+			vertical-align: middle;
+			margin-right:5px;
+		}
+		.cui-refresh-wrap
+		{
+			min-height:100%;
+		}
+
+		/*轮播图*/
+		.cui-swiper-content
+		{
+			width:100%;
+			height:10rem;
+			background-color:white;
+			white-space: nowrap;
+			position:relative;
+			overflow:hidden;
+		}
+		.cui-swiper-content .cui-swiper-wrap
+		{
+			white-space: inherit;
+			margin-left:0;
+			width:100%;
+			font-size:0;
+            height:100%
+			/*-webkit-transition: margin-left .5s;
+			-moz-transition: margin-left .5s;
+			-ms-transition: margin-left .5s;
+			-o-transition: margin-left .5s;
+			transition: margin-left .5s;*/
+
+		}
+		.cui-swiper-content .cui-swiper-slide
+		{
+			width:100%;
+			height:100%;
+			display:inline-block;
+			vertical-align: top;
+			background-color:blue;
+			text-align: center;
+			font-size:1rem;
+			background-position:center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-repeat:no-repeat;
+		}
+		.cui-swiper-content .cui-swiper-pagination
+		{
+			position:absolute;
+			width:100%;
+			height:3rem;
+			line-height: 3rem;
+			bottom:0;
+			left:0;
+			text-align: center;
+		}
+		.cui-swiper-pagination span
+		{
+			display:inline-block;
+			width:.5rem;
+			height:.5rem;
+			margin:4px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			background-color:white;
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			-ms-transition: all .2s;
+			-o-transition: all .2s;
+			transition: all .2s;
+		}
+		.cui-swiper-content-v .cui-swiper-pagination
+		{
+			position:absolute;
+			width:1rem;
+			line-height: normal;
+			min-height:100px;
+			margin:auto;
+			left:auto;
+			top:0;
+			right:2rem;
+			bottom:0;
+		}
+		.cui-swiper-pagination .cui-swiper-pagination-acitve
+		{
+			 background-color:firebrick;
+		}
+		.cui-swiper-content-v
+		{
+			white-space:normal !important;
+		}
+	</style>
+</head>
+<body>
+<div class="test">
+
+		<ul id="po">
+			<li>23432</li>
+			<li>23432</li>
+			<li>23432</li>
+			<li>23432</li>
+			<li>23432</li>
+			<li>23432</li>
+		</ul>
+		<div class="cui-loading-content">
+
+		</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/cui-scroll.js"></script>
+<script src="../js/cui-loading.js"></script>
+<script src="../js/cui-pullrefresh.js"></script>
+<script type="text/javascript">
+
+	//下拉刷新用法
+    var refresh=new cuiPullRefresh({domStr:".test"},function()
+    {
+        $("#po").html("");
+        p=1;
+        message(function()
+		{
+            refresh.refreshDone()
+		})
+    });
+
+    var s=new cuiScroll(".test",message);
+    //实例一个loading对象
+    var load=new cuiLoading({domStr:".cui-loading-content"});
+    var timeout="";
+    var p=1;
+    var length=5;
+
+
+    function message(cb){
+        var callback=cb&&(typeof cb==="function")?cb:function(){};
+        //显示加载中
+        load.showloading();
+        var url="http://www.paishowtong.com/?r=item/housinginfo/SearchTwoHouse&page="+p+"&page_length="+length+"&sort_type=&sort_order="
+        $.get(url,function(ret){
+            var str="";
+            if (ret.isSuccess) {
+
+                if (ret.data.length) {
+                    for(var i=0;i<ret.data.length;i++)
+                    {
+                        str+="<li>"+ret.data[i].desc+"</li>";
+                    }
+
+                    $("#po").append(str);
+                    p++;
+                    load.hideloading();
+                }
+                else if(ret.data.length===0&&p!==1)//判断是否还有内容
+                {
+                    //显示加载已经完成（没有内容了）
+                    load.finishloading();
+                }
+                callback();
+            }
+        });
+        // alert("已经到最底部了！");
+    }
+</script>
+</html>

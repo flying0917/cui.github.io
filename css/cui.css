@@ -1,4 +1,12 @@
-
+div,body,html,ul,li,p
+{
+    margin:0;
+    padding:0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
 /*下拉刷新插件*/
 .cui-refresh-content
 {
@@ -24,6 +32,20 @@
     min-height:100%;
 }
 /*下拉刷新插件end*/
+
+
+/*加载插件*/
+.cui-loading-content
+{
+    height:1rem;
+    text-align: center;
+    font-size:14px;
+}
+.cui-loading-content img
+{
+    height:100%;
+    margin-right:5px;
+}
 
 /*轮播图*/
 .cui-swiper-content
