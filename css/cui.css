@@ -428,6 +428,12 @@ body,html
     color:white;
 }
 
+.cui-header-dark
+{
+    background-color:#354C54;
+    color:white;
+}
+
 
 /*头部end*/
 
@@ -455,7 +461,7 @@ body,html
     border-radius:50%;
     background-color: rgb(224, 224, 224);
     position:absolute;
-    right:.2rem;
+    right:.15rem;
     top:.4rem;
     text-align: center;
     line-height: 1.2rem;
@@ -469,6 +475,118 @@ body,html
 }
 /*搜索框end*/
 
+/*按钮*/
+.cui-btn
+{
+    display:inline-block;
+    padding:.4rem 1rem;
+    background-color: #fcfcfc;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    cursor:pointer;
+}
+.cui-sm
+{
+    padding:.2rem .4rem;
+    font-size:.7rem;
+}
+.cui-btn-radius:not(.cui-sm)
+{
+    border-radius:1rem;
+    height:2rem;
+}
+.cui-btn-radius.cui-sm
+{
+    border-radius:.75rem;
+    height:1.5rem;
+}
+.cui-btn-block
+{
+    display:block;
+    text-align: center;
+}
+.cui-btn-default
+{
+    background-color:#fcfcfc;
+    border:1px solid #dedede;
+}
+.cui-btn-default.cui-line
+{
+    border:1px solid #1c1c1c;
+}
+.cui-btn-primary
+{
+    background-color:#478CD1;
+    border:1px solid #478CD1;
+    color:white;
+}
+.cui-btn-primary.cui-line
+{
+    border:1px solid #478CD1;
+    color:#478CD1;
+}
+.cui-btn-danger
+{
+    background-color:#EE3E55;
+    border:1px solid #EE3E55;
+    color:white;
+}
+.cui-btn-danger.cui-line
+{
+    border:1px solid #EE3E55;
+    color:#EE3E55;
+}
+.cui-btn-warning
+ {
+     background-color:#EDCC42;
+     border:1px solid #EDCC42;
+     color:white;
+ }
+.cui-btn-warning.cui-line
+{
+    border:1px solid #EDCC42;
+    color:#EDCC42;
+}
+.cui-btn-success
+{
+    background-color:#82C35C;
+    border:1px solid #82C35C;
+    color:white;
+}
+.cui-btn-success.cui-line
+{
+    border:1px solid #82C35C;
+    color:#82C35C;
+}
+.cui-btn-dark
+{
+    background-color:#354C54;
+    border:1px solid #354C54;
+    color:white;
+}
+.cui-btn-dark.cui-line
+{
+    border:1px solid #354C54;
+    color:#354C54;
+}
+.cui-btn-purple
+{
+    background-color:#CB56AF;
+    border:1px solid #CB56AF;
+    color:white;
+}
+.cui-btn-purple.cui-line
+{
+    border:1px solid #CB56AF;
+    color:#CB56AF;
+}
+
+.cui-line
+{
+    background-color:transparent;
+}
+/*按钮end*/
 
 /*下拉刷新插件*/
 .cui-refresh-content
