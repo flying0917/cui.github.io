@@ -8,6 +8,7 @@ html,body {
     -webkit-text-size-adjust:none;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
     -webkit-overflow-scrolling:auto;
+    -webkit-user-select:auto;
     width: 100%;
 }
 body {
@@ -607,6 +608,7 @@ body,html
 }
 .cui-input
 {
+    color:inherit !important;
     min-height:2rem;
     line-height: 2rem;
     border-bottom:1px solid #e2e2e2;
@@ -618,6 +620,10 @@ body,html
     -webkit-align-content: center;
     -webkit-justify-content: center;
     position:relative;
+}
+.cui-input:focus
+{
+    border-bottom:1px solid deepskyblue;
 }
 .cui-input label,.cui-input .label
 {
@@ -788,3 +794,39 @@ body,html
     white-space:normal !important;
 }
 /*轮播图end*/
+
+
+/*popModal插件*/
+.cui-popmodal
+{
+    position:absolute;
+    width:200px;
+    top:100%;
+    left:0;
+    z-index:2;
+    padding-top:8px;
+}
+.cui-popmodal:before
+{
+    content:"";
+    display:inline-block;
+    width:0;
+    height:0;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:8px solid rgba(0, 0, 0, 0.61);
+    position:absolute;
+    top:0;
+    left:5px;
+}
+
+.cui-popmodal .cui-popmodal-text
+{
+    width:100%;
+    min-height:15px;
+    background-color:rgba(0, 0, 0, 0.61);
+    word-break: break-all;
+    color:white;
+    padding:.4rem;
+
+}
