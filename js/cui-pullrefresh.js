@@ -126,6 +126,7 @@
 
                     if(start&&offsetTop>0&&Math.abs(offsetTop/offsetLeft)>1.5)//下划角度超过45度时不干活
                     {
+                        e.preventDefault();//去掉ios的橡皮筋效果
                         //下拉的动画
                         wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY("+offsetTop+"px)";
                         //是否大于下拉的距离的触发点

@@ -101,10 +101,13 @@
             });
             contentDom.addEventListener("touchmove",function(e)
             {
+                e.preventDefault();//去掉ios的橡皮筋效果
                 if(ismoving===false)
                 {
                     moveX=e.changedTouches[0].pageX-startX;
                     moveY=e.changedTouches[0].pageY-startY;
+
+
                     if(defaults.direction==="vertical")//垂直
                     {
                         if(Math.abs(moveY/moveX)>1.5)//垂直滑动角度超过45度不干活

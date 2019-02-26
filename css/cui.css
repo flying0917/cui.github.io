@@ -7,7 +7,7 @@ html,body {
     -webkit-touch-callout:none;
     -webkit-text-size-adjust:none;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-    -webkit-user-select:none;
+    -webkit-overflow-scrolling:auto;
     width: 100%;
 }
 body {
@@ -23,11 +23,13 @@ html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,str
     padding:0;
     font-style:normal;
 }
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
     outline: none;
 }
 @media only screen and (min-width: 400px) {
@@ -61,7 +63,7 @@ a
 }
 textarea
 {
-    overflow: hidden;
+    overflow: auto;
     resize: none;
 }
 button
@@ -87,7 +89,9 @@ body,html
 {
     width:100%;
     height:100%;
-    overflow:hidden auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;
 }
 
 /*图标*/
@@ -449,9 +453,12 @@ body,html
     width:100%;
     height:1.4rem;
     background-color:#f5f5f5;
+    -webkit-user-select:text;
     border-radius:1rem;
     padding:0 .75rem;
+    line-height: 1.4rem;
     color:#1c1c1c;
+    margin-top:.3rem;
 }
 .cui-searchbar .cui-searchbar-btn
 {
@@ -480,26 +487,28 @@ body,html
 {
     display:inline-block;
     padding:.4rem 1rem;
+    line-height: 1;
     background-color: #fcfcfc;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
     cursor:pointer;
+    white-space:nowrap;
 }
-.cui-sm
+.cui-btn-sm
 {
     padding:.2rem .4rem;
     font-size:.7rem;
 }
-.cui-btn-radius:not(.cui-sm)
+.cui-btn-radius:not(.cui-btn-sm)
 {
-    border-radius:1rem;
-    height:2rem;
+    border-radius:.9rem;
+    height:1.8rem;
 }
-.cui-btn-radius.cui-sm
+.cui-btn-radius.cui-btn-sm
 {
-    border-radius:.75rem;
-    height:1.5rem;
+    border-radius:.6rem;
+    height:1.2rem;
 }
 .cui-btn-block
 {
@@ -588,6 +597,70 @@ body,html
 }
 /*按钮end*/
 
+/*表单*/
+.cui-form
+{
+    display:block;
+    width:100%;
+    background-color:white;
+    padding:.4rem;
+}
+.cui-input
+{
+    min-height:2rem;
+    line-height: 2rem;
+    border-bottom:1px solid #e2e2e2;
+    margin-bottom:.5rem;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-box-align: center;
+    -webkit-align-content: center;
+    -webkit-justify-content: center;
+    position:relative;
+}
+.cui-input label,.cui-input .label
+{
+    display:inline-block;
+    width:5rem;
+    overflow:hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.cui-input input
+{
+    height:99%;
+    line-height: 2rem;
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    color:black;
+    flex:1;
+    margin:auto;
+    -webkit-user-select:text;
+}
+.cui-input textarea
+{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    line-height: normal;
+    height:7rem;
+    margin-top:8px;
+    -webkit-user-select:text;
+}
+.cui-input-btn .cui-btn
+{
+    position:absolute;
+    margin:auto;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+/*表单end*/
+
 /*下拉刷新插件*/
 .cui-refresh-content
 {
@@ -595,6 +668,7 @@ body,html
     width:100%;
     position:relative;
     background-color: #f9f9f9;
+    -webkit-overflow-scrolling:touch;
 }
 .cui-refresh-content .cui-refresh-header
 {
@@ -637,6 +711,7 @@ body,html
     white-space: nowrap;
     position:relative;
     overflow:hidden;
+    -webkit-overflow-scrolling:auto;
 }
 .cui-swiper-content .cui-swiper-wrap
 {
@@ -658,7 +733,7 @@ body,html
     height:100%;
     display:inline-block;
     vertical-align: top;
-    background-color:blue;
+
     text-align: center;
     font-size:1rem;
     background-position:center;
