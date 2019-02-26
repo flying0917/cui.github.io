@@ -5,7 +5,7 @@
     {
         var callback=fn,
             that=this;
-        that.dom=null
+        that.dom=null;
         if(typeof dom==="string")
         {
             that.dom=document.querySelector(dom)

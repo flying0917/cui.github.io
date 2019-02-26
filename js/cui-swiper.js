@@ -206,7 +206,7 @@
 
                         },parseFloat(defaults.speed)*1000)
                     }
-                    else
+                    else //没超过触发点 还原动画
                     {
                         ismoving=true;
                         wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";
@@ -267,7 +267,7 @@
                             defaults.change(nowIndex);
                         },500)
                     }
-                    else
+                    else //没超过触发点 还原动画
                     {
                         ismoving=true;
                         wrapDom.style.transition=wrapDom.style.webkitTransition="all "+defaults.speed+"s";

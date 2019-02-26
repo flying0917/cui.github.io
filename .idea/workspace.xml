@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/loading-scroll.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/refresh.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cui-loading.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cui-scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/demo_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/iconfont.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cui.css" afterPath="$PROJECT_DIR$/css/cui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-scroll.js" afterPath="$PROJECT_DIR$/js/cui-scroll.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-swiper.js" afterPath="$PROJECT_DIR$/js/cui-swiper.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/course/test.html" afterPath="$PROJECT_DIR$/course/swiper.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,81 +21,118 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loading-scroll.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui-scroll.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cui-scroll.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui-loading.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swiper.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course/swiper.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="refresh.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course/refresh.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/cui.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cui-swiper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-              <folding>
-                <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-                <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.3209566">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="loading-scroll.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cui-scroll.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/cui-scroll.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="351">
+                  <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cui-loading.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="243">
+                  <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="swiper.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/course/swiper.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="refresh.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/course/refresh.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="81">
+                  <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/course/header.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="iconfont.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/fonts/iconfont.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="54">
+                  <caret line="2" column="91" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="2" selection-end-column="91" />
+                  <folding>
+                    <element signature="e#185#8531#1" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cui-swiper.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="123">
+                  <caret line="146" column="15" lean-forward="true" selection-start-line="146" selection-start-column="15" selection-end-line="146" selection-end-column="15" />
+                  <folding>
+                    <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+                    <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="cui.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/css/cui.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="328" column="21" lean-forward="false" selection-start-line="328" selection-start-column="21" selection-end-line="328" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#1572#1835#0" expanded="false" />
+                    <element signature="e#1851#2023#0" expanded="false" />
+                    <element signature="e#2052#2077#0" expanded="false" />
+                    <element signature="e#2100#2125#0" expanded="false" />
+                    <element signature="e#2153#2178#0" expanded="false" />
+                    <element signature="e#2517#2542#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -133,13 +172,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
-        <option value="$PROJECT_DIR$/js/cui-swiper.js" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-loading.js" />
-        <option value="$PROJECT_DIR$/js/cui-scroll.js" />
         <option value="$PROJECT_DIR$/course/test.html" />
         <option value="$PROJECT_DIR$/course/refresh.html" />
         <option value="$PROJECT_DIR$/course/swiper.html" />
+        <option value="$PROJECT_DIR$/js/cui-swiper.js" />
+        <option value="$PROJECT_DIR$/js/cui-scroll.js" />
+        <option value="$PROJECT_DIR$/course/header.html" />
+        <option value="$PROJECT_DIR$/fonts/iconfont.css" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
       </list>
     </option>
   </component>
@@ -158,10 +199,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="61" />
-    <option name="y" value="295" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="826" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -179,7 +219,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,12 +234,18 @@
             <path>
               <item name="my-ui" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-ui" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="my-ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-ui" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fonts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,8 +256,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\phpStudy\WWW\my-ui\js" />
       <recent name="D:\phpStudy\WWW\my-ui\course" />
+      <recent name="D:\phpStudy\WWW\my-ui\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,18 +295,20 @@
       <workItem from="1550904019842" duration="1107000" />
       <workItem from="1550912763725" duration="19189000" />
       <workItem from="1550999534498" duration="599000" />
-      <workItem from="1551060780980" duration="8312000" />
+      <workItem from="1551060780980" duration="10846000" />
+      <workItem from="1551110288284" duration="3513000" />
+      <workItem from="1551150637717" duration="3725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75088000" />
+    <option name="totallyTimeSpent" value="84860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -303,25 +350,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4050">
@@ -348,7 +376,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -357,8 +392,8 @@
         <state relative-caret-position="5589">
           <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -382,7 +417,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -391,8 +433,8 @@
         <state relative-caret-position="1026">
           <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -409,7 +451,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,8 +467,8 @@
         <state relative-caret-position="1647">
           <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -444,8 +493,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -461,7 +510,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -478,8 +534,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -495,7 +551,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -512,8 +575,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -529,7 +592,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -553,8 +623,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -563,7 +633,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -580,8 +657,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -597,7 +674,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -620,7 +704,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -637,8 +728,8 @@
         <state relative-caret-position="135">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
           </folding>
         </state>
       </provider>
@@ -647,7 +738,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -672,33 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <marker date="1551062239577" expanded="true" signature="14728:14741" ph="..." />
-            <marker date="1551062239577" expanded="true" signature="15219:15232" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/refresh.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -710,24 +781,76 @@
     <entry file="file://$PROJECT_DIR$/course/swiper.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-scroll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-scroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="146" column="15" lean-forward="true" selection-start-line="146" selection-start-column="15" selection-end-line="146" selection-end-column="15" />
+          <folding>
+            <marker date="1551070741152" expanded="true" signature="14756:14769" ph="..." />
+            <marker date="1551070741152" expanded="true" signature="15247:15260" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="91" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="2" selection-end-column="91" />
+          <folding>
+            <element signature="e#185#8531#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="328" column="21" lean-forward="false" selection-start-line="328" selection-start-column="21" selection-end-line="328" selection-end-column="21" />
+          <folding>
+            <element signature="e#1572#1835#0" expanded="false" />
+            <element signature="e#1851#2023#0" expanded="false" />
+            <element signature="e#2052#2077#0" expanded="false" />
+            <element signature="e#2100#2125#0" expanded="false" />
+            <element signature="e#2153#2178#0" expanded="false" />
+            <element signature="e#2517#2542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

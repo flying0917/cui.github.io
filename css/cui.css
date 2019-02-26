@@ -1,12 +1,335 @@
-div,body,html,ul,li,p
-{
-    margin:0;
-    padding:0;
+/*style*/
+html{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
 }
-body,html{
+html,body {
+    -webkit-touch-callout:none;
+    -webkit-text-size-adjust:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-user-select:none;
+    width: 100%;
+}
+body {
+    line-height: 1.5;
+    font-size: 0.8rem;
+    color: #1c1c1c;
+    background-color: #f5f5f5;
+    outline: 0;
+}
+html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,strong,var,fieldset,form,label,dl,dt,dd,cite,input,hr,time,mark,code,figcaption,figure,textarea,h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    border:0;
+    padding:0;
+    font-style:normal;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+@media only screen and (min-width: 400px) {
+    html {
+        font-size: 21.33333333px !important;
+    }
+}
+@media only screen and (min-width: 414px) {
+    html {
+        font-size: 21px !important;
+    }
+}
+@media only screen and (min-width: 480px) {
+    html {
+        font-size: 25.6px !important;
+    }
+}
+ul, li {
+    list-style: none;
+}
+p
+{
+    font-size: 0.7rem;
+    color: #757575;
+}
+a
+{
+    color: #0062cc;
+    text-decoration: none;
+    background-color: transparent;
+}
+textarea
+{
+    overflow: hidden;
+    resize: none;
+}
+button
+{
+    overflow: visible;
+}
+button,select
+{
+    text-transform: none;
+}
+button,input,select,textarea
+{
+    font: inherit;
+    color: inherit;
+}
+body,html
+{
     width: 100%;
     height: 100%;
 }
+/*图标*/
+@font-face {
+    font-family: "cui-iconfont";
+    src: url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('../fonts/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.cui-iconfont {
+    font-family:"cui-iconfont" !important;
+    font-size: 1rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cui-icon-accessory:before {
+    content: "\e6dd";
+}
+
+.cui-icon-add:before {
+    content: "\e6df";
+}
+
+.cui-icon-addition:before {
+    content: "\e6e0";
+}
+
+.cui-icon-addpeople:before {
+    content: "\e6e1";
+}
+
+.cui-icon-barrage:before {
+    content: "\e6e3";
+}
+
+.cui-icon-brush:before {
+    content: "\e6e5";
+}
+
+.cui-icon-businesscard:before {
+    content: "\e6e6";
+}
+
+.cui-icon-camera:before {
+    content: "\e6e7";
+}
+
+.cui-icon-clock:before {
+    content: "\e6e8";
+}
+
+.cui-icon-close:before {
+    content: "\e6e9";
+}
+
+.cui-icon-collection:before {
+    content: "\e6ea";
+}
+
+.cui-icon-computer:before {
+    content: "\e6eb";
+}
+
+.cui-icon-coordinates:before {
+    content: "\e6ec";
+}
+
+.cui-icon-createtask:before {
+    content: "\e6ef";
+}
+
+.cui-icon-customerservice:before {
+    content: "\e6f1";
+}
+
+.cui-icon-delete:before {
+    content: "\e6f2";
+}
+
+.cui-icon-document:before {
+    content: "\e6f3";
+}
+
+.cui-icon-dynamic:before {
+    content: "\e6f4";
+}
+
+.cui-icon-editor:before {
+    content: "\e6f5";
+}
+
+.cui-icon-eit:before {
+    content: "\e6f6";
+}
+
+.cui-icon-emoji:before {
+    content: "\e6f7";
+}
+
+.cui-icon-empty:before {
+    content: "\e6f8";
+}
+
+.cui-icon-enter:before {
+    content: "\e6f9";
+}
+
+.cui-icon-enterinto:before {
+    content: "\e6fa";
+}
+
+.cui-icon-flag:before {
+    content: "\e6fb";
+}
+
+.cui-icon-group:before {
+    content: "\e6ff";
+}
+
+.cui-icon-headlines:before {
+    content: "\e701";
+}
+
+.cui-icon-like_fill:before {
+    content: "\e707";
+}
+
+.cui-icon-like:before {
+    content: "\e708";
+}
+
+.cui-icon-lock:before {
+    content: "\e709";
+}
+
+.cui-icon-mail:before {
+    content: "\e70a";
+}
+
+.cui-icon-manage:before {
+    content: "\e70b";
+}
+
+.cui-icon-message:before {
+    content: "\e70c";
+}
+
+.cui-icon-order:before {
+    content: "\e713";
+}
+
+.cui-icon-other:before {
+    content: "\e714";
+}
+
+.cui-icon-people:before {
+    content: "\e715";
+}
+
+.cui-icon-picture:before {
+    content: "\e716";
+}
+
+.cui-icon-play:before {
+    content: "\e717";
+}
+
+.cui-icon-qrcode:before {
+    content: "\e71c";
+}
+
+.cui-icon-refresh:before {
+    content: "\e71e";
+}
+
+.cui-icon-remind:before {
+    content: "\e71f";
+}
+
+.cui-icon-return:before {
+    content: "\e720";
+}
+
+.cui-icon-send:before {
+    content: "\e726";
+}
+
+.cui-icon-setup:before {
+    content: "\e728";
+}
+
+.icon-share:before {
+    content: "\e729";
+}
+
+.cui-icon-switch:before {
+    content: "\e72e";
+}
+
+.cui-icon-tasklist:before {
+    content: "\e733";
+}
+
+.cui-icon-time:before {
+    content: "\e735";
+}
+
+.cui-icon-trash:before {
+    content: "\e738";
+}
+
+.cui-icon-undo:before {
+    content: "\e739";
+}
+
+.cui-icon-unlock:before {
+    content: "\e73a";
+}
+
+.cui-icon-search:before {
+    content: "\e741";
+}
+
+.cui-icon-packup:before {
+    content: "\e749";
+}
+
+.cui-icon-unfold:before {
+    content: "\e74a";
+}
+
+.cui-icon-shake:before {
+    content: "\e74e";
+}
+/*图标end*/
+
+/*头部*/
+.cui-header
+{
+    height:2rem;
+    line-height: 2rem;
+    width:100%;
+    background-color:white;
+    padding:0 .75rem;
+}
+/*头部end*/
+
 /*下拉刷新插件*/
 .cui-refresh-content
 {
