@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="cui-content" style="text-align: center;">
-
+		<h3>方向（direction）</h3>
 		<div class="cui-btn cui-btn-primary" id="test3" style="margin-top:100px;">popModal（up）</div>
 		<br>
 
@@ -31,31 +31,22 @@
 
 		<div class="cui-btn cui-btn-primary" id="test6" style="margin-top:70px;"  >popModal(width:50px;)</div>
 		<br>
+		<h3 style="margin-top:100px;">对齐方式(verticalAlign)</h3>
+		<div class="cui-btn cui-btn-primary" id="test7" style="margin-top:70px;"  >popModal(middle)</div>
+		<br>
+		<div class="cui-btn cui-btn-primary" id="test8" style="margin-top:70px;"  >popModal(bottom)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test9" style="margin-top:70px;"  >popModal(top)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test10" style="margin-top:70px;"  >popModal(left)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test11" style="margin-top:70px;"  >popModal(right)</div>
+		<br>
 
 
-	<!--<div class="cui-popmodal cui-popmodal-down" style="top:135px;left:100px;">
-		<div class="cui-popmodal-text">
-			向下popModal
-		</div>
-	</div>
-
-	<div class="cui-popmodal cui-popmodal-up" style="top:210px;left:100px;">
-		<div class="cui-popmodal-text">
-			向上popModal
-		</div>
-	</div>
-
-	<div class="cui-popmodal cui-popmodal-right" style="top:300px;left:100px;">
-		<div class="cui-popmodal-text">
-			向右popModal
-		</div>
-	</div>
-
-	<div class="cui-popmodal cui-popmodal-left" style="top:400px;left:100px;">
-		<div class="cui-popmodal-text">
-			向左popModal
-		</div>
-	</div>-->
 
 </div>
 <script src="../js/cui-popmodal.js"></script>
@@ -64,7 +55,7 @@
 	var popMdal=new cuiPopmodal({
 		domStr:document.getElementById("test"),
 		direction:"left",
-		msg:"没有"
+		msg:"左边"
 	})
 	popMdal.showPopModal()
 
@@ -72,14 +63,14 @@
     var popMdal2=new cuiPopmodal({
         domStr:document.getElementById("test2"),
 		direction:"right",
-		msg:"快下班了"
+		msg:"右边"
     })
     popMdal2.showPopModal()
     //popModal插件使用
     var popMdal3=new cuiPopmodal({
         domStr:document.getElementById("test3"),
         direction:"up",
-        msg:"加班"
+        msg:"上边"
     })
     popMdal3.showPopModal()
 
@@ -87,7 +78,7 @@
     var popMdal4=new cuiPopmodal({
         domStr:document.getElementById("test4"),
         direction:"down",
-        msg:"加屁班"
+        msg:"下边"
     })
     popMdal4.showPopModal()
 
@@ -103,10 +94,54 @@
     var popMdal6=new cuiPopmodal({
         domStr:document.getElementById("test6"),
         direction:"down",
-        msg:"加屁班",
+        msg:"回家",
 		width:50
     })
     popMdal6.showPopModal();
+    //popModal插件使用
+    var popMdal7=new cuiPopmodal({
+        domStr:document.getElementById("test7"),
+        direction:"down",
+        msg:"居中对齐",
+		verticalAlign:"middle"
+    })
+    popMdal7.showPopModal();
+
+    //popModal插件使用
+    var popMdal8=new cuiPopmodal({
+        domStr:document.getElementById("test8"),
+        direction:"right",
+        msg:"居下对齐",
+        verticalAlign:"bottom"
+    })
+    popMdal8.showPopModal();
+
+    //popModal插件使用
+    var popMdal9=new cuiPopmodal({
+        domStr:document.getElementById("test9"),
+        direction:"right",
+        msg:"居上对齐",
+        verticalAlign:"top"
+    })
+    popMdal9.showPopModal();
+
+    //popModal插件使用
+    var popMdal10=new cuiPopmodal({
+        domStr:document.getElementById("test10"),
+        direction:"down",
+        msg:"居左对齐",
+        verticalAlign:"left"
+    })
+    popMdal10.showPopModal();
+
+    //popModal插件使用
+    var popMdal11=new cuiPopmodal({
+        domStr:document.getElementById("test11"),
+        direction:"down",
+        msg:"居右对齐",
+        verticalAlign:"right"
+    })
+    popMdal11.showPopModal();
 </script>
 </body>
 </html>

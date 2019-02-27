@@ -21,6 +21,18 @@
             msg:"",
             event:false,//触发popmodal展示的事件
             width:150,
+            verticalAlign:"left"
+
+        };
+        //添加类的公用函数
+        that.addClass=function(dom,clsName)
+        {
+            var nowClsName=dom.className;
+            if(nowClsName.indexOf(clsName)===-1)
+            {
+                dom.className=nowClsName+" "+clsName;
+            }
+            return false;
 
         };
         //属性替换
@@ -36,12 +48,13 @@
         that.extend(that.defaults,param);
         that.showPopModal=function(params)
         {
+            var verticalCls="cui-popmodal-vertical-"+that.defaults.verticalAlign
             if(params&&Object.prototype.toString.call(params)==="[object Object]")
             {
                 that.extend(that.defaults,params);
             }
             popDom=document.createElement("div");
-            popDom.className="cui-popmodal cui-popmodal-"+that.defaults.direction;
+            popDom.className="cui-popmodal cui-popmodal-"+that.defaults.direction+" "+verticalCls;
             popDom.innerHTML='<div class="cui-popmodal-close">×</div><div class="cui-popmodal-text">' + that.defaults.msg +'</div>';
             popDom.style.width=that.defaults.width+"px";
             popDom.style.opacity="0";
@@ -81,25 +94,54 @@
                 closeTransform="translateY(-10px)";
                 top=offsetTop+domHeight;
                 left=offsetLeft;
+                if(that.defaults.verticalAlign==="right")
+                {
+                    left=left+(domContent.offsetWidth-popWidth)
+                }
             }
             else if(that.defaults.direction==="up")
             {
                 closeTransform="translateY(10px)";
                 top=offsetTop-popHeight;
                 left=offsetLeft;
+                if(that.defaults.verticalAlign==="right")
+                {
+                    left=left+(domContent.offsetWidth-popWidth)
+                }
             }
             else if(that.defaults.direction==="right")
             {
                 closeTransform="translateX(-10px)";
                 top=offsetTop;
                 left=offsetLeft+domWidth;
+                if(that.defaults.verticalAlign==="bottom")
+                {
+                    top=top+(domContent.offsetHeight-popHeight)
+                }
             }
             else if(that.defaults.direction==="left")
             {
                 closeTransform="translateX(10px)";
                 top=offsetTop;
                 left=offsetLeft-popWidth;
+                if(that.defaults.verticalAlign==="bottom")
+                {
+                    top=top+(domContent.offsetHeight-popHeight)
+                }
             }
+
+            if(that.defaults.verticalAlign==="middle")
+            {
+                if(that.defaults.direction==="left"||that.defaults.direction==="right")
+                {
+                    top=top+((domContent.offsetHeight-popHeight)/2);
+                }
+                if(that.defaults.direction==="up"||that.defaults.direction==="down")
+                {
+                    left=left+((domContent.offsetWidth-popWidth)/2);
+                }
+            }
+
             popDom.style.top=top+"px";
             popDom.style.left=left+"px";
             popDom.style.transform=popDom.style.webkitTransform=closeTransform;

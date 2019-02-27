@@ -844,14 +844,33 @@ body,html
     top:5px;
     right:0;
 }
-.cui-popmodal-down:before
+.cui-popmodal-down.cui-popmodal-vertical-left:before,.cui-popmodal-down.cui-popmodal-vertical-top:before,.cui-popmodal-down.cui-popmodal-vertical-bottom:before
+{
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid rgba(0, 0, 0, 0.61);
+    top:0;
+    left:10px;
+}
+.cui-popmodal-down.cui-popmodal-vertical-right:before
 {
 
     border-left:5px solid transparent;
     border-right:5px solid transparent;
     border-bottom:5px solid rgba(0, 0, 0, 0.61);
     top:0;
-    left:10px;
+    right:10px;
+}
+.cui-popmodal-down.cui-popmodal-vertical-middle:before
+{
+
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid rgba(0, 0, 0, 0.61);
+    left:0;
+    top:0;
+    right:0;
+    margin:auto;
 }
 /*向右*/
 .cui-popmodal.cui-popmodal-right
@@ -863,7 +882,7 @@ body,html
     top:0;
     right:0;
 }
-.cui-popmodal-right:before
+.cui-popmodal-right.cui-popmodal-vertical-top:before,.cui-popmodal-right.cui-popmodal-vertical-left:before,.cui-popmodal-right.cui-popmodal-vertical-right:before
 {
 
     border-right:5px solid rgba(0, 0, 0, 0.61);
@@ -871,6 +890,26 @@ body,html
     border-bottom:5px solid transparent;
     left:0;
     top:10px;
+}
+.cui-popmodal-right.cui-popmodal-vertical-bottom:before
+{
+
+    border-right:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    left:0;
+    bottom:10px;
+}
+.cui-popmodal-right.cui-popmodal-vertical-middle:before
+{
+
+    border-right:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    bottom:0;
+    left:0;
+    top:0;
+    margin:auto;
 }
 
 /*向上*/
@@ -883,7 +922,7 @@ body,html
     top:0;
     right:0;
 }
-.cui-popmodal-up:before
+.cui-popmodal-up.cui-popmodal-vertical-left:before,.cui-popmodal-up.cui-popmodal-vertical-top:before,.cui-popmodal-up.cui-popmodal-vertical-bottom:before
 {
 
     border-right:5px solid transparent;
@@ -892,6 +931,28 @@ body,html
     bottom:0;
     left:10px;
 }
+
+.cui-popmodal-up.cui-popmodal-vertical-right:before
+{
+
+    border-right:5px solid transparent;
+    border-top:5px solid rgba(0, 0, 0, 0.61);
+    border-left:5px solid transparent;
+    bottom:0;
+    right:10px;
+}
+.cui-popmodal-up.cui-popmodal-vertical-middle:before
+{
+
+    border-right:5px solid transparent;
+    border-top:5px solid rgba(0, 0, 0, 0.61);
+    border-left:5px solid transparent;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+}
+
 
 /*向左*/
 .cui-popmodal.cui-popmodal-left
@@ -903,7 +964,12 @@ body,html
     top:0;
     right:5px;
 }
-.cui-popmodal-left:before
+.cui-popmodal-left .cui-popmodal-close
+{
+    top:0;
+    right:5px;
+}
+.cui-popmodal-left.cui-popmodal-vertical-top:before,.cui-popmodal-left.cui-popmodal-vertical-right:before,.cui-popmodal-left.cui-popmodal-vertical-left:before
 {
 
     border-left:5px solid rgba(0, 0, 0, 0.61);
@@ -911,6 +977,27 @@ body,html
     border-bottom:5px solid transparent;
     right:0;
     top:10px;
+}
+/*对齐方式*/
+.cui-popmodal-left.cui-popmodal-vertical-bottom:before
+{
+
+    border-left:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    right:0;
+    bottom:10px;
+}
+.cui-popmodal-left.cui-popmodal-vertical-middle:before
+{
+
+    border-left:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
 }
 
 
