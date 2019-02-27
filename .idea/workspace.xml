@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cui-popmodal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/popModal.html" afterPath="$PROJECT_DIR$/course/popModal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cui.css" afterPath="$PROJECT_DIR$/css/cui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-popmodal.js" afterPath="$PROJECT_DIR$/js/cui-popmodal.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,13 +14,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63247323">
+    <splitter split-orientation="horizontal" split-proportion="0.71428573">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="loading-scroll.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="27">
                   <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
                   <folding />
                 </state>
@@ -31,10 +30,15 @@
           <file leaf-file-name="popModal.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/popModal.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="568">
-                  <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state relative-caret-position="636">
+                  <caret line="102" column="34" lean-forward="true" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
                   <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -43,8 +47,8 @@
           <file leaf-file-name="cui-popmodal.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+                <state relative-caret-position="783">
+                  <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -54,7 +58,7 @@
             <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="7035">
-                  <caret line="347" column="37" lean-forward="true" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
+                  <caret line="347" column="37" lean-forward="false" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
                   <folding>
                     <marker date="1551201984906" expanded="true" signature="14807:14820" ph="..." />
                     <marker date="1551201984906" expanded="true" signature="15298:15311" ph="..." />
@@ -67,7 +71,7 @@
             <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-1">
-                  <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+                  <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
                   <folding>
                     <marker date="1551202144062" expanded="true" signature="2854:3125" ph="..." />
                     <marker date="1551202144062" expanded="true" signature="3187:3288" ph="..." />
@@ -83,8 +87,8 @@
           <file leaf-file-name="cui.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="314">
-                  <caret line="803" column="12" lean-forward="false" selection-start-line="803" selection-start-column="12" selection-end-line="803" selection-end-column="12" />
+                <state relative-caret-position="578">
+                  <caret line="924" column="23" lean-forward="false" selection-start-line="924" selection-start-column="23" selection-end-line="924" selection-end-column="23" />
                   <folding>
                     <element signature="e#2323#2348#0" expanded="false" />
                     <element signature="e#2371#2396#0" expanded="false" />
@@ -161,8 +165,8 @@
         <option value="$PROJECT_DIR$/js/cui-swiper.js" />
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
         <option value="$PROJECT_DIR$/course/form.html" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/course/popModal.html" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-popmodal.js" />
       </list>
     </option>
@@ -239,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workspace/pshowtong" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workspace/quickos-basic" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -288,12 +292,12 @@
       <workItem from="1551150637717" duration="11943000" />
       <workItem from="1551186136333" duration="17920000" />
       <workItem from="1551237898373" duration="3728000" />
-      <workItem from="1551241650230" duration="11978000" />
+      <workItem from="1551241650230" duration="16064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126704000" />
+    <option name="totallyTimeSpent" value="130790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -720,18 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7035">
-          <caret line="347" column="37" lean-forward="true" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
+          <caret line="347" column="37" lean-forward="false" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
           <folding>
             <marker date="1551201984906" expanded="true" signature="14807:14820" ph="..." />
             <marker date="1551201984906" expanded="true" signature="15298:15311" ph="..." />
@@ -742,7 +738,7 @@
     <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
           <folding>
             <marker date="1551202144062" expanded="true" signature="2854:3125" ph="..." />
             <marker date="1551202144062" expanded="true" signature="3187:3288" ph="..." />
@@ -750,10 +746,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/popModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="102" column="34" lean-forward="true" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/cui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="803" column="12" lean-forward="false" selection-start-line="803" selection-start-column="12" selection-end-line="803" selection-end-column="12" />
+        <state relative-caret-position="578">
+          <caret line="924" column="23" lean-forward="false" selection-start-line="924" selection-start-column="23" selection-end-line="924" selection-end-column="23" />
           <folding>
             <element signature="e#2323#2348#0" expanded="false" />
             <element signature="e#2371#2396#0" expanded="false" />
@@ -763,20 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/popModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="783">
+          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
           <folding />
         </state>
       </provider>

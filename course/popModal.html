@@ -5,10 +5,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="../css/cui.css">
+	<style>
+		.cui-btn
+		{
+			margin:10px;
+		}
+	</style>
 </head>
 <body>
-<div class="cui-content">
-	<div class="cui-btn cui-btn-primary" id="test" style="margin-top:100px;margin-left:100px;">popModal</div>
+<div class="cui-content" style="text-align: center;">
+
+		<div class="cui-btn cui-btn-primary" id="test3" style="margin-top:100px;">popModal（up）</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test"  style="margin-left:100px;">popModal(left)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test2"  style="margin-right:100px;">popModal(right)</div>
+		<br>
+		<div class="cui-btn cui-btn-primary" id="test4"  >popModal(down)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test5" style="margin-top:70px;"  >popModal(click事件触发)</div>
+		<br>
+
+		<div class="cui-btn cui-btn-primary" id="test6" style="margin-top:70px;"  >popModal(width:50px;)</div>
+		<br>
+
 
 	<!--<div class="cui-popmodal cui-popmodal-down" style="top:135px;left:100px;">
 		<div class="cui-popmodal-text">
@@ -37,10 +60,53 @@
 </div>
 <script src="../js/cui-popmodal.js"></script>
 <script>
-
+	//popModal插件使用
 	var popMdal=new cuiPopmodal({
-		domStr:document.getElementById("test")
+		domStr:document.getElementById("test"),
+		direction:"left",
+		msg:"没有"
 	})
+	popMdal.showPopModal()
+
+    //popModal插件使用
+    var popMdal2=new cuiPopmodal({
+        domStr:document.getElementById("test2"),
+		direction:"right",
+		msg:"快下班了"
+    })
+    popMdal2.showPopModal()
+    //popModal插件使用
+    var popMdal3=new cuiPopmodal({
+        domStr:document.getElementById("test3"),
+        direction:"up",
+        msg:"加班"
+    })
+    popMdal3.showPopModal()
+
+    //popModal插件使用
+    var popMdal4=new cuiPopmodal({
+        domStr:document.getElementById("test4"),
+        direction:"down",
+        msg:"加屁班"
+    })
+    popMdal4.showPopModal()
+
+    //popModal插件使用
+    var popMdal5=new cuiPopmodal({
+        domStr:document.getElementById("test5"),
+        direction:"down",
+        msg:"加屁班",
+		event:"click"
+    })
+
+    //popModal插件使用
+    var popMdal6=new cuiPopmodal({
+        domStr:document.getElementById("test6"),
+        direction:"down",
+        msg:"加屁班",
+		width:50
+    })
+    popMdal6.showPopModal();
 </script>
 </body>
 </html>

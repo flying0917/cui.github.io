@@ -7,6 +7,7 @@
             domContent=null,
             parentDom=null,
             popDom=null,
+            closeDom=null,
             closeTransform="translateY(-10px)",
             domWidth=0,
             domHeight=0,
@@ -16,9 +17,9 @@
             offsetLeft=0;
         that.defaults={
             domStr:"",
-            direction:"left",
-            msg:"哈哈哈哈哈，快下班了 哈哈哈哈哈，快下班了哈哈哈哈哈，快下班了哈哈哈哈哈，快下班了哈哈哈哈哈，快下班了哈哈哈哈哈，快下班了",
-            event:"click",//触发popmodal展示的事件
+            direction:"down",
+            msg:"",
+            event:false,//触发popmodal展示的事件
             width:150,
 
         };
@@ -41,11 +42,17 @@
             }
             popDom=document.createElement("div");
             popDom.className="cui-popmodal cui-popmodal-"+that.defaults.direction;
-            popDom.innerHTML='<div class="cui-popmodal-text">' + that.defaults.msg +'</div>';
+            popDom.innerHTML='<div class="cui-popmodal-close">×</div><div class="cui-popmodal-text">' + that.defaults.msg +'</div>';
             popDom.style.width=that.defaults.width+"px";
             popDom.style.opacity="0";
             //popDom.style.transform=popDom.style.webkitTransform="translate(0,0)";
             parentDom.appendChild(popDom);
+
+            closeDom=popDom.children[0];
+            closeDom.addEventListener("click",function()
+            {
+                that.hidePopMoal();
+            })
             popHeight=popDom.offsetHeight;
             popWidth=popDom.offsetWidth;
             //计算top 和 left
@@ -53,7 +60,7 @@
             setTimeout(function(){
                 popDom.style.transform=popDom.style.webkitTransform="translate(0,0)";
                 popDom.style.opacity="1";
-            },100)
+            },200)
         };
         that.hidePopMoal=function()
         {
