@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>表单例子</title>
+	<title>popmodal例子</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="../css/cui.css">
 </head>
 <body>
 <div class="cui-content">
-	<form class="cui-form">
-		<a href="javascript:void(0);" class="cui-input">
-			<label>姓名</label>
-			<input placeholder="请输入姓名">
-			<div class="cui-popmodal">
-				<div class="cui-popmodal-text">
-					sldfjsldkfjsdflkjsdflksdjfsdlkfjdslk
-				</div>
-			</div>
-		</a>
-		<a  href="javascript:void(0);" class="cui-input">
-			<label>密码</label>
-			<input type="password" placeholder="请输入密码">
-		</a>
-		<a  href="javascript:void(0);" class="cui-input">
-			<div class="label">电话号码</div>
-			<input placeholder="请输入电话号码">
-		</a>
-		<a href="javascript:void(0);" class="cui-input cui-input-btn">
-			<label>验证码</label>
-			<input placeholder="验证码" maxlength="6">
-			<span class="cui-btn cui-btn-sm cui-btn-radius cui-btn-primary">获取验证码</span>
-		</a>
-		<a href="javascript:void(0);" class="cui-input">
-			<label>备注</label>
-			<textarea placeholder="请输入备注"></textarea>
-		</a>
-	</form>
-</div>
+	<div class="cui-btn cui-btn-primary" id="test" style="margin-top:100px;margin-left:100px;">popModal</div>
 
+	<!--<div class="cui-popmodal cui-popmodal-down" style="top:135px;left:100px;">
+		<div class="cui-popmodal-text">
+			向下popModal
+		</div>
+	</div>
+
+	<div class="cui-popmodal cui-popmodal-up" style="top:210px;left:100px;">
+		<div class="cui-popmodal-text">
+			向上popModal
+		</div>
+	</div>
+
+	<div class="cui-popmodal cui-popmodal-right" style="top:300px;left:100px;">
+		<div class="cui-popmodal-text">
+			向右popModal
+		</div>
+	</div>
+
+	<div class="cui-popmodal cui-popmodal-left" style="top:400px;left:100px;">
+		<div class="cui-popmodal-text">
+			向左popModal
+		</div>
+	</div>-->
+
+</div>
+<script src="../js/cui-popmodal.js"></script>
+<script>
+
+	var popMdal=new cuiPopmodal({
+		domStr:document.getElementById("test")
+	})
+</script>
 </body>
 </html>

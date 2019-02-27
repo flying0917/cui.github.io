@@ -90,6 +90,7 @@ body,html
 {
     width:100%;
     height:100%;
+    position:relative;
     overflow-y:auto;
     overflow-x:hidden;
     -webkit-overflow-scrolling:touch;
@@ -610,7 +611,6 @@ body,html
 {
     color:inherit !important;
     min-height:2rem;
-    line-height: 2rem;
     border-bottom:1px solid #e2e2e2;
     margin-bottom:.5rem;
     display:-webkit-box;
@@ -629,6 +629,7 @@ body,html
 {
     display:inline-block;
     width:5rem;
+    line-height: 2rem;
     overflow:hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -800,30 +801,93 @@ body,html
 .cui-popmodal
 {
     position:absolute;
-    width:200px;
-    top:100%;
-    left:0;
+    width:150px;
     z-index:2;
-    padding-top:8px;
+    opacity:1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 .cui-popmodal:before
 {
     content:"";
+    position:absolute;
     display:inline-block;
     width:0;
     height:0;
-    border-left:8px solid transparent;
-    border-right:8px solid transparent;
-    border-bottom:8px solid rgba(0, 0, 0, 0.61);
-    position:absolute;
-    top:0;
-    left:5px;
 }
+/*向下*/
+.cui-popmodal.cui-popmodal-down
+{
+    padding-top:5px;
+}
+.cui-popmodal-down:before
+{
+
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid rgba(0, 0, 0, 0.61);
+    top:0;
+    left:10px;
+}
+/*向右*/
+.cui-popmodal.cui-popmodal-right
+{
+    padding-left:5px;
+}
+.cui-popmodal-right:before
+{
+
+    border-right:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    left:0;
+    top:10px;
+}
+
+/*向上*/
+.cui-popmodal.cui-popmodal-up
+{
+    padding-bottom:5px;
+}
+.cui-popmodal-up:before
+{
+
+    border-right:5px solid transparent;
+    border-top:5px solid rgba(0, 0, 0, 0.61);
+    border-left:5px solid transparent;
+    bottom:0;
+    left:10px;
+}
+
+/*向左*/
+.cui-popmodal.cui-popmodal-left
+{
+    padding-right:5px;
+}
+.cui-popmodal-left:before
+{
+
+    border-left:5px solid rgba(0, 0, 0, 0.61);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    right:0;
+    top:10px;
+}
+
+
 
 .cui-popmodal .cui-popmodal-text
 {
     width:100%;
-    min-height:15px;
+    min-height:2rem;
     background-color:rgba(0, 0, 0, 0.61);
     word-break: break-all;
     color:white;
