@@ -17,10 +17,10 @@
             offsetLeft=0;
         that.defaults={
             domStr:"",
-            direction:"down",
+            direction:"down",//方向
             msg:"",
             event:false,//触发popmodal展示的事件
-            width:150,
+            width:0,
             verticalAlign:"left"
 
         };
@@ -48,7 +48,7 @@
         that.extend(that.defaults,param);
         that.showPopModal=function(params)
         {
-            var verticalCls="cui-popmodal-vertical-"+that.defaults.verticalAlign
+            var verticalCls="cui-popmodal-vertical-"+that.defaults.verticalAlign;
             if(params&&Object.prototype.toString.call(params)==="[object Object]")
             {
                 that.extend(that.defaults,params);
@@ -187,6 +187,16 @@
             offsetTop=domContent.offsetTop;
             //获取目标dom的父节点
             parentDom=domContent.parentNode;
+
+            //控制宽度 没有宽度就拿目标的宽度
+
+            if(that.defaults.width===(-1))
+            {
+                that.defaults.width=domWidth;
+            }
+
+            that.defaults.width=parseInt(that.defaults.width)>0?that.defaults.width:150;
+
             bindEvent();
 
         }

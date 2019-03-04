@@ -96,6 +96,21 @@ body,html
     -webkit-overflow-scrolling:touch;
 }
 
+/*公共css*/
+.cui-clearfix
+{
+    clear: both;
+}
+.cui-clearfix:before
+{
+    display: table;
+    content: " ";
+}
+.cui-clearfix:after
+{
+    clear: both;
+}
+
 /*图标*/
 @font-face {
     font-family: "cui-iconfont";
@@ -609,19 +624,14 @@ body,html
 }
 .cui-input
 {
+    display:block;
     color:inherit !important;
     min-height:2rem;
-    border-bottom:1px solid #e2e2e2;
-    margin-bottom:.5rem;
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:flex;
-    -webkit-box-align: center;
-    -webkit-align-content: center;
-    -webkit-justify-content: center;
+    margin-bottom:.6rem;
+    height:2rem;
     position:relative;
 }
-.cui-input:focus
+.cui-input input:focus,.cui-input textarea:focus
 {
     border-bottom:1px solid deepskyblue;
 }
@@ -629,33 +639,51 @@ body,html
 {
     display:inline-block;
     width:5rem;
+    height:2rem;
     line-height: 2rem;
     overflow:hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
-
+    position:relative;
+    z-index: 2;
 }
 .cui-input input
 {
-    height:99%;
     line-height: 2rem;
-    -webkit-box-flex:1;
-    -webkit-flex:1;
     color:black;
-    flex:1;
+    width:100%;
+    height:100%;
     margin:auto;
     -webkit-user-select:text;
+    position:absolute;
+    top:0;
+    left:0;
+    padding-left:5rem;
+    border-bottom:1px solid #e2e2e2;
+    -webkit-transition: border-bottom .3s;
+    -moz-transition: border-bottom .3s;
+    -ms-transition: border-bottom .3s;
+    -o-transition: border-bottom .3s;
+    transition: border-bottom .3s;
 }
 .cui-input textarea
 {
-    -webkit-box-flex:1;
-    -webkit-flex:1;
-    flex:1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
     line-height: normal;
-    height:7rem;
+    height:5rem;
     margin-top:8px;
     -webkit-user-select:text;
+    padding-left:5rem;
+    border-bottom:1px solid #e2e2e2;
+    -webkit-transition: border-bottom .3s;
+    -moz-transition: border-bottom .3s;
+    -ms-transition: border-bottom .3s;
+    -o-transition: border-bottom .3s;
+    transition: border-bottom .3s;
 }
 .cui-input-btn .cui-btn
 {
@@ -664,6 +692,10 @@ body,html
     right:0;
     top:0;
     bottom:0;
+}
+.cui-textarea
+{
+    height:5rem;
 }
 
 /*表单end*/
@@ -802,7 +834,7 @@ body,html
 {
     position:absolute;
     width:150px;
-    z-index:2;
+    z-index:4;
     opacity:1;
     -webkit-transform: translate(0,0);
     -moz-transform: translate(0,0);
@@ -1013,4 +1045,27 @@ body,html
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+}
+
+/*
+.cui-popmodal-validate .cui-popmodal-text
+{
+    background-color:white;
+    color:black;
+}
+.cui-popmodal-validate:before
+{
+    border-bottom:5px solid white !important;
+}
+*/
+
+/*验证插件*/
+.cui-validate-error
+{
+    border-bottom:1px solid #ff2d48 !important;
+}
+
+.cui-validate-success
+{
+    border-bottom:1px solid #82c35c !important;
 }

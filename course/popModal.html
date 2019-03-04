@@ -29,8 +29,10 @@
 		<div class="cui-btn cui-btn-primary" id="test5" style="margin-top:70px;"  >popModal(click事件触发)</div>
 		<br>
 
-		<div class="cui-btn cui-btn-primary" id="test6" style="margin-top:70px;"  >popModal(width:50px;)</div>
+		<div class="cui-btn cui-btn-primary" id="test6" style="margin-top:70px;"  >popModal(width:50)</div>
 		<br>
+        <div class="cui-btn cui-btn-primary" id="test12" style="margin-top:70px;"  >popModal(铺满按钮 width:-1;)</div>
+        <br>
 		<h3 style="margin-top:100px;">对齐方式(verticalAlign)</h3>
 		<div class="cui-btn cui-btn-primary" id="test7" style="margin-top:70px;"  >popModal(middle)</div>
 		<br>
@@ -142,6 +144,17 @@
         verticalAlign:"right"
     })
     popMdal11.showPopModal();
+    //popModal插件使用
+    var popMdal12=new cuiPopmodal({
+        domStr:document.getElementById("test12"),
+        direction:"down",
+        msg:"宽度铺满按钮",
+        verticalAlign:"middle",
+        width:-1
+    })
+    popMdal12.showPopModal({
+        msg:"宽度铺满按钮"
+    });
 </script>
 </body>
 </html>
