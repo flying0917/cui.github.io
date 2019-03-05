@@ -1,4 +1,4 @@
-//加载中插件
+//validate表单验证插件
 (function(){
     "use strict";
     var cuiValidate=function(param,fn)

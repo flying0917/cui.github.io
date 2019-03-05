@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/form.html" afterPath="$PROJECT_DIR$/course/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/validate.html" afterPath="$PROJECT_DIR$/course/validate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-popmodal.js" afterPath="$PROJECT_DIR$/js/cui-popmodal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-validate.js" afterPath="$PROJECT_DIR$/js/cui-validate.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +38,8 @@
           <file leaf-file-name="cui-validate.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="638">
-                  <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
+                <state relative-caret-position="162">
+                  <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -86,7 +82,7 @@
           <file leaf-file-name="cui-popmodal.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="287">
+                <state relative-caret-position="-2594">
                   <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="29" />
                   <folding />
                 </state>
@@ -190,8 +186,8 @@
       <find>parentDom</find>
       <find>removeC</find>
       <find>transition</find>
-      <find>remove</find>
       <find>maxlength</find>
+      <find>remove</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -348,12 +344,12 @@
       <workItem from="1551323698676" duration="3025000" />
       <workItem from="1551449848129" duration="2801000" />
       <workItem from="1551712007856" duration="8888000" />
-      <workItem from="1551750997233" duration="12156000" />
+      <workItem from="1551750997233" duration="12798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166399000" />
+    <option name="totallyTimeSpent" value="167041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -831,14 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/validate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -847,10 +835,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2594">
+          <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
+        <state relative-caret-position="162">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
       </provider>
