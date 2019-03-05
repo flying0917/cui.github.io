@@ -60,12 +60,13 @@
             popDom.style.opacity="0";
             //popDom.style.transform=popDom.style.webkitTransform="translate(0,0)";
             parentDom.appendChild(popDom);
-
+            //获取关闭的按钮
             closeDom=popDom.children[0];
+            //给关闭的按钮添加事件
             closeDom.addEventListener("click",function()
             {
                 that.hidePopMoal();
-            })
+            });
             popHeight=popDom.offsetHeight;
             popWidth=popDom.offsetWidth;
             //计算top 和 left

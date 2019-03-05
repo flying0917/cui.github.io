@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/validate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cui-validate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/popModal.html" afterPath="$PROJECT_DIR$/course/popModal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cui.css" afterPath="$PROJECT_DIR$/css/cui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/form.html" afterPath="$PROJECT_DIR$/course/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/validate.html" afterPath="$PROJECT_DIR$/course/validate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-popmodal.js" afterPath="$PROJECT_DIR$/js/cui-popmodal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cui-validate.js" afterPath="$PROJECT_DIR$/js/cui-validate.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,13 +16,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.71554434">
+    <splitter split-orientation="horizontal" split-proportion="0.86658275">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="loading-scroll.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1566">
+                <state relative-caret-position="27">
                   <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
                   <folding />
                 </state>
@@ -33,31 +32,19 @@
           <file leaf-file-name="cui-loading.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="988">
-                  <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+                <state relative-caret-position="434">
+                  <caret line="52" column="46" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="cui-validate.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="cui-validate.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="569">
-                  <caret line="99" column="44" lean-forward="true" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+                <state relative-caret-position="638">
+                  <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="validate.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/course/validate.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-                  <folding>
-                    <element signature="n#style#0;n#div#1;n#a#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -65,8 +52,8 @@
           <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/form.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="743">
-                  <caret line="32" column="11" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="32" selection-end-column="11" />
+                <state relative-caret-position="191">
+                  <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -99,8 +86,8 @@
           <file leaf-file-name="cui-popmodal.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="362">
-                  <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+                <state relative-caret-position="287">
+                  <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -109,8 +96,8 @@
           <file leaf-file-name="cui-swiper.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="9369">
-                  <caret line="347" column="37" lean-forward="false" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
+                <state relative-caret-position="530">
+                  <caret line="82" column="10" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="82" selection-end-column="10" />
                   <folding>
                     <marker date="1551201984906" expanded="true" signature="14807:14820" ph="..." />
                     <marker date="1551201984906" expanded="true" signature="15298:15311" ph="..." />
@@ -132,6 +119,16 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="validate.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/course/validate.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -139,8 +136,8 @@
           <file leaf-file-name="cui.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="1048" column="0" lean-forward="true" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
+                <state relative-caret-position="287">
+                  <caret line="666" column="17" lean-forward="false" selection-start-line="666" selection-start-column="7" selection-end-line="666" selection-end-column="17" />
                   <folding>
                     <element signature="e#2473#2498#0" expanded="false" />
                     <element signature="e#2521#2546#0" expanded="false" />
@@ -165,11 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start=</find>
-      <find>contentHtml</find>
-      <find>isRefreshing</find>
-      <find>renderContent</find>
-      <find>refresContentDom</find>
       <find>wrapContentDom</find>
       <find>headerContentDom</find>
       <find>headerTextDom</find>
@@ -195,6 +187,11 @@
       <find>offsetWidth</find>
       <find>cui-input</find>
       <find>that.defaults.width</find>
+      <find>parentDom</find>
+      <find>removeC</find>
+      <find>transition</find>
+      <find>remove</find>
+      <find>maxlength</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -216,12 +213,12 @@
         <option value="$PROJECT_DIR$/course/swiper.html" />
         <option value="$PROJECT_DIR$/js/cui-swiper.js" />
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
-        <option value="$PROJECT_DIR$/course/form.html" />
-        <option value="$PROJECT_DIR$/js/cui-popmodal.js" />
         <option value="$PROJECT_DIR$/course/popModal.html" />
         <option value="$PROJECT_DIR$/css/cui.css" />
-        <option value="$PROJECT_DIR$/js/cui-validate.js" />
+        <option value="$PROJECT_DIR$/js/cui-popmodal.js" />
+        <option value="$PROJECT_DIR$/course/form.html" />
         <option value="$PROJECT_DIR$/course/validate.html" />
+        <option value="$PROJECT_DIR$/js/cui-validate.js" />
       </list>
     </option>
   </component>
@@ -259,8 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -351,11 +348,12 @@
       <workItem from="1551323698676" duration="3025000" />
       <workItem from="1551449848129" duration="2801000" />
       <workItem from="1551712007856" duration="8888000" />
+      <workItem from="1551750997233" duration="12156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154243000" />
+    <option name="totallyTimeSpent" value="166399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -363,7 +361,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18663839" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -752,17 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9369">
-          <caret line="347" column="37" lean-forward="false" selection-start-line="347" selection-start-column="37" selection-end-line="347" selection-end-column="37" />
-          <folding>
-            <marker date="1551201984906" expanded="true" signature="14807:14820" ph="..." />
-            <marker date="1551201984906" expanded="true" signature="15298:15311" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3456">
@@ -776,45 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
+        <state relative-caret-position="27">
           <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="32" column="11" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="32" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="1048" column="0" lean-forward="true" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
-          <folding>
-            <element signature="e#2473#2498#0" expanded="false" />
-            <element signature="e#2521#2546#0" expanded="false" />
-            <element signature="e#2574#2599#0" expanded="false" />
-            <element signature="e#2938#2963#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="99" column="44" lean-forward="true" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -841,21 +791,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="82" column="10" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="82" selection-end-column="10" />
+          <folding>
+            <marker date="1551201984906" expanded="true" signature="14807:14820" ph="..." />
+            <marker date="1551201984906" expanded="true" signature="15298:15311" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="666" column="17" lean-forward="false" selection-start-line="666" selection-start-column="7" selection-end-line="666" selection-end-column="17" />
+          <folding>
+            <element signature="e#2473#2498#0" expanded="false" />
+            <element signature="e#2521#2546#0" expanded="false" />
+            <element signature="e#2574#2599#0" expanded="false" />
+            <element signature="e#2938#2963#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="52" column="46" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-popmodal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="287">
+          <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course/validate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#a#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="432">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
