@@ -110,7 +110,42 @@ body,html
 {
     clear: both;
 }
+/*文本对齐*/
+.cui-text-center
+{
+    text-align: center;
+}
+.cui-text-left
+{
+    text-align: left;
+}
+.cui-text-right
+{
+    text-align: right;
+}
 
+/*fixed定位*/
+.cui-fixed-top
+{
+    position:fixed;
+    top:0;
+}
+
+.cui-fixed-bottom
+{
+    position:fixed;
+    bottom:0;
+}
+.cui-fixed-left
+{
+    position:fixed;
+    left:0;
+}
+.cui-fixed-right
+{
+    position:fixed;
+    right:0;
+}
 /*图标*/
 @font-face {
     font-family: "cui-iconfont";
@@ -648,7 +683,7 @@ body,html
     position:relative;
     z-index: 2;
 }
-.cui-input input
+.cui-input input,.cui-input select
 {
     line-height: 2rem;
     color:black;
@@ -1068,4 +1103,70 @@ body,html
 .cui-validate-success
 {
     border-bottom:1px solid #82c35c !important;
+}
+
+/*tabbar*/
+.cui-tabbar
+{
+    width:100%;
+    display:table;
+    background-color:white;
+    height:2rem;
+
+}
+.cui-tabbar .cui-tabbar-tabitem
+{
+    display:table-cell;
+    padding:0 .75rem;
+    text-align: center;
+    font-size:0;
+    width:1%;
+    position:relative;
+}
+.cui-tabbar-tabitem .cui-iconfont
+{
+    font-size:1rem;
+    display:block;
+}
+.cui-tabbar-tabitem img
+{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    margin:0.3rem 0;
+    vertical-align: top;
+}
+.cui-tabbar-tabitem label
+{
+    font-size:.6rem;
+    display:inline-block;
+    width:100%;
+}
+.cui-tabbar-tabitem .cui-badge
+{
+    position:absolute;
+    right:.1rem;
+    top:.1rem;
+    height:.7rem;
+    min-width:.7rem;
+    max-width:1.8rem;
+    overflow:hidden;
+    line-height: .7rem;
+    text-overflow: ellipsis;
+}
+
+/*badge*/
+.cui-badge
+{
+    display:inline-block;
+    height:.8rem;
+    min-width:.8rem;
+    border-radius:.4rem;
+    padding:0 .2rem;
+    font-size:.6rem;
+    text-align: center;
+    background-color:red;
+    color:white;
+    white-space: nowrap;
+    line-height: .8rem;
 }
