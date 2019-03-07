@@ -1117,7 +1117,6 @@ body,html
 .cui-tabbar .cui-tabbar-tabitem
 {
     display:table-cell;
-    padding:0 .75rem;
     text-align: center;
     font-size:0;
     width:1%;
@@ -1141,6 +1140,7 @@ body,html
     font-size:.6rem;
     display:inline-block;
     width:100%;
+    overflow:hidden;
 }
 .cui-tabbar-tabitem .cui-badge
 {
@@ -1153,6 +1153,33 @@ body,html
     overflow:hidden;
     line-height: .7rem;
     text-overflow: ellipsis;
+}
+.cui-tabbar-theme
+{
+    height:50px;
+    padding:0 !important;
+    position:relative;
+}
+.cui-tabbar-theme img
+{
+    width:2.2rem;
+    height:2.2rem;
+    background-color:white;
+    border-radius:50%;
+    border:3px solid white;
+    position:absolute;
+    top:-0.8rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.cui-tabbar-theme label
+{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
 }
 
 /*badge*/
