@@ -95,7 +95,26 @@ body,html
     overflow-x:hidden;
     -webkit-overflow-scrolling:touch;
 }
-
+/*一些公用的css*/
+.cui-flex-wrap
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.cui-flex-con
+{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.cui-flex-vertical
+{
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+/*一些公用的css end*/
 /*公共css*/
 .cui-clearfix
 {
@@ -127,24 +146,24 @@ body,html
 /*fixed定位*/
 .cui-fixed-top
 {
-    position:fixed;
-    top:0;
+    position:fixed !important;
+    top:0 !important;
 }
 
 .cui-fixed-bottom
 {
-    position:fixed;
-    bottom:0;
+    position:fixed !important;
+    bottom:0 !important;
 }
 .cui-fixed-left
 {
-    position:fixed;
-    left:0;
+    position:fixed !important;
+    left:0 !important;
 }
 .cui-fixed-right
 {
-    position:fixed;
-    right:0;
+    position:fixed !important;
+    right:0 !important;
 }
 /*图标*/
 @font-face {
@@ -383,26 +402,6 @@ body,html
     content: "\e74e";
 }
 /*图标end*/
-/*一些公用的css*/
-.cui-flex-wrap
-{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-}
-.cui-flex-con
-{
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-}
-.cui-flex-vertical
-{
-    -webkit-box-orient: vertical;
-    -webkit-flex-flow: column;
-    flex-flow: column;
-}
-/*一些公用的css end*/
 /*头部*/
 .cui-header
 {
