@@ -430,6 +430,11 @@ body,html
     right:0;
     margin:auto;
 }
+.cui-header-bangs
+{
+    padding-top:50px;
+    height:3rem;
+}
 
 .cui-header .cui-iconfont
 {
