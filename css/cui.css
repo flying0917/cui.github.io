@@ -411,6 +411,7 @@ body,html
     background-color:white;
     padding:0 .4rem;
     position:relative;
+    z-index:2;
 }
 .cui-header .cui-header-title
 {
