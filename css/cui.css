@@ -839,6 +839,7 @@ body,html
     background-color:white;
     padding:.4rem;
 }
+
 .cui-input
 {
     display:block;
@@ -847,6 +848,21 @@ body,html
     margin-bottom:.6rem;
     height:2rem;
     position:relative;
+}
+
+.cui-input-link:after
+{
+    font-family:"cui-iconfont";
+    content:"\e6ff";
+    display:inline-block;
+    height:2rem;
+    width:20px;
+    color:#808080;
+    line-height: 2rem;
+    text-align: center;
+    position:absolute;
+    right:0;
+    bottom:0;
 }
 .cui-input input:focus,.cui-input textarea:focus
 {
@@ -877,7 +893,7 @@ body,html
     top:0;
     left:0;
     padding-left:5rem;
-    border-bottom:1px solid #e2e2e2;
+    border-bottom:1px solid #E6E6E6;
     -webkit-transition: border-bottom .3s;
     -moz-transition: border-bottom .3s;
     -ms-transition: border-bottom .3s;
