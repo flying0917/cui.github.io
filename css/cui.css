@@ -1530,5 +1530,56 @@ body,html
 }
 
 /*开关*/
+.cui-switch input[type='checkbox']
+{
+    display:none;
+}
+.cui-switch
+{
+    width:3rem;
+    height:1.5rem;
+    display:inline-block;
+    vertical-align: middle;
+}
+.cui-switch .cui-switch-btn
+{
+    width:100%;
+    height:100%;
+    background-color:lightgray;
+    border-radius:.75rem;
+    position:relative;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -ms-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
 
-
+.cui-switch .cui-switch-btn:after
+{
+    content:"";
+    display:inline-block;
+    width:1.3rem;
+    height:1.3rem;
+    border-radius:50%;
+    background-color:white;
+    position:absolute;
+    left:-1.5rem;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    -webkit-transition: left .3s;
+    -moz-transition: left .3s;
+    -ms-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+}
+.cui-switch input[type='checkbox']:checked+.cui-switch-btn:after
+{
+    left:1.5rem;
+}
+.cui-switch input[type='checkbox']:checked+.cui-switch-btn
+{
+    background-color:#61d8ff;
+}
