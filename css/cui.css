@@ -1583,3 +1583,103 @@ body,html
 {
     background-color:#61d8ff;
 }
+
+/*卡片*/
+.cui-card
+{
+    min-height:5rem;
+    background-color:white;
+    -webkit-box-shadow: 0 0 4px #dedede;
+    -moz-box-shadow: 0 0 4px #dedede;
+    box-shadow: 0 0 4px #dedede;
+}
+.cui-card-padding
+{
+    margin:.5rem;
+}
+
+.cui-card .cui-card-img
+{
+
+}
+.cui-card .cui-card-img img
+{
+    width:100%;
+}
+.cui-card .cui-card-item
+{
+    min-height:1rem;
+    border-bottom:1px solid #e4e4e4;
+    padding:.5rem;
+}
+.cui-card .cui-card-item:last-child
+{
+    border-bottom:none;
+}
+
+/*栅格系统*/
+
+.cui-row
+{
+
+}
+.cui-row:after,.cui-row:before
+{
+    content:"";
+    display:table;
+    clear:both;
+}
+.cui-row [class*="cui-col-"]
+{
+    float:left;
+}
+.cui-row .cui-col-1
+{
+    width:8.33%;
+}
+.cui-row .cui-col-2
+{
+    width:16.66%;
+}
+.cui-row .cui-col-3
+{
+    width:25%;
+}
+.cui-row .cui-col-4
+{
+    width:33.33%;
+}
+.cui-row .cui-col-5
+{
+    width:41.66%;
+}
+.cui-row .cui-col-6
+{
+    width:50%;
+}
+
+.cui-row .cui-col-7
+{
+    width:58.33%;
+}
+.cui-row .cui-col-8
+{
+    width:66.66%;
+}
+.cui-row .cui-col-9
+{
+    width:75%;
+}
+.cui-row .cui-col-10
+{
+    width:83.33%;
+}
+.cui-row .cui-col-11
+{
+    width:91.66%;
+}
+.cui-row .cui-col-12
+{
+    width:100%;
+}
+

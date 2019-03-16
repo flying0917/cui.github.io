@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/cui.css">
+    <style>
+        .cui-content
+        {
+            background-color:#f5f5f5;
+        }
+        [class*='cui-col-']
+        {
+
+            text-align: center;
+        }
+        .test
+        {
+            margin:2px 0 2px 2px;
+            background-color:lightgray;
+        }
+        [class*='cui-col-']:last-child .test
+        {
+            margin-right:2px;
+        }
+
+        .flow-item1
+        {
+            width:3rem;
+            margin:5px;
+            height:5rem;
+            background-color:blue;
+        }
+        .flow-item2
+        {
+            width:3rem;
+            margin:5px;
+            height:2rem;
+            background-color:blue;
+        }
+
+        .flow-item3
+        {
+            width:3rem;
+            margin:5px;
+            height:3rem;
+            background-color:blue;
+        }
+
+        .column-content
+        {
+            -webkit-column-width:3rem; /* Safari 和 Chrome */
+            -moz-column-width:3rem; /* Firefox */
+            -webkit-column-gap:5px;/* Safari 和 Chrome */
+            -moz-column-gap:5px;/* Firefox */
+        }
+
+    </style>
+</head>
+<body>
+<div class="cui-content">
+    <h4 class="cui-text-center">栅格系统</h4>
+    <div class="cui-row">
+        <div class="cui-col-1">
+            <div class="test">cui-col-1</div>
+        </div>
+        <div class="cui-col-11">
+            <div class="test">cui-col-11</div>
+        </div>
+        <div class="cui-col-12">
+            <div class="test">cui-col-12</div>
+        </div>
+    </div>
+    <div class="cui-row">
+        <div class="cui-col-2">
+            <div class="test">cui-col-2</div>
+        </div>
+        <div class="cui-col-10">
+            <div class="test">cui-col-10</div>
+        </div>
+    </div>
+    <div class="cui-row">
+        <div class="cui-col-3">
+            <div class="test">cui-col-3</div>
+        </div>
+        <div class="cui-col-9">
+            <div class="test">cui-col-9</div>
+        </div>
+    </div>
+    <div class="cui-row">
+        <div class="cui-col-4">
+            <div class="test">cui-col-4</div>
+        </div>
+        <div class="cui-col-8">
+            <div class="test">cui-col-8</div>
+        </div>
+    </div>
+    <div class="cui-row">
+        <div class="cui-col-5">
+            <div class="test">cui-col-5</div>
+        </div>
+        <div class="cui-col-7">
+            <div class="test">cui-col-7</div>
+        </div>
+    </div>
+    <div class="cui-row">
+        <div class="cui-col-6">
+            <div class="test">cui-col-6</div>
+        </div>
+        <div class="cui-col-6">
+            <div class="test">cui-col-6</div>
+        </div>
+    </div>
+
+    <h3>瀑布流</h3>
+    <div class="column-content">
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
+    </div>
+</div>
+</body>
+</html>
