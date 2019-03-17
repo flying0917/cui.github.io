@@ -27,33 +27,46 @@
 
         .flow-item1
         {
-            width:3rem;
-            margin:5px;
+            width:100%;
             height:5rem;
+            margin-top:1px;
             background-color:blue;
+            -moz-page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
         }
         .flow-item2
         {
-            width:3rem;
-            margin:5px;
+            width:100%;
             height:2rem;
+            margin-top:1px;
             background-color:blue;
+            -moz-page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .flow-item3
         {
-            width:3rem;
-            margin:5px;
+            width:100%;
             height:3rem;
+            margin-top:1px;
             background-color:blue;
+            -moz-page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .column-content
         {
-            -webkit-column-width:3rem; /* Safari 和 Chrome */
-            -moz-column-width:3rem; /* Firefox */
-            -webkit-column-gap:5px;/* Safari 和 Chrome */
-            -moz-column-gap:5px;/* Firefox */
+            height300px;
+            -webkit-column-width:100%; /* Safari 和 Chrome */
+            -moz-column-width:100%; /* Firefox */
+            -webkit-column-gap:1px;/* Safari 和 Chrome */
+            -moz-column-gap:1px;/* Firefox */
+            column-count:5;
+            -moz-column-span: 1;
+            column-span: 1;
         }
 
     </style>
@@ -115,6 +128,36 @@
 
     <h3>瀑布流</h3>
     <div class="column-content">
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item1"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item2"></div>
+        <div class="flow-item3"></div>
+        <div class="flow-item1"></div>
         <div class="flow-item1"></div>
         <div class="flow-item2"></div>
         <div class="flow-item3"></div>

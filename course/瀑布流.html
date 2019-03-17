@@ -1,40 +1,57 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>CSS3代码column属性实现瀑布流效果</title>
-    <style type="text/css">
-        .container{
-            -webkit-column-width:260px; /* Safari 和 Chrome */
-            -moz-column-width:260px; /* Firefox */
-            -webkit-column-gap:5px;/* Safari 和 Chrome */
-            -moz-column-gap:5px;/* Firefox */
+    <meta charset="UTF-8">
+    <title>鏍呮牸</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/cui.css">
+    <style>
+        .cui-content
+        {
+            background-color:#f5f5f5;
         }
-        /*数据块 砖块*/
-        .container div{width:260px;margin:4px 0;}
+
+
+        .cui-column-item
+        {
+            height:3rem;
+            background-color:white;
+            -webkit-box-shadow: 0 0 4px lightgray;
+            -moz-box-shadow: 0 0 4px lightgray;
+            box-shadow: 0 0 4px lightgray;
+            background-size:cover;
+            background-position:center;
+        }
+        .cui-column-item:nth-child(1n)
+        {
+            height:6rem;
+        }
+        .cui-column-item:nth-child(2n)
+        {
+            height:3rem;
+        }
+        .cui-column-item:nth-child(3n)
+        {
+            height:9rem;
+        }
+
     </style>
 </head>
 <body>
-<div class="container">
-    <div><img src="http://mpic.tiankong.com/3c6/cb2/3c6cb2a10d0ba3404f823d67156c285f/640.jpg" /></div>
-    <div><img src="https://b-ssl.duitang.com/uploads/item/201410/26/20141026182438_dFPSH.thumb.700_0.jpeg" /></div>
-    <div><img src="http://d.hiphotos.baidu.com/exp/w=480/sign=bac6d39e9a82d158bb8258b9b00b19d5/d788d43f8794a4c216d1b25b08f41bd5ac6e39cb.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112423.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112423-51.jpg" /></div>
-    <div><img src="https://b-ssl.duitang.com/uploads/item/201411/23/20141123193323_tMB3e.thumb.700_0.jpeg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112424-50.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112425.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112425-51.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112425-52.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112426-50.jpg" /></div>
-    <div><img src="http://www.6681.com/uploads/allimg/150801/37-150P1160259.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112426-51.jpg" /></div>
-    <div><img src="http://d.hiphotos.baidu.com/exp/w=480/sign=bac6d39e9a82d158bb8258b9b00b19d5/d788d43f8794a4c216d1b25b08f41bd5ac6e39cb.jpg" /></div>
-    <div><img src="https://b-ssl.duitang.com/uploads/item/201410/26/20141026182438_dFPSH.thumb.700_0.jpeg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112425-51.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112424-50.jpg" /></div>
-    <div><img src="http://img.qt.baidu.com/hiapk_pic/old/150331/7730-150331112423.jpg" /></div>
-    <div><img src="https://b-ssl.duitang.com/uploads/item/201411/23/20141123193323_tMB3e.thumb.700_0.jpeg" /></div>
+<div class="cui-content">
+
+    <h3 style="padding-left:.5rem;">鐎戝竷娴�</h3>
+    <div class="cui-column cui-column-cout-3">
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/b138585784ccb6b0c584376a6f50cbd0db340f30a3123-zCicSa_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/eb1c9e642227d99616455958a0c359303bb252bb1159fd-EHYjg4_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/2f59742ba0ef57ed1e1c6a5e21a7d7fbd87de56f41916-14Hv3B_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/904a9b8986dc67feb4ef6b19c90d20de207aa93821718-I4ypqM_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/ddadaa028b4bc9f23b9ea7e3dd7a59ea76f70c341d8d7-0aD2kY_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/d04b611b95267104d16576950ae0e2e8ea2aec0d3ea99-T1F7Sw_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/02ecf51ca5815eeb9e3e1d49c7beb898d00ed65b3be94-udZPwP_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/6878ed662ff70ac65132455708377c6a733bde8d44567-y0hRBB_/fw/480)"></div>
+        <div class="cui-column-item" style="background-image:url(//img.hb.aicdn.com/02ecf51ca5815eeb9e3e1d49c7beb898d00ed65b3be94-udZPwP_/fw/480)"></div>
+    </div>
 </div>
 </body>
 </html>
