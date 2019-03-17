@@ -8,26 +8,19 @@
 </head>
 <body>
 <div class="cui-content">
-
-</div>
-<div class="cui-actionsheet">
-	<div class="cui-actionsheet-shelter">
-		<div class="cui-actionsheet-select">
-			<div class="cui-actionsheet-option">
-				<div class="cui-actionsheet-btn cui-actionsheet-title">请选择</div>
-				<div class="cui-actionsheet-btn">相册</div>
-				<div class="cui-actionsheet-btn">文件</div>
-				<div class="cui-actionsheet-btn">文件柜</div>
-			</div>
-			<div class="cui-actionsheet-cancel">取消</div>
-
-		</div>
-	</div>
+	<div style="margin:10px;" class="cui-btn cui-btn-primary cui-btn-block" onclick="showActionSheet()">展示actionsheet</div>
 </div>
 
-<script src="../js/cui-validate.js"></script>
+
+<script src="../js/cui-actionsheet.js"></script>
 <script>
-
+var a=new cuiActionsheet({
+	buttons:[{text:"拍照",color:""},{text:"相册",color:""},{text:"文件",color:""}]
+})
+function showActionSheet()
+{
+	a.showActionSheet();
+}
 
 </script>
 
