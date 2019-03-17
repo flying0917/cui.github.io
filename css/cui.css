@@ -1727,4 +1727,9 @@ body,html
     margin-bottom:.5rem;
 }
 
+.cui-column-item img
+{
+    width:100%;
+}
+
 
