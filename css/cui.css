@@ -1732,4 +1732,64 @@ body,html
     width:100%;
 }
 
+/*actionsheet 操作表*/
 
+.cui-actionsheet
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.cui-actionsheet .cui-actionsheet-shelter
+{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+.cui-actionsheet .cui-actionsheet-select
+{
+    width:100%;
+    min-height:4rem;
+    position:absolute;
+    bottom:0;
+    padding:.5rem;
+}
+.cui-actionsheet-select .cui-actionsheet-option
+{
+    min-height:2rem;
+    background-color:white;
+    border-radius:8px;
+}
+
+.cui-actionsheet-select .cui-actionsheet-cancel
+{
+    height:2rem;
+    background-color:red;
+    color:white;
+    text-align: center;
+    line-height: 2rem;
+    border-radius:8px;
+    margin-top:.5rem;
+}
+
+
+.cui-actionsheet .cui-actionsheet-btn
+{
+    height:2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-bottom:1px solid #f7f7f7;
+
+}
+.cui-actionsheet .cui-actionsheet-btn:last-child
+{
+    border-bottom:none;
+}
+
+.cui-actionsheet-title
+{
+    font-size:.8rem;
+    color:#a5a5a5;
+}
