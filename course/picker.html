@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>picker插件</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../css/cui.css">
+</head>
+<body>
+<div class="cui-content">
+
+</div>
+<div class="cui-picker">
+	<div class="cui-picker-shelter">
+		<div class="cui-picker-content">
+			<div class="cui-picker-header">
+				<div class="cui-picker-header-left">取消</div>
+				<div class="cui-picker-header-title">请选择</div>
+				<div class="cui-picker-header-right">确认</div>
+			</div>
+			<div class="cui-picker-item">
+				<div class="cui-picker-item-list" id="test1">
+					<div class="cui-picker-item-select" id="test" style="top:100px;">
+						<div class="cui-picker-item-option">1</div>
+						<div class="cui-picker-item-option">2</div>
+						<div class="cui-picker-item-option">3</div>
+						<div class="cui-picker-item-option">4</div>
+						<div class="cui-picker-item-option">5</div>
+						<div class="cui-picker-item-option">6</div>
+						<div class="cui-picker-item-option">7</div>
+						<div class="cui-picker-item-option">8</div>
+						<div class="cui-picker-item-option">9</div>
+						<div class="cui-picker-item-option">10</div>
+						<div class="cui-picker-item-option">11</div>
+						<div class="cui-picker-item-option">12</div>
+						<div class="cui-picker-item-option">13</div>
+						<div class="cui-picker-item-option">14</div>
+					</div>
+					<!--<div class="cui-picker-item-selected"></div>-->
+				</div>
+
+				<div class="cui-picker-item-list"></div>
+
+				<div class="cui-picker-item-list"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	var startY=0,
+		moveY=0,
+		nowY=document.getElementById("test").style.top,
+			speed=0,
+			time=0,
+			timeInterval=null,
+			direction=0;
+	document.getElementById("test1").addEventListener("touchstart",function(e)
+	{
+		document.getElementById("test").style.transition="";
+		startY=e.changedTouches[0].pageY;
+		timeInterval=setInterval(function(){
+			time++
+		},50)
+	})
+	document.getElementById("test1").addEventListener("touchmove",function(e)
+	{
+		moveY=e.changedTouches[0].pageY-startY;
+		//console.log(moveY)
+
+		document.getElementById("test").style.top=parseInt(nowY+moveY)+"px"
+	})
+	document.getElementById("test1").addEventListener("touchend",function(e)
+	{
+		clearInterval(timeInterval);
+		direction=moveY-nowY;
+		speed=direction/time;
+
+		var continueMoveY=0;
+
+
+		startY=0;
+		time=0;
+		nowY=parseInt(document.getElementById("test").style.top);
+
+
+		document.getElementById("test").style.transition="all .5s";
+		if(moveY)
+		{
+			moveY>0?continueMoveY=100:continueMoveY=-80
+			document.getElementById("test").style.top=parseInt(nowY+continueMoveY)+"px"
+		}
+		moveY=0;
+
+	})
+</script>
+</html>
