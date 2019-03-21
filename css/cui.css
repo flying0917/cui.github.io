@@ -1692,6 +1692,16 @@ body,html
     -webkit-column-count:3;
     padding:.5rem;
 }
+.cui-column-gap-no
+{
+    -webkit-column-gap:0;/* Safari 和 Chrome */
+    -moz-column-gap:0;
+}
+.cui-column-gap-sm
+{
+    -webkit-column-gap:1px;/* Safari 和 Chrome */
+    -moz-column-gap:1px;
+}
 .cui-column-count-1
 {
     column-count:1;
