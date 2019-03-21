@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="content">
+        <div class="sider">
+            <div class="sider-item sider-item-active" onclick="showPre(this)">cui</div>
+            <div class="sider-item" onclick="showNext(this)">example</div>
+            <div class="sider-item"><a style="color:white;" target="_blank" href="https://github.com/flying0917/cui.github.io">github</a></div>
+        </div>
+        <div class="wrap">
+            <div class="page-item">
+                <div class="center">
+                   <span id="theme-word">c</span>ui
+                </div>
+                <div class="info">
+                    <div class="info-item" onclick="move()"></div>
+                </div>
+            </div>
+            <div class="page-item">
+
+                <div class="mobile">
+                    <div class="mobile-aa" style="background-image:url(./image/mobile.png)">
+                        <div class="mobile-view">
+                            <iframe  id="iframe" width="100%"  height="100%"></iframe>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="food">
+                    <div class="column food-items">
+                        <div class="food-item" data-url="./course/form.html">
+                            <div class="detail" data-url="./course/form.html">表单</div>
+                        </div>
+                        <div class="food-item" data-url="./course/card.html">
+                            <div class="detail" data-url="./course/card.html">卡片</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/flow.html">
+                            <div class="detail" data-url="./course/flow.html">瀑布流</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/radio_checkbox_switch.html">
+                            <div class="detail"  data-url="./course/radio_checkbox_switch.html">单选/多选/开关</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/grid.html">
+                            <div class="detail" data-url="./course/grid.html">栅格</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/header.html">
+                            <div class="detail" data-url="./course/header.html">头部</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/button.html">
+                            <div class="detail" data-url="./course/button.html">按钮</div>
+                        </div>
+                        <div class="food-item"  data-url="./course/tabbar.html">
+                            <div class="detail" data-url="./course/tabbar.html">导航</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/swiper.html">
+                            <div class="detail" data-url="./course/swiper.html">轮播插件</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/validate.html">
+                            <div class="detail" data-url="./course/validate.html">表单验证插件</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/refresh.html">
+                            <div class="detail" data-url="./course/validate.html">下拉刷新插件</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/popModal.html">
+                            <div class="detail" data-url="./course/popModal.html">信息提示插件</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/actionsheet.html">
+                            <div class="detail" data-url="./course/actionsheet.html">操作表插件</div>
+                        </div>
+                        <div class="food-item food-item-tool"  data-url="./course/loading-scroll.html">
+                            <div class="detail" data-url="./course/loading-scroll.html">滚到底部插件</div>
+                        </div>
+                        <div class="food-item food-item-continue" >
+                            <div class="detail" >待续。。。。。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function addClass(dom,clsName)
+    {
+        var clsArr=dom.className.split(" ");
+        if(clsArr.indexOf(clsName)===-1)
+        {
+            clsArr.push(clsName)
+        }
+        dom.className=clsArr.join(" ");
+    }
+
+    function removeClass(dom,clsName)
+    {
+        var clsArr=dom.className.split(" "),
+            index=clsArr.indexOf(clsName);
+        if(index!==-1)
+        {
+            clsArr.splice(index,1)
+        }
+        dom.className=clsArr.join(" ")
+    }
+    var moveIndex=0,
+        time=300,
+        movedone=true
+    function move()
+    {
+        if(movedone)
+        {
+
+            movedone=false
+            var target=document.getElementById("theme-word");
+            switch (moveIndex) {
+                case 0:
+                        target.style.webkitTransform="translateY(-30px)"
+                        setTimeout(function()
+                        {
+                            target.style.webkitTransform="translateY(0)"
+                            setTimeout(function(){
+                                target.style.webkitTransform="translateY(-25px)"
+                                setTimeout(function(){
+                                    target.style.webkitTransform="translateY(0px)"
+                                    setTimeout(function()
+                                    {
+                                        target.style.webkitTransform="translateY(-28px)"
+                                        setTimeout(function()
+                                        {
+                                            target.style.webkitTransform="translateY(0)"
+                                            setTimeout(function(){
+                                                target.style.webkitTransform="translateY(-26px)"
+                                                setTimeout(function(){
+                                                    target.style.webkitTransform="translateY(0)"
+                                                    setTimeout(function(){
+                                                        target.style.webkitTransform="translateY(-24px)"
+                                                        target.style.color="#fdc07c"
+                                                        setTimeout(function(){
+                                                            target.style.webkitTransform="translateY(0)"
+                                                            setTimeout(function(){
+                                                                target.style.webkitTransform="translateY(-22px)"
+                                                                setTimeout(function(){
+                                                                    target.style.webkitTransform="translateY(0)"
+                                                                    setTimeout(function(){
+                                                                        target.style.webkitTransform="translateY(-20px)"
+                                                                        setTimeout(function(){
+                                                                            target.style.webkitTransform="translateY(0)"
+                                                                            setTimeout(function(){
+                                                                                target.style.webkitTransform="translateY(-18px)"
+                                                                                setTimeout(function(){
+                                                                                    target.style.webkitTransform="translateY(0)"
+                                                                                    setTimeout(function(){
+                                                                                        target.style.webkitTransform="translateY(-45px)"
+                                                                                        target.style.color="#fd9f9f"
+                                                                                        setTimeout(function(){
+                                                                                            target.style.webkitTransform="translateY(0)"
+                                                                                            setTimeout(function(){
+                                                                                                target.style.webkitTransform="translateY(-30px)"
+                                                                                                target.style.color="#fd7a84"
+                                                                                                setTimeout(function(){
+                                                                                                    target.style.webkitTransform="translateY(0)"
+                                                                                                    setTimeout(function(){
+                                                                                                        target.style.webkitTransform="translateY(-25px)"
+                                                                                                        setTimeout(function(){
+                                                                                                            target.style.webkitTransform="translateY(0)"
+                                                                                                            setTimeout(function(){
+                                                                                                                target.style.webkitTransform="translateY(-20px)"
+                                                                                                                setTimeout(function(){
+                                                                                                                    target.style.webkitTransform="translateY(0)"
+                                                                                                                    setTimeout(function(){
+                                                                                                                        target.style.webkitTransform="translateY(-15px)"
+                                                                                                                        setTimeout(function(){
+                                                                                                                            target.style.webkitTransform="translateY(0)"
+                                                                                                                            setTimeout(function(){
+                                                                                                                                target.style.webkitTransform="rotate(20deg)"
+                                                                                                                                movedone=true;
+
+                                                                                                                            },1000)
+                                                                                                                        },time)
+                                                                                                                    },time)
+                                                                                                                },time)
+                                                                                                            },time)
+                                                                                                        },time)
+                                                                                                    },time)
+                                                                                                },time)
+                                                                                            },time)
+                                                                                        },time)
+                                                                                    },time)
+                                                                                },time)
+                                                                            },time)
+                                                                        },time)
+                                                                    },time)
+                                                                },time)
+                                                            },time)
+                                                        },time)
+                                                    },time)
+                                                },time)
+                                            },time)
+                                        },time)
+                                    },time)
+                                },time)
+                            },time)
+                        },time);break;
+                case 1:setTimeout(function(){
+                        //其他动画
+                },time)
+            }
+            moveIndex++;
+
+        }
+
+    }
+    var view=document.querySelector(".mobile-view")
+    function showNext(that){
+
+        var allItem=document.querySelectorAll(".sider-item")
+        for(var x=0;x<allItem.length;x++)
+        {
+            removeClass(allItem[x],"sider-item-active")
+        }
+        addClass(document.querySelector('.wrap'),"wrap-next")
+        addClass(that,"sider-item-active")
+    }
+    function showPre(that){
+        var allItem=document.querySelectorAll(".sider-item")
+        for(var x=0;x<allItem.length;x++)
+        {
+            removeClass(allItem[x],"sider-item-active")
+        }
+        removeClass(document.querySelector('.wrap'),"wrap-next")
+        addClass(that,"sider-item-active")
+    }
+
+    document.querySelector(".food-items").addEventListener("click",function(e)
+    {
+        var target=e.target,
+            url=target.dataset["url"],
+            frame=document.getElementById("iframe");
+        view.style.opacity="1";
+        frame.style.opacity="0";
+        setTimeout(function(){
+            frame.src=url;
+            setTimeout(function(){
+                frame.style.opacity="1";
+            },500)
+        },500)
+    })
+</script>
+</html>
