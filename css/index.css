@@ -143,7 +143,7 @@ body,html
 }
 .food-item
 {
-    background-color:white;
+    background-color:lightgray;
     color:white;
     height:100px;
     -moz-page-break-inside: avoid;
