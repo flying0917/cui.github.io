@@ -10,7 +10,7 @@
 <div class="cui-content">
 
 </div>
-<div class="cui-picker">
+<!--<div class="cui-picker">
 	<div class="cui-picker-shelter">
 		<div class="cui-picker-content">
 			<div class="cui-picker-header">
@@ -20,7 +20,7 @@
 			</div>
 			<div class="cui-picker-item">
 				<div class="cui-picker-item-list" id="test1">
-					<div class="cui-picker-item-select" id="test" style="top:100px;">
+					<div class="cui-picker-item-select" id="test">
 						<div class="cui-picker-item-option">1</div>
 						<div class="cui-picker-item-option">2</div>
 						<div class="cui-picker-item-option">3</div>
@@ -36,7 +36,7 @@
 						<div class="cui-picker-item-option">13</div>
 						<div class="cui-picker-item-option">14</div>
 					</div>
-					<!--<div class="cui-picker-item-selected"></div>-->
+					<div class="cui-picker-item-selected"></div>
 				</div>
 
 				<div class="cui-picker-item-list"></div>
@@ -46,35 +46,45 @@
 
 		</div>
 	</div>
-</div>
+</div>-->
+
+<input type="text" id="test" value="">
 </body>
+<script src="../js/cui-picker.js"></script>
 <script>
-	var startY=0,
+	var picker=new cuiPicker({domStr:document.getElementById("test")})
+</script>
+<script>
+	/*var startY=0,
 		moveY=0,
-		nowY=document.getElementById("test").style.top,
+		nowY=parseInt(document.getElementById("test").style.top),
+			selectedTop=parseFloat(document.querySelector(".cui-picker-item-selected").offsetTop),
 			speed=0,
 			time=0,
 			timeInterval=null,
-			direction=0;
+			direction=0,
+			nowHelpY=0;
+	document.getElementById("test").style.top=selectedTop+"px"
 	document.getElementById("test1").addEventListener("touchstart",function(e)
 	{
 		document.getElementById("test").style.transition="";
 		startY=e.changedTouches[0].pageY;
+		nowY=nowHelpY
 		timeInterval=setInterval(function(){
 			time++
-		},50)
+		},10)
 	})
 	document.getElementById("test1").addEventListener("touchmove",function(e)
 	{
 		moveY=e.changedTouches[0].pageY-startY;
-		//console.log(moveY)
 
-		document.getElementById("test").style.top=parseInt(nowY+moveY)+"px"
+		document.getElementById("test").style.webkitTransform="translateY("+parseInt(nowY+moveY)+"px)"
+		nowHelpY=parseInt(nowY+moveY)
 	})
 	document.getElementById("test1").addEventListener("touchend",function(e)
 	{
 		clearInterval(timeInterval);
-		direction=moveY-nowY;
+		direction=moveY;
 		speed=direction/time;
 
 		var continueMoveY=0;
@@ -82,17 +92,40 @@
 
 		startY=0;
 		time=0;
-		nowY=parseInt(document.getElementById("test").style.top);
+		nowY=nowHelpY;
 
 
 		document.getElementById("test").style.transition="all .5s";
 		if(moveY)
 		{
-			moveY>0?continueMoveY=100:continueMoveY=-80
-			document.getElementById("test").style.top=parseInt(nowY+continueMoveY)+"px"
+			continueMoveY=+(parseInt(speed)*8);
+			var shouldY=calcOffseTop(nowY+continueMoveY)
+			document.getElementById("test").style.webkitTransform="translateY("+parseInt(shouldY)+"px)"
+			nowHelpY=shouldY;
+
 		}
 		moveY=0;
 
 	})
+
+	function calcOffseTop(Y)
+	{
+		var count=0,
+			resultY=0;
+
+
+
+		count=Math.floor(Y/50);
+		resultY=count*50;
+		if(resultY<=-650)
+		{
+			resultY=-650;
+		}
+		if(resultY>=0)
+		{
+			resultY=0;
+		}
+			return resultY
+	}*/
 </script>
 </html>

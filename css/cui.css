@@ -1875,6 +1875,7 @@ body,html
 {
     height:2rem;
     position:relative;
+    color:#696666;
 }
 
 .cui-picker-header .cui-picker-header-left
@@ -1929,7 +1930,7 @@ body,html
 .cui-picker-item-list .cui-picker-item-selected
 {
     width:80%;
-    height:2rem;
+    height:50px;
     position:absolute;
     left:0;
     right:0;
@@ -1941,14 +1942,19 @@ body,html
 .cui-picker-item-select
 {
     width:100%;
-    height:4000px;
     position:absolute;
     left:0;
 
 }
 .cui-picker-item-select .cui-picker-item-option
 {
-    height:2rem;
+    height:50px;
     text-align: center;
-    line-height: 2rem;
+    line-height: 50px;
+    color:gray;
 }
+.cui-picker-item-select .cui-picker-item-option-active
+{
+    color:#2a70d0;
+}
+
