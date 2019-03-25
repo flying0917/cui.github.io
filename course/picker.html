@@ -8,7 +8,23 @@
 </head>
 <body>
 <div class="cui-content">
+	<form class="cui-form">
+		<a  href="javascript:void(0);" class="cui-input cui-input-link">
+			<div class="label">手机</div>
+			<input placeholder="请选择手机" value="" id="test">
+		</a>
 
+		<a  href="javascript:void(0);" class="cui-input cui-input-link">
+			<div class="label">时间</div>
+			<input placeholder="请选择时间" value="" id="time">
+		</a>
+
+		<a  href="javascript:void(0);" class="cui-input cui-input-link">
+			<div class="label">日期</div>
+			<input placeholder="请选择时间" value="" id="date">
+		</a>
+	</form>
+	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPicker()">点击显示picker</div>
 </div>
 <!--<div class="cui-picker">
 	<div class="cui-picker-shelter">
@@ -48,11 +64,34 @@
 	</div>
 </div>-->
 
-<input type="text" id="test" value="">
 </body>
 <script src="../js/cui-picker.js"></script>
 <script>
-	var picker=new cuiPicker({domStr:document.getElementById("test")})
+	//绑定input
+	var picker=new cuiPicker({
+								inputDom:document.getElementById("test"),
+								data:[["iphoneX","ipone8","小米9"],["高通","mtk","德州"]]
+
+	})
+	//没有绑定input
+	var picker1=new cuiPicker();
+
+	function showPicker()
+	{
+		picker1.showPicker();
+	}
+
+	var picker2=new cuiPicker({
+				type:"time",
+				inputDom:document.getElementById("time")
+	})
+
+	//绑定input
+	var picker3=new cuiPicker({
+		inputDom:document.getElementById("date"),
+		type:"datetime"
+
+	})
 </script>
 <script>
 	/*var startY=0,
