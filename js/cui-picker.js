@@ -378,6 +378,7 @@
                 });
                 dom.addEventListener("touchmove",function(e)
                 {
+                    e.preventDefault();//去掉ios的橡皮筋效果
                     itemsDomArr[index].moveY=e.changedTouches[0].pageY-itemsDomArr[index].startY;
 
                     itemsDomArr[index].dom.style.webkitTransform="translateY("+parseInt(itemsDomArr[index].nowY+itemsDomArr[index].moveY)+"px)"
@@ -431,6 +432,13 @@
                     else if (typeof that.defaults.inputDom==="object"&&that.defaults.inputDom.tagName)//这里可能埋了个坑
                     {
                         domInput=that.defaults.inputDom;
+                    }
+                    if(domInput)
+                    {
+                        if(domInput.tagName==='INPUT')
+                        {
+                            domInput.readOnly=true;
+                        }
                     }
                 }
 
