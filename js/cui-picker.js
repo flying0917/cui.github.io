@@ -14,13 +14,16 @@
             itemsDomArr=[],//选择列表数组
             confirmBtnDom=null,//确认按钮
             cancelBtnDom=null;//取消按钮
+
         /*默认值*/
         that.defaults=
         {
-                domStr:"",//容器
+                inputDom:null,//容器
                 type:"",//类型
                 value:"",//默认值
-                title:"请选择ssss",
+                maxyear:2019,//当type不为空和等于date dateTime时有用
+                minyear:1989,//当type不为空和等于date dateTime时有用
+                title:"请选择",
                 data:[[
 
                             {name:"iphone3",value:"1"},
@@ -28,8 +31,20 @@
                             {name:"iphone5",value:"3"}
                        ],
                        [
-                           {name:"高通",value:"1"},
-                           {name:"mtk",value:"2"},
+                           {name:"高通",value:"1",children:[
+                                                                {name:"高通800"},
+                                                                {name:"高通810"},
+                                                                {name:"高通820"},
+                                                                {name:"高通835"},
+                                                                {name:"高通845"}
+                                                           ]},
+                           {name:"苹果",value:"2",children:[
+                                                               {name:"a8"},
+                                                               {name:"a9"},
+                                                               {name:"a10"},
+                                                               {name:"a11"},
+                                                               {name:"a12"}
+                                                           ]},
                            {name:"德州",value:"3"}
                        ],
                        [
@@ -37,9 +52,17 @@
                            "234"
                        ]
                 ],
-                selectOk:function(selected)
+                separate:[],//分隔字符 其的长度等于（列数-1）
+                onOk:function(selected)
                 {
-                    console.log(selected)
+                    //console.log(selected)
+                },
+                onShow:function()
+                {
+
+                },
+                onCancel:function(){
+
                 }
         };
         //删除类的公用函数
@@ -88,7 +111,6 @@
         };
         that.extend(that.defaults,param);
 
-
         var
             //计算动画
             calcOffseTop=function(contentHeight,itemHeight,Y)
@@ -107,17 +129,106 @@
                 }
                 return resultY
             },
+            //处理日期的数据(2018-3-5)
+            handleDateData=function()
+            {
+                var datedata=[];
+                for(var dateItem=0;dateItem<3;dateItem++)
+                {
+                    //年
+                    if(dateItem===0)
+                    {
+                        var yearItemData=[],
+                            maxyear=parseInt(that.defaults.maxyear),
+                            minyear=parseInt(that.defaults.minyear);
+                        for(var yearItem=minyear;yearItem<=maxyear;yearItem++)
+                        {
+                            yearItemData.push(yearItem);
+                        }
+                    }
+                    //月
+                    if(dateItem===1)
+                    {
+                        var monthItemData=[];
+                        for(var monthItem=1;monthItem<13;monthItem++)
+                        {
+                            monthItem=monthItem<10?"0"+monthItem:monthItem;
+                            monthItemData.push(monthItem)
+                        }
+                    }
+                    //日
+                    if(dateItem===2)
+                    {
+                        var dayItemData=[];
+                        for(var dayItem=1;dayItem<29;dayItem++)
+                        {
+                            dayItem=dayItem<10?"0"+dayItem:dayItem;
+                            dayItemData.push(dayItem)
+                        }
+                    }
+                }
+                datedata.push(yearItemData)
+                datedata.push(monthItemData)
+                datedata.push(dayItemData)
+                return datedata;
+            },
+            //处理时间的数据（19:39）
+            handleTimeData=function()
+            {
+                var timeData=[];
+                for(var timeItem=0;timeItem<2;timeItem++)
+                {
+                    //时
+                    var houseItemData=[];
+                    for(var houseItem=1;houseItem<=24;houseItem++)
+                    {
+                        houseItem=houseItem<10?"0"+houseItem:houseItem;
+                        houseItemData.push(houseItem);
+                    }
+                    //分
+                    var mintuesItemData=[];
+                    for(var mintuesItem=0;mintuesItem<=60;mintuesItem++)
+                    {
+                        mintuesItem=mintuesItem<10?"0"+mintuesItem:mintuesItem;
+                        mintuesItemData.push(mintuesItem);
+                    }
+
+                }
+                timeData.push(houseItemData);
+                timeData.push(mintuesItemData);
+                return timeData;
+            },
+            //处理三级联动（地点）
+            handlePlaceData=function()
+            {
+
+            },
+            //处理日期时间的数据（2018-3-5 19:39）
+            handleDateTimeData=function()
+            {
+                return handleDateData().concat(handleTimeData())
+            },
+
+            //根据type给data赋对应的数组
+            switchType=function()
+            {
+                //特定的类型
+                var type=that.defaults.type;
+                if(that.defaults.type)
+                {
+                    switch(type)
+                    {
+                        case 'date':that.defaults.data=handleDateData();break;
+                        case 'place':that.defaults.data=handlePlaceData();break;
+                        case 'datetime':that.defaults.data=handleDateTimeData();break;
+                        case 'time':that.defaults.data=handleTimeData();break;
+                    }
+                }
+            },
             //渲染html
             renderContent=function()
             {
-                //特定的类型
-                if(that.defaults.type)
-                {
-
-                }
-                //自定义
-                else
-                {
+                    switchType();
                     if(that.defaults.data&&that.defaults.data instanceof Array&&that.defaults.data.length)
                     {
                         var itemHtml='',
@@ -125,21 +236,28 @@
                             contentHtml='';
                         //遍历data的一级
                         itemArr=that.defaults.data;
+
+                        //选择状态
+                        if(selectedValueArr&&selectedValueArr.length)
+                        {
+                            valueArr=selectedValueArr;
+                        }
+                        valueIndexArr=[];
+
                         for(var x=0;x<itemArr.length;x++)
                         {
                             var optionHtml="",
                                 defaultOffseTop="",
                                 valueIndex=-1
-
                             for(var y=0;y<itemArr[x].length;y++)
                             {
                                 var cls="";
-                                if(typeof itemArr[x][y]==="string")
+                                if(typeof itemArr[x][y]==="string"||typeof itemArr[x][y]==="number")
                                 {
                                     //默认值视图
                                     if(valueArr)
                                     {
-                                        if(valueArr[x]===itemArr[x][y])
+                                        if(valueArr[x]===itemArr[x][y]+"")
                                         {
                                             cls="cui-picker-item-option-active";
                                             //默认值滑动高度
@@ -155,10 +273,11 @@
                                 }
                                 else
                                 {
+
                                     //默认值视图
                                     if(valueArr)
                                     {
-                                        if(valueArr[x]===itemArr[x][y].value)
+                                        if(valueArr[x]===itemArr[x][y].value+"")
                                         {
                                             cls="cui-picker-item-option-active";
                                             //默认值滑动高度
@@ -175,6 +294,7 @@
                             }
 
                             valueIndexArr.push(valueIndex);
+
 
 
                             itemHtml+=  '\t\t\t\t\t<div class="cui-picker-item-list">\n'+
@@ -207,8 +327,16 @@
                     {
                         console.log("缺少data或data格式错误")
                     }
-                }
             },
+            //input的点击事件
+            bindInputClicEvent=function()
+            {
+                domInput?domInput.addEventListener("click",function()
+                {
+                    that.showPicker();
+                }):"";
+            },
+            //picker内点击事件
             bindClickEvent=function()
             {
                 confirmBtnDom.addEventListener("click",function(e)
@@ -216,12 +344,25 @@
                     //获取选中的值
                     var res={
                         array:selectedValueArr,
-                        string:selectedValueArr.join(" "),
-                        object:{}
+                        string:handleFormatFromArr(selectedValueArr)
                     }
-
-                    that.defaults.selectOk(res)
+                    //点击确认之后的回调
+                    that.defaults.onOk.call(that,res);
+                    if(domInput)
+                    {
+                        if(domInput.tagName==='INPUT')
+                        {
+                            domInput.value=res.string
+                        }
+                    }
+                    that.hidePicker();
                 });
+                cancelBtnDom.addEventListener("click",function()
+                {
+                    that.hidePicker();
+                    that.defaults.onCancel();
+                });
+
             },
             //触控事件
             bindTouchEvent=function(index,dom)
@@ -234,14 +375,14 @@
                     itemsDomArr[index].timeInterval=setInterval(function(){
                         itemsDomArr[index].time++
                     },10)
-                })
+                });
                 dom.addEventListener("touchmove",function(e)
                 {
                     itemsDomArr[index].moveY=e.changedTouches[0].pageY-itemsDomArr[index].startY;
 
                     itemsDomArr[index].dom.style.webkitTransform="translateY("+parseInt(itemsDomArr[index].nowY+itemsDomArr[index].moveY)+"px)"
                     itemsDomArr[index].nowHelpY=parseInt(itemsDomArr[index].nowY+itemsDomArr[index].moveY)
-                })
+                });
                 dom.addEventListener("touchend",function(e)
                 {
                     clearInterval(itemsDomArr[index].timeInterval);
@@ -269,89 +410,164 @@
                         itemsDomArr[index].dom.style.webkitTransform="translateY("+parseInt(shouldY)+"px)";
                         //选择的高亮
                         that.removeClass(itemsDomArr[index].dom.children,"cui-picker-item-option-active");
-
                         that.addClass(itemsDomArr[index].dom.children[itemsDomArr[index].index],"cui-picker-item-option-active");
                         itemsDomArr[index].nowHelpY=shouldY;
-
                         //给要返回的结果数组赋值（已经选中的值）
                         itemsDomArr[index].value=selectedValueArr[index]=itemsDomArr[index].dom.children[itemsDomArr[index].index].dataset["value"];
 
                     }
                     itemsDomArr[index].moveY=0;
-                    console.log(selectedValueArr)
 
                 })
             },
             init=function()
             {
-                //获取目标
-                if(that.defaults.domStr)
+                if(that.defaults.inputDom)
                 {
-                    if(typeof that.defaults.domStr==="string")
+                    if(typeof that.defaults.inputDom==="string")
                     {
-                        domInput=document.querySelector(that.defaults.domStr);
+                        domInput=document.querySelector(that.defaults.inputDom);
                     }
-                    else if (typeof that.defaults.domStr==="object")//这里可能埋了个坑
+                    else if (typeof that.defaults.inputDom==="object"&&that.defaults.inputDom.tagName)//这里可能埋了个坑
                     {
-                        domInput=that.defaults.domStr;
+                        domInput=that.defaults.inputDom;
                     }
-                    //获取默认值
-                    if(that.defaults.value)
-                    {
-                        valueArr=that.defaults.value.trim().split(" ");
-                    }
-                    else if(domInput)
-                    {
+                }
 
-                        var inputvalue=domInput.value;
-
-                        valueArr=inputvalue?inputvalue.split(" "):null;
-                    }
-                    renderContent();
-                    var itemsContentDom=pickerDom.children[0].children[0].children[1].children;
-                    //获取初始top
-                    initTop=itemsContentDom[0].children[1].offsetTop;
-                    itemOptionHeight=itemsContentDom[0].children[0].children[0].offsetHeight;
-                    //获取item dom
-                    for(var j=0;j<itemsContentDom.length;j++)
-                    {
-                        itemsContentDom[j].children[0].style.top=initTop+"px";
-                        var value=valueArr?valueArr[j]:itemsContentDom[j].children[0].children[0].dataset['value'];
-                        //给要返回的结果数组赋值（已经选中的值）
-                        selectedValueArr[j]=value;
-                        itemsDomArr.push(
-                            {
-                                dom:itemsContentDom[j].children[0],
-                                startY:0,
-                                moveY:0,
-                                nowY:0,
-                                selectedTop:initTop,
-                                speed:0,
-                                time:0,
-                                timeInterval:null,
-                                direction:0,
-                                nowHelpY:valueIndexArr[j]!==-1?parseInt("-"+valueIndexArr[j])*50:0,
-                                index:0,
-                                value:value
-                            });
-                        bindTouchEvent(j,itemsContentDom[j]);
-                    }
-
-
-                    //获取确认按钮
-                    var headerDom=pickerDom.children[0].children[0].children[0];
-                    confirmBtnDom=headerDom.children[2];
-                    //获取取消按钮
-                    cancelBtnDom=headerDom.children[0];
-                    bindClickEvent();
+                bindInputClicEvent();
+                //that.showPicker();
+            },
+            //（从字符串里面）处理默认值的格式
+            handleFormat=function(v)
+            {
+              var separateArr=that.defaults.separate,
+                  value=v;
+              if(separateArr&&separateArr instanceof Array&&separateArr.length)
+              {
+                  separateArr.map(function(item){
+                      value=value.replace(item," ")
+                  })
+              }
+              return value;
+            },
+            //（从数组里面）处理默认值的格式
+            handleFormatFromArr=function(vArr)
+            {
+                var separateArr=that.defaults.separate,
+                    valueArr=vArr,
+                    result="";
+                if(separateArr&&separateArr instanceof Array&&separateArr.length)
+                {
+                    valueArr.map(function(item,index){
+                        var sep="";
+                        if(separateArr[index])
+                        {
+                            sep=separateArr[index];
+                        }
+                        else
+                        {
+                            sep=" ";
+                        }
+                        result+=item+sep;
+                    })
                 }
                 else
                 {
-                    console.log("缺少参数");
+                    result=valueArr.join(" ")
+                }
+                return result.trim();
+            },
+            getDefault=function()
+            {
+                if(that.defaults.type||!(that.defaults.separate instanceof Array)||!that.defaults.separate.length)
+                {
+                    switch (that.defaults.type)
+                    {
+                        case "date":that.defaults.separate=["-","-"];break;
+                        case "datetime":that.defaults.separate=["-","-"," ",":"];break;
+                        case "time":that.defaults.separate=[":"];break;
+                    }
+                }
+                //获取默认值
+                if(that.defaults.value)
+                {
+                    valueArr=handleFormat(that.defaults.value.trim()).trim().split(" ");
+                }
+                else if(domInput)
+                {
+                    var inputvalue=handleFormat(domInput.value.trim());
+                    valueArr=inputvalue?inputvalue.split(" "):null;
                 }
             };
+        //显示picker
+        that.showPicker=function(newParam)
+        {
 
-            init();
+            if(!pickerDom)
+            {
+                getDefault();
+                //新赋值
+                newParam?that.extend(that.defaults,newParam):"";
+                renderContent();
+                var itemsContentDom=pickerDom.children[0].children[0].children[1].children;
+                //获取初始top
+                initTop=itemsContentDom[0].children[1].offsetTop;
+                itemOptionHeight=itemsContentDom[0].children[0].children[0].offsetHeight;
+                //获取item dom
+                for(var j=0;j<itemsContentDom.length;j++)
+                {
+                    itemsContentDom[j].children[0].style.top=initTop+"px";
+                    var value=valueArr?valueArr[j]:itemsContentDom[j].children[0].children[0].dataset['value'];
+                    //给要返回的结果数组赋值（已经选中的值）
+                    selectedValueArr[j]=value;
+                    itemsDomArr.push(
+                        {
+                            dom:itemsContentDom[j].children[0],
+                            startY:0,
+                            moveY:0,
+                            nowY:0,
+                            selectedTop:initTop,
+                            speed:0,
+                            time:0,
+                            timeInterval:null,
+                            direction:0,
+                            nowHelpY:valueIndexArr[j]!==-1?parseInt("-"+valueIndexArr[j])*50:0,
+                            index:0,
+                            value:value
+                        });
+                    bindTouchEvent(j,itemsContentDom[j]);
+                }
+
+
+                //获取确认按钮
+                var headerDom=pickerDom.children[0].children[0].children[0];
+                confirmBtnDom=headerDom.children[2];
+                //获取取消按钮
+                cancelBtnDom=headerDom.children[0];
+                bindClickEvent();
+
+                //展示动画
+                setTimeout(function(){
+                    that.addClass(pickerDom,"cui-picker-active");
+                },0)
+                //展示后的回调
+                that.defaults.onShow.call(that);
+            }
+        }
+
+        //隐藏picker
+        that.hidePicker=function()
+        {
+            that.removeClass(pickerDom,"cui-picker-active");
+            setTimeout(function(){
+                //销毁
+                pickerDom.remove();
+                pickerDom=null;
+                itemsDomArr=[];
+            },600)
+        };
+
+        init();
 
 
     };
