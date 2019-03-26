@@ -70,7 +70,19 @@
 	//绑定input
 	var picker=new cuiPicker({
 								inputDom:document.getElementById("test"),
-								data:[["iphoneX","ipone8","小米9"],["高通","mtk","德州"]]
+								data:[
+										[
+												{name:"广东",value:"广东",id:"1"}
+										],
+										[
+												{name:"广州",value:"广州",id:"2"},
+												{name:"茂名",value:"茂名",id:"2"},
+												{name:"中山",value:"中山",id:"3"},
+												{name:"深圳",value:"深圳",id:"4"},
+												{name:"珠海",value:"珠海",id:"5"},
+												{name:"江门",value:"江门",id:"6"}
+										]
+									 ]
 
 	})
 	//没有绑定input
