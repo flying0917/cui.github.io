@@ -13,7 +13,8 @@
             selectedValueArr=[],//已经选择的值
             itemsDomArr=[],//选择列表数组
             confirmBtnDom=null,//确认按钮
-            cancelBtnDom=null;//取消按钮
+            cancelBtnDom=null,//取消按钮
+            nowDayCount=31;
 
         /*默认值*/
         that.defaults=
@@ -53,15 +54,20 @@
                        ]
                 ],
                 separate:[],//分隔字符 其的长度等于（列数-1）
-                onOk:function(selected)
+                onOk:function(selected)//点击确认回调事件
                 {
                     //console.log(selected)
                 },
-                onShow:function()
+                onShow:function()//当展示picker时回调事件
                 {
 
                 },
-                onCancel:function(){
+                onCancel:function()//当点击取消时回调事件
+                {
+
+                },
+                changeCol:function(colIndex,data)//当改变其中一列时 colIndex 为目前在选的列  data 为目前选中的行数据
+                {
 
                 }
         };
@@ -129,6 +135,54 @@
                 }
                 return resultY
             },
+            //选择月份时更新对应的日
+            handleUpdateDayForMonth=function()
+            {
+                that.defaults.changeCol=function(colIndex,data)
+                {
+                    if(colIndex===1)
+                    {
+                        var d=new Date(selectedValueArr[0],data,0).getDate(),
+                            dayItemDom=itemsDomArr[colIndex+1];
+
+                            console.log(dayItemDom)
+
+                        if(d!==nowDayCount)
+                        {
+                            if(d>nowDayCount)
+                            {
+
+                                var temHtml="";
+                                for(var x=1;x<=d-nowDayCount;x++)
+                                {
+                                   temHtml+='<div class="cui-picker-item-option">'+(nowDayCount+x)+'</div>'
+                                }
+                                var nowHtml=dayItemDom.dom.innerHTML;
+                                //添加日
+                                dayItemDom.dom.innerHTML=nowHtml+temHtml;
+                            }
+                            else
+                            {
+
+                                var offsetCount=nowDayCount-d;
+                                //减少日
+                                for(var y=1;y<=offsetCount;y++)
+                                {
+                                    dayItemDom.dom.children[nowDayCount-y].remove();
+                                }
+                                console.log(dayItemDom.nowHelpY)
+
+                                dayItemDom.nowHelpY=0;
+                                dayItemDom.dom.style.webkitTransform='translateY('+dayItemDom.nowHelpY+'px)'
+
+                            }
+                            nowDayCount=d;
+                        }
+
+
+                    }
+                }
+            },
             //处理日期的数据(2018-3-5)
             handleDateData=function()
             {
@@ -152,7 +206,7 @@
                         var monthItemData=[];
                         for(var monthItem=1;monthItem<13;monthItem++)
                         {
-                            monthItem=monthItem<10?"0"+monthItem:monthItem;
+                            monthItem=monthItem<10?"0"+monthItem:monthItem+"";
                             monthItemData.push(monthItem)
                         }
                     }
@@ -160,7 +214,7 @@
                     if(dateItem===2)
                     {
                         var dayItemData=[];
-                        for(var dayItem=1;dayItem<29;dayItem++)
+                        for(var dayItem=1;dayItem<=nowDayCount;dayItem++)
                         {
                             dayItem=dayItem<10?"0"+dayItem:dayItem;
                             dayItemData.push(dayItem)
@@ -170,6 +224,7 @@
                 datedata.push(yearItemData)
                 datedata.push(monthItemData)
                 datedata.push(dayItemData)
+                handleUpdateDayForMonth();
                 return datedata;
             },
             //处理时间的数据（19:39）
@@ -180,14 +235,14 @@
                 {
                     //时
                     var houseItemData=[];
-                    for(var houseItem=1;houseItem<=24;houseItem++)
+                    for(var houseItem=0;houseItem<=23;houseItem++)
                     {
                         houseItem=houseItem<10?"0"+houseItem:houseItem;
                         houseItemData.push(houseItem);
                     }
                     //分
                     var mintuesItemData=[];
-                    for(var mintuesItem=0;mintuesItem<=60;mintuesItem++)
+                    for(var mintuesItem=0;mintuesItem<=59;mintuesItem++)
                     {
                         mintuesItem=mintuesItem<10?"0"+mintuesItem:mintuesItem;
                         mintuesItemData.push(mintuesItem);
@@ -206,6 +261,7 @@
             //处理日期时间的数据（2018-3-5 19:39）
             handleDateTimeData=function()
             {
+                handleUpdateDayForMonth()
                 return handleDateData().concat(handleTimeData())
             },
 
@@ -359,6 +415,8 @@
                 });
                 cancelBtnDom.addEventListener("click",function()
                 {
+                    valueIndexArr=[];
+                    selectedValueArr=[];
                     that.hidePicker();
                     that.defaults.onCancel();
                 });
@@ -415,6 +473,9 @@
                         itemsDomArr[index].nowHelpY=shouldY;
                         //给要返回的结果数组赋值（已经选中的值）
                         itemsDomArr[index].value=selectedValueArr[index]=itemsDomArr[index].dom.children[itemsDomArr[index].index].dataset["value"];
+                        //调用列改变时api
+                        that.defaults.changeCol.call(that,index,that.defaults.data[index][itemsDomArr[index].index])
+
 
                     }
                     itemsDomArr[index].moveY=0;
