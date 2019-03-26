@@ -3,7 +3,7 @@
  * 创建于
  * created by flying0917
  **/
-var place=[
+var cuiPlace=[
     {
         "name": "北京市",
         "city": [

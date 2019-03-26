@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/js/place.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course/picker.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/picker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cui-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/place.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/place.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +33,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/picker.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="58" />
+                <state relative-caret-position="281">
+                  <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -46,8 +45,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/place.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5706">
-                  <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+                <state relative-caret-position="227">
+                  <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -55,7 +54,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
+                <state relative-caret-position="-1822">
                   <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
                 </state>
               </provider>
@@ -64,9 +63,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="429">
-                  <caret line="174" column="54" selection-start-line="174" selection-start-column="54" selection-end-line="174" selection-end-column="54" />
+                <state relative-caret-position="145">
+                  <caret line="283" column="65" lean-forward="true" selection-start-line="283" selection-start-column="65" selection-end-line="283" selection-end-column="65" />
                   <folding>
+                    <element signature="e#496#2673#0" />
+                    <element signature="e#6070#6968#0" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
@@ -171,8 +172,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fonts/new_icon/iconfont.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+                <state relative-caret-position="360">
+                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
                   <folding>
                     <element signature="e#185#12891#1" expanded="true" />
                   </folding>
@@ -216,9 +217,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
-      <find>textarea</find>
-      <find>text</find>
       <find>style</find>
       <find>offsetWidth</find>
       <find>cui-input</find>
@@ -238,14 +236,17 @@
       <find>onOk</find>
       <find>alert</find>
       <find>-1</find>
-      <find>valueIndexArr</find>
       <find>inputDom</find>
       <find>domInput</find>
       <find>handleFormat</find>
-      <find>console.log</find>
       <find>tagName</find>
-      <find>click</find>
       <find>changeCol</find>
+      <find>click</find>
+      <find>selectedValueArr</find>
+      <find>valueIndexArr</find>
+      <find>place</find>
+      <find>console.log</find>
+      <find>handlePlaceData</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -431,12 +432,12 @@
       <workItem from="1553233758277" duration="1526000" />
       <workItem from="1553308023365" duration="33194000" />
       <workItem from="1553484510484" duration="26541000" />
-      <workItem from="1553576713053" duration="9532000" />
+      <workItem from="1553576713053" duration="20484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274990000" />
+    <option name="totallyTimeSpent" value="285942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="23" width="1400" height="774" extended-state="0" />
@@ -665,45 +666,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/new_icon/iconfont.css">
+    <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="e#185#12891#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/place.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5706">
-          <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+        <state relative-caret-position="-1822">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course/picker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="58" />
+        <state relative-caret-position="281">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
+    <entry file="file://$PROJECT_DIR$/js/place.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        <state relative-caret-position="227">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/new_icon/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#185#12891#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="174" column="54" selection-start-line="174" selection-start-column="54" selection-end-line="174" selection-end-column="54" />
+        <state relative-caret-position="145">
+          <caret line="283" column="65" lean-forward="true" selection-start-line="283" selection-start-column="65" selection-end-line="283" selection-end-column="65" />
           <folding>
+            <element signature="e#496#2673#0" />
+            <element signature="e#6070#6968#0" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>

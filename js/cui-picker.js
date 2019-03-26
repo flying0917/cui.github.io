@@ -145,7 +145,7 @@
                         var d=new Date(selectedValueArr[0],data,0).getDate(),
                             dayItemDom=itemsDomArr[colIndex+1];
 
-                            console.log(dayItemDom)
+
 
                         if(d!==nowDayCount)
                         {
@@ -155,7 +155,8 @@
                                 var temHtml="";
                                 for(var x=1;x<=d-nowDayCount;x++)
                                 {
-                                   temHtml+='<div class="cui-picker-item-option">'+(nowDayCount+x)+'</div>'
+                                    var resultNowDayCount=nowDayCount+x;
+                                   temHtml+='<div class="cui-picker-item-option" data-value="'+resultNowDayCount+'">'+resultNowDayCount+'</div>'
                                 }
                                 var nowHtml=dayItemDom.dom.innerHTML;
                                 //添加日
@@ -170,7 +171,7 @@
                                 {
                                     dayItemDom.dom.children[nowDayCount-y].remove();
                                 }
-                                console.log(dayItemDom.nowHelpY)
+
 
                                 dayItemDom.nowHelpY=0;
                                 dayItemDom.dom.style.webkitTransform='translateY('+dayItemDom.nowHelpY+'px)'
@@ -257,6 +258,74 @@
             handlePlaceData=function()
             {
 
+                that.defaults.changeCol=function(colIndex,data)
+                {
+                    if(colIndex===0)
+                    {
+                        var city=that.defaults.data[colIndex][valueIndexArr[colIndex]].city;
+
+                        if(city)
+                        {
+                            var temHtml="";
+                            for(var cityItem=0;cityItem<city.length;cityItem++)
+                            {
+                                temHtml+='<div class="cui-picker-item-option" data-value="'+city[cityItem].name+'">'+city[cityItem].name+'</div>'
+                            }
+                            itemsDomArr[colIndex+1].dom.innerHTML=temHtml;
+                            itemsDomArr[colIndex+1].nowHelpY=0;
+                            itemsDomArr[colIndex+1].dom.style.webkitTransform='translateY('+itemsDomArr[colIndex+1].nowHelpY+'px)'
+                        }
+                        valueIndexArr[1]=valueIndexArr[2]=-1;
+                        valueArr&&valueArr.length>=3?valueArr[1]="":"";
+                        valueArr&&valueArr.length>=3?valueArr[2]="":"";
+                        //清空县数据
+
+
+                        itemsDomArr[colIndex+2].dom.innerHTML="";
+                    }
+
+                    if(colIndex===1)
+                    {
+
+                        var area=that.defaults.data[colIndex-1][valueIndexArr[colIndex-1]].city[valueIndexArr[colIndex]].area;
+
+
+                        if(area)
+                        {
+                            var areatemHtml="";
+                            for(var areaItem=0;areaItem<area.length;areaItem++)
+                            {
+                                areatemHtml+='<div class="cui-picker-item-option" data-value="'+area[areaItem]+'">'+area[areaItem]+'</div>'
+                            }
+                            itemsDomArr[colIndex+1].dom.innerHTML=areatemHtml;
+                        }
+                        else
+                        {
+                            itemsDomArr[colIndex+1].dom.innerHTML="";
+                        }
+                        itemsDomArr[colIndex+1].nowHelpY=0;
+                        itemsDomArr[colIndex+1].dom.style.webkitTransform='translateY('+itemsDomArr[colIndex+1].nowHelpY+'px)'
+                        valueIndexArr[2]=-1;
+                        valueArr&&valueArr.length>=3?valueArr[2]="":"";
+                    }
+
+                }
+                //市
+                var defaultCityData=[],//根据已经选中的省 更新市
+                    defaultAreaData=[];//根据已经选中的市 更新县
+
+
+                if(valueIndexArr.length&&valueIndexArr[0]!==-1)
+                {
+                    defaultCityData=that.defaults.data[0][valueIndexArr[0]].city
+                }
+                if(valueIndexArr.length&&valueIndexArr[0]!==-1&&valueIndexArr[1]!==-1)
+                {
+                    defaultAreaData=that.defaults.data[0][valueIndexArr[0]].city[valueIndexArr[1]].area
+                }
+
+                that.defaults.data= [cuiPlace,defaultCityData,defaultAreaData]
+
             },
             //处理日期时间的数据（2018-3-5 19:39）
             handleDateTimeData=function()
@@ -275,7 +344,7 @@
                     switch(type)
                     {
                         case 'date':that.defaults.data=handleDateData();break;
-                        case 'place':that.defaults.data=handlePlaceData();break;
+                        case 'place':handlePlaceData();break;
                         case 'datetime':that.defaults.data=handleDateTimeData();break;
                         case 'time':that.defaults.data=handleTimeData();break;
                     }
@@ -304,7 +373,7 @@
                         {
                             var optionHtml="",
                                 defaultOffseTop="",
-                                valueIndex=-1
+                                valueIndex=-1;
                             for(var y=0;y<itemArr[x].length;y++)
                             {
                                 var cls="";
@@ -329,11 +398,15 @@
                                 }
                                 else
                                 {
+                                    var showValue="";
+                                    showValue=itemArr[x][y].value?itemArr[x][y].value:itemArr[x][y].name;
+
 
                                     //默认值视图
                                     if(valueArr)
                                     {
-                                        if(valueArr[x]===itemArr[x][y].value+"")
+
+                                        if(valueArr[x]===showValue+"")
                                         {
                                             cls="cui-picker-item-option-active";
                                             //默认值滑动高度
@@ -345,7 +418,7 @@
 
                                     }
 
-                                    optionHtml+='<div  class="cui-picker-item-option '+cls+'" data-value="'+itemArr[x][y].value+'">'+itemArr[x][y].name+'</div>'
+                                    optionHtml+='<div  class="cui-picker-item-option '+cls+'" data-value="'+showValue+'">'+itemArr[x][y].name+'</div>'
                                 }
                             }
 
@@ -402,6 +475,7 @@
                         array:selectedValueArr,
                         string:handleFormatFromArr(selectedValueArr)
                     }
+
                     //点击确认之后的回调
                     that.defaults.onOk.call(that,res);
                     if(domInput)
@@ -471,11 +545,11 @@
                         that.removeClass(itemsDomArr[index].dom.children,"cui-picker-item-option-active");
                         that.addClass(itemsDomArr[index].dom.children[itemsDomArr[index].index],"cui-picker-item-option-active");
                         itemsDomArr[index].nowHelpY=shouldY;
+                        valueIndexArr[index]=itemsDomArr[index].index;
                         //给要返回的结果数组赋值（已经选中的值）
                         itemsDomArr[index].value=selectedValueArr[index]=itemsDomArr[index].dom.children[itemsDomArr[index].index].dataset["value"];
                         //调用列改变时api
                         that.defaults.changeCol.call(that,index,that.defaults.data[index][itemsDomArr[index].index])
-
 
                     }
                     itemsDomArr[index].moveY=0;
@@ -586,8 +660,10 @@
                 for(var j=0;j<itemsContentDom.length;j++)
                 {
                     itemsContentDom[j].children[0].style.top=initTop+"px";
-                    var value=valueArr?valueArr[j]:itemsContentDom[j].children[0].children[0].dataset['value'];
+
+                    var value=valueArr?valueArr[j]:(itemsContentDom[j].children[0].children[0]?itemsContentDom[j].children[0].children[0].dataset['value']:"");
                     //给要返回的结果数组赋值（已经选中的值）
+
                     selectedValueArr[j]=value;
                     itemsDomArr.push(
                         {

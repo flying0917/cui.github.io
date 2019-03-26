@@ -23,6 +23,11 @@
 			<div class="label">日期</div>
 			<input placeholder="请选择时间" value="" id="date">
 		</a>
+
+		<a  href="javascript:void(0);" class="cui-input cui-input-link">
+			<div class="label">地区</div>
+			<input placeholder="请选择地区" value="" id="place">
+		</a>
 	</form>
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPicker()">点击显示picker</div>
 </div>
@@ -65,6 +70,7 @@
 </div>-->
 
 </body>
+<script src="../js/place.js"></script>
 <script src="../js/cui-picker.js"></script>
 <script>
 	//绑定input
@@ -92,16 +98,24 @@
 	{
 		picker1.showPicker();
 	}
+	//时间
 
 	var picker2=new cuiPicker({
 				type:"time",
 				inputDom:document.getElementById("time")
 	})
 
-	//绑定input
+	//日期时间
 	var picker3=new cuiPicker({
 		inputDom:document.getElementById("date"),
 		type:"datetime"
+
+	})
+
+	//地点
+	var p=new cuiPicker({
+		inputDom:document.getElementById("place"),
+		type:"place"
 
 	})
 </script>
