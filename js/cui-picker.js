@@ -1,4 +1,4 @@
-//validate表单验证插件
+//picker插件(时间/地点/自定义)
 (function(){
     "use strict";
     var cuiPicker=function(param,fn)
@@ -25,34 +25,7 @@
                 maxyear:2019,//当type不为空和等于date dateTime时有用
                 minyear:1989,//当type不为空和等于date dateTime时有用
                 title:"请选择",
-                data:[[
-
-                            {name:"iphone3",value:"1"},
-                            {name:"iphone4",value:"2"},
-                            {name:"iphone5",value:"3"}
-                       ],
-                       [
-                           {name:"高通",value:"1",children:[
-                                                                {name:"高通800"},
-                                                                {name:"高通810"},
-                                                                {name:"高通820"},
-                                                                {name:"高通835"},
-                                                                {name:"高通845"}
-                                                           ]},
-                           {name:"苹果",value:"2",children:[
-                                                               {name:"a8"},
-                                                               {name:"a9"},
-                                                               {name:"a10"},
-                                                               {name:"a11"},
-                                                               {name:"a12"}
-                                                           ]},
-                           {name:"德州",value:"3"}
-                       ],
-                       [
-                           "324",
-                           "234"
-                       ]
-                ],
+                data:[],
                 separate:[],//分隔字符 其的长度等于（列数-1）
                 onOk:function(selected)//点击确认回调事件
                 {
