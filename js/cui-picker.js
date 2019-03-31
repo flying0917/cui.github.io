@@ -20,12 +20,12 @@
         that.defaults=
         {
                 inputDom:null,//容器
-                type:"",//类型
+                type:"",//类型 date（日期) datetime(日期时间) time(时间) place(地点)
                 value:"",//默认值
                 maxyear:2019,//当type不为空和等于date dateTime时有用
                 minyear:1989,//当type不为空和等于date dateTime时有用
                 title:"请选择",
-                data:[],
+                data:[["缺少data"]],
                 separate:[],//分隔字符 其的长度等于（列数-1）
                 onOk:function(selected)//点击确认回调事件
                 {

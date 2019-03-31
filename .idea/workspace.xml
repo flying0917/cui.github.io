@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/course/timetree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course/picker.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/picker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cui.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cui.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cui-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-picker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,14 +29,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8276182">
+    <splitter split-orientation="horizontal" split-proportion="0.43932268">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/picker.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-643">
-                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="1140">
+                  <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -42,11 +44,17 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/place.js">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/course/timetree.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+                <state relative-caret-position="301">
+                  <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -63,11 +71,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="23">
-                  <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="315">
+                  <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -149,11 +154,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27525">
-                  <caret line="1835" column="17" selection-start-line="1835" selection-start-column="17" selection-end-line="1835" selection-end-column="17" />
+                <state relative-caret-position="398">
+                  <caret line="2177" column="56" selection-start-line="2177" selection-start-column="56" selection-end-line="2177" selection-end-column="56" />
                 </state>
               </provider>
             </entry>
@@ -161,17 +166,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fonts/new_icon/iconfont.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="40" selection-start-line="40" selection-end-line="40" />
+                <state relative-caret-position="31">
+                  <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
                   <folding>
                     <element signature="e#185#12891#1" expanded="true" />
                   </folding>
@@ -215,7 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>style</find>
       <find>offsetWidth</find>
       <find>cui-input</find>
       <find>that.defaults.width</find>
@@ -245,6 +249,7 @@
       <find>place</find>
       <find>console.log</find>
       <find>handlePlaceData</find>
+      <find>cui-icon-success</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -277,11 +282,12 @@
         <option value="$PROJECT_DIR$/course/card.html" />
         <option value="$PROJECT_DIR$/course/swiper.html" />
         <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/place.js" />
         <option value="$PROJECT_DIR$/js/cui-picker.js" />
         <option value="$PROJECT_DIR$/course/picker.html" />
+        <option value="$PROJECT_DIR$/course/timetree.html" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
       </list>
     </option>
   </component>
@@ -296,7 +302,7 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
+    <option name="x" value="11" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="774" />
@@ -326,6 +332,17 @@
             <path>
               <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="cui.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="new_icon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,6 +366,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/course" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="C:\Users\Administrator\Desktop\cui\fonts\new_icon" />
       <recent name="D:\phpStudy\WWW\my-ui\course" />
@@ -367,8 +385,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.picker.html">
-    <configuration name="demo_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui/fonts/demo_index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.demo_index.html (1)">
+    <configuration name="demo_index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/fonts/new_icon/demo_index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/index.html" useBuiltInWebServerPort="true">
@@ -380,12 +398,16 @@
     <configuration name="raido_checkbox.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui/course/raido_checkbox.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="timetree.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/course/timetree.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.demo_index.html (1)" />
+        <item itemvalue="JavaScript Debug.timetree.html" />
         <item itemvalue="JavaScript Debug.picker.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.raido_checkbox.html" />
-        <item itemvalue="JavaScript Debug.demo_index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -432,17 +454,20 @@
       <workItem from="1553484510484" duration="26541000" />
       <workItem from="1553576713053" duration="20862000" />
       <workItem from="1553650283626" duration="3732000" />
+      <workItem from="1553756686231" duration="1087000" />
+      <workItem from="1553842259272" duration="7529000" />
+      <workItem from="1553997887261" duration="6389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290052000" />
+    <option name="totallyTimeSpent" value="305057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="23" width="1400" height="774" extended-state="0" />
+    <frame x="11" y="23" width="1400" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20839469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21723123" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -580,10 +605,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/course/picker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-validate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -648,20 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27525">
-          <caret line="1835" column="17" selection-start-line="1835" selection-start-column="17" selection-end-line="1835" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fonts/demo_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -679,33 +707,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
+    <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fonts/new_icon/iconfont.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="31">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding>
             <element signature="e#185#12891#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/picker.html">
+    <entry file="file://$PROJECT_DIR$/course/timetree.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-643">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="301">
+          <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="2177" column="56" selection-start-line="2177" selection-start-column="56" selection-end-line="2177" selection-end-column="56" />
         </state>
       </provider>
     </entry>
