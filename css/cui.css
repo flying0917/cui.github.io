@@ -1976,4 +1976,210 @@ body,html
 {
     color:#2a70d0;
 }
+/*时间树*/
+.cui-tree
+{
+    background-color:white;
+    padding:.5rem
+}
+.cui-tree .cui-tree-item
+{
+    min-width:5rem;
+    min-height:3rem;
+    position:relative;
+}
 
+.cui-tree-item .cui-tree-icon
+{
+    height:100%;
+    width:.4rem;
+    position:absolute;
+    top:.3rem;
+    text-align: center;
+
+}
+
+.cui-tree-item .cui-tree-icon:after
+{
+    content:"";
+    display:block;
+    width:.4rem;
+    height:.4rem;
+    background-color:#e6e6e6;
+    border-radius:50%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.cui-tree-item-dot-warning:after
+{
+    background-color: #dfa670 !important;
+}
+.cui-tree-item-dot-danger:after
+{
+    background-color: #FF1744 !important;
+}
+
+.cui-tree-item-dot-active:after
+{
+    background-color:#81C784 !important;
+}
+
+.cui-tree-item .cui-tree-icon:before
+{
+    content:"";
+    width:.1rem;
+    height:100%;
+    background-color:#e6e6e6;
+    display:inline-block;
+}
+.cui-tree-item-line-warning:before
+{
+    background-color:#fdc07c !important;
+}
+.cui-tree-item-line-danger:before
+{
+    background-color:#FF1744 !important;
+}
+.cui-tree-item-line-active:before
+{
+    background-color:#81C784 !important;
+}
+
+.cui-tree-item .cui-tree-detail
+{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    padding:0 0 .5rem 1rem;
+    float:left;
+}
+.cui-tree-item:after,.cui-tree-item:before
+{
+    content:"";
+    clear:both;
+    display:block;
+
+}
+
+.cui-tree-item:last-child .cui-tree-icon:before
+{
+    display:none;
+}
+/*时间树带图标*/
+.cui-tree .cui-iconfont
+{
+    width:1rem;
+    height:1rem;
+    position:absolute;
+    top:-0.3rem;
+    left:-0.3rem;
+    background-color:white;
+    z-index: 2;
+    font-size:1rem;
+}
+.cui-tree-item-dot-active .cui-iconfont
+{
+    color:#81C784 !important;
+}
+.cui-tree-item-dot-warning .cui-iconfont
+{
+    color:#fdc07c !important;
+}
+.cui-tree-item-dot-danger .cui-iconfont
+{
+    color:#FF1744 !important;
+}
+.cui-tree .cui-iconfont:before
+{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    line-height: 1rem;
+}
+/*时间树（带序号）*/
+.cui-tree .cui-tree-item-num
+{
+    font-size:.6rem;
+    width:.8rem;
+    height:.8rem;
+    position:absolute;
+    top:0;
+    left:-0.2rem;
+    background-color:#e6e6e6;
+    z-index:2;
+    border-radius:50%;
+    color:grey;
+    line-height: .8rem;
+}
+
+.cui-tree-item-dot-active .cui-tree-item-num
+{
+    color:white;
+    background-color:#81C784;
+}
+.cui-tree-item-dot-warning .cui-tree-item-num
+{
+    color:white;
+    background-color:#fdc07c;
+}
+.cui-tree-item-dot-danger .cui-tree-item-num
+{
+    color:white;
+    background-color:#FF1744;
+}
+
+/*时间树（横）*/
+.cui-tree-h
+{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+}
+.cui-tree-h .cui-tree-item
+{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+}
+.cui-tree-h .cui-tree-item .cui-tree-icon
+{
+    width:100%;
+    height:.4rem;
+}
+.cui-tree-h .cui-tree-item .cui-tree-icon:before
+{
+    width:100%;
+    height:.1rem;
+    position:absolute;
+    top:0;
+    right:0;
+    left:50%;
+    bottom:0;
+    margin:auto;
+}
+.cui-tree-h .cui-tree-item .cui-tree-icon:after
+{
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+}
+.cui-tree-h .cui-tree-item .cui-tree-detail
+{
+    padding:1rem 1rem .5rem 1rem;
+    text-align: center;
+}
+.cui-tree-h .cui-iconfont,.cui-tree-h .cui-tree-item-num
+{
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+}
