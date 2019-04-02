@@ -16,8 +16,8 @@
             placeholder:"",
             styleType:"",//三星样式 anycall
             duration:1000,
-            onSuccess:function()
-            {}
+            onSuccess:function(){},
+            onCancel:function(){}
         };
         //删除类的公用函数
         that.removeClass=function(dom,clsName)
