@@ -13,6 +13,7 @@
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showConfirm()">confirm</div>
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPrompt()">prompt</div>
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showToast()">toast</div>
+	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAnyCall()">三星样式</div>
 </div>
 
 <script src="../js/cui-dialog.js"></script>
@@ -39,13 +40,13 @@
 	}
 	//prompt
 	var prompt=new cuiDialog({
-		title:"I am title",
+		title:"请输入",
 		type:"prompt",
-		msg:"I am superman",
+		msg:"",
 		placeholder:"plase insert username",
 		onSuccess:function(result)
 		{
-			alert.show({msg:result,title:"您输入的是",})
+			alert.show({msg:result,title:"您输入的是"})
 		}
 	})
 	function showPrompt()
@@ -62,6 +63,19 @@
 	function showToast()
 	{
 		toast.show();
+	}
+	//其他样式
+	var anycall=new cuiDialog({
+		type:"alert",
+		msg:"登陆失败",
+		styleType:"anycall",
+		onSuccess:function()
+		{
+		}
+	})
+	function showAnyCall()
+	{
+		anycall.show();
 	}
 </script>
 </body>

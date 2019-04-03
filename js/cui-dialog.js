@@ -10,8 +10,8 @@
         /*默认值*/
         that.defaults=
         {
-            title:"标题",
-            msg:"你确定要关闭么？",
+            title:"",
+            msg:"",
             type:"confrim", //类型 confirm 确认  ，alert
             placeholder:"",
             styleType:"",//三星样式 anycall
@@ -165,7 +165,6 @@
                 contentDom.addEventListener("click",function(e)
                 {
                     var targetCls=e.target.className;
-                    console.log(targetCls)
                     switch(targetCls)
                     {
                         case "cui-dialog-btn-item cui-dialog-cancel":onCancel();break;
