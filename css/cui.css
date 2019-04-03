@@ -2192,6 +2192,7 @@ body,html
     top:0;
     left:0;
     z-index:2;
+    overflow:hidden;
 }
 .cui-dialog .cui-dialog-shelter
 {
@@ -2281,16 +2282,16 @@ body,html
     transform:translate(-50%,-50%) scale(1.5);
 
     width:80%;
-    min-height:5rem;
+    min-height:4rem;
     padding:.5rem;
     background-color:white;
     border-radius:.5rem;
     opacity:0;
-    -webkit-transition: all .7s;
-    -moz-transition: all .7s;
-    -ms-transition: all .7s;
-    -o-transition: all .7s;
-    transition: all .7s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 .cui-dialog.cui-dialog-active .cui-dialog-shelter
 {

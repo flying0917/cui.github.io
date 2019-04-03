@@ -199,9 +199,11 @@
             setTimeout(function()
             {
                 contentDom.remove();
-                contentDom=null;
-                isMove=false;
-            },750)
+                setTimeout(function(){
+                    contentDom=null;
+                    isMove=false;
+                },100)
+            },550)
         }
     };
     window.cuiDialog=cuiDialog;

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5485d17f-d6cd-411a-b79f-e34bab3989e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/dialog.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/dialog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cui.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cui.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/cui-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-dialog.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +26,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.805026">
+    <splitter split-orientation="horizontal" split-proportion="0.55864465">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -88,8 +87,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/cui-dialog.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="166" column="53" selection-start-line="166" selection-start-column="53" selection-end-line="166" selection-end-column="53" />
+                <state relative-caret-position="442">
+                  <caret line="203" column="33" selection-start-line="203" selection-start-column="33" selection-end-line="203" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -140,8 +139,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="417">
-                  <caret line="2232" column="10" selection-start-line="2232" selection-start-column="10" selection-end-line="2232" selection-end-column="10" />
+                <state relative-caret-position="376">
+                  <caret line="2281" column="19" lean-forward="true" selection-start-line="2281" selection-start-column="19" selection-end-line="2281" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -203,7 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>offsetWidth</find>
       <find>cui-input</find>
       <find>that.defaults.width</find>
       <find>parentDom</find>
@@ -233,6 +231,7 @@
       <find>console.log</find>
       <find>handlePlaceData</find>
       <find>cui-icon-success</find>
+      <find>setTim</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -272,9 +271,9 @@
         <option value="$PROJECT_DIR$/course/grid.html" />
         <option value="$PROJECT_DIR$/course/button.html" />
         <option value="$PROJECT_DIR$/course/picker.html" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/course/dialog.html" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-dialog.js" />
       </list>
     </option>
@@ -447,12 +446,12 @@
       <workItem from="1553997887261" duration="9602000" />
       <workItem from="1554090854182" duration="4940000" />
       <workItem from="1554184608990" duration="18504000" />
-      <workItem from="1554267557526" duration="304000" />
+      <workItem from="1554267557526" duration="905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332018000" />
+    <option name="totallyTimeSpent" value="332619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="23" width="1398" height="774" extended-state="0" />
@@ -729,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="2232" column="10" selection-start-line="2232" selection-start-column="10" selection-end-line="2232" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -783,10 +775,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="2281" column="19" lean-forward="true" selection-start-line="2281" selection-start-column="19" selection-end-line="2281" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="166" column="53" selection-start-line="166" selection-start-column="53" selection-end-line="166" selection-end-column="53" />
+        <state relative-caret-position="442">
+          <caret line="203" column="33" selection-start-line="203" selection-start-column="33" selection-end-line="203" selection-end-column="33" />
         </state>
       </provider>
     </entry>
