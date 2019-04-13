@@ -58,7 +58,15 @@
 		title:"I am title",
 		type:"toast",
 		msg:"I am superman",
-		placeholder:"plase insert username"
+		placeholder:"plase insert username",
+        onSuccess:function()
+        {
+            console.log(1)
+        },
+        onCancel:function()
+        {
+            console.log(2)
+        },
 	})
 	function showToast()
 	{

@@ -2354,3 +2354,37 @@ body,html
     -webkit-flex: 1;
     flex:1;
 }
+
+/*列表*/
+.cui-list
+{
+
+}
+.cui-list .cui-list-item
+{
+    min-height:2rem;
+    background-color:white;
+}
+.cui-list-item>div
+{
+    position:absolute;
+}
+.cui-list-item .cui-list-icon
+{
+    height:2.5rem;
+    width:2.5rem;
+    background-color:red;
+    left:0;
+}
+.cui-list-item .cui-list-center
+{
+    left:2.5rem;
+    right:2.5rem;
+}
+.cui-list-item .cui-list-right
+{
+    height:2.5rem;
+    width:2.5rem;
+    background-color:red;
+    right:0;
+}
