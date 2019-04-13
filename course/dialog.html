@@ -13,7 +13,7 @@
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showConfirm()">confirm</div>
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPrompt()">prompt</div>
 	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showToast()">toast</div>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAnyCall()">三星样式</div>
+	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAnyCall()">其他样式</div>
 </div>
 
 <script src="../js/cui-dialog.js"></script>
@@ -67,7 +67,8 @@
 	//其他样式
 	var anycall=new cuiDialog({
 		type:"alert",
-		msg:"登陆失败",
+		title:"提示",
+		msg:"这个是另外的样式",
 		styleType:"anycall",
 		onSuccess:function()
 		{
