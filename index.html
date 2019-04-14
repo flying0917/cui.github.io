@@ -6,6 +6,7 @@
     <meta name="description" content="cui原生移动端ui框架"/>
     <title>cui移动端ui框架</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="prism/prism.css">
 </head>
 <body>
     <div class="content">
@@ -36,59 +37,94 @@
                 <div class="food">
                     <div class="column food-items">
                         <div class="food-item" data-url="./course/form.html">
+
                             <div class="detail" data-url="./course/form.html">表单</div>
+                            <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item" data-url="./course/card.html">
                             <div class="detail" data-url="./course/card.html">卡片</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
 
                         <div class="food-item" data-url="./course/timetree.html">
                             <div class="detail" data-url="./course/timetree.html">时间树</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
 
                         <div class="food-item"  data-url="./course/flow.html">
                             <div class="detail" data-url="./course/flow.html">瀑布流</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item"  data-url="./course/radio_checkbox_switch.html">
                             <div class="detail"  data-url="./course/radio_checkbox_switch.html">单选/多选/开关</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item"  data-url="./course/grid.html">
                             <div class="detail" data-url="./course/grid.html">栅格</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item"  data-url="./course/header.html">
                             <div class="detail" data-url="./course/header.html">头部</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item"  data-url="./course/button.html">
                             <div class="detail" data-url="./course/button.html">按钮</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item"  data-url="./course/tabbar.html">
                             <div class="detail" data-url="./course/tabbar.html">导航</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/swiper.html">
                             <div class="detail" data-url="./course/swiper.html">轮播插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/validate.html">
                             <div class="detail" data-url="./course/validate.html">表单验证插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/refresh.html">
                             <div class="detail" data-url="./course/validate.html">下拉刷新插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
 
                         <div class="food-item food-item-tool"  data-url="./course/picker.html">
                             <div class="detail" data-url="./course/picker.html">picker插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
 
                         <div class="food-item food-item-tool"  data-url="./course/popModal.html">
                             <div class="detail" data-url="./course/popModal.html">信息提示插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/dialog.html">
                             <div class="detail" data-url="./course/dialog.html">dialog插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/actionsheet.html">
                             <div class="detail" data-url="./course/actionsheet.html">操作表插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-tool"  data-url="./course/loading-scroll.html">
                             <div class="detail" data-url="./course/loading-scroll.html">滚到底部插件</div>
+                             <a class="food-code">代码展示</a>
+                            <a class="food-api">api</a>
                         </div>
                         <div class="food-item food-item-continue" >
                             <div class="detail" >待续。。。。。</div>
@@ -98,8 +134,27 @@
             </div>
         </div>
     </div>
+    <div class="dialog-content">
+        <div class="dialog">
+            <div class="dialog-close" onclick="closeDialog()">
+                <a class="">✕</a>
+            </div>
+            <div class="dialog-header">
+                <a class="active">查看代码</a>
+                <a>api</a>
+            </div>
+            <div class="dialog-wrap">
+                <div class="dialog-haml">
+                       <pre><code class="language-haml" id="html-code"></code></pre>
+                </div>
+                <div class="dialog-api"></div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="prism/prism.js"></script>
 <script>
+
     function addClass(dom,clsName)
     {
         var clsArr=dom.className.split(" ");
@@ -119,6 +174,14 @@
             clsArr.splice(index,1)
         }
         dom.className=clsArr.join(" ")
+    }
+    function closeDialog()
+    {
+        var dialogDom=document.querySelector(".dialog-content");
+        removeClass(dialogDom,"dialog-content-active");
+        setTimeout(function(){
+            dialogDom.style.display="none"
+        },400)
     }
     var moveIndex=0,
         time=300,
@@ -252,16 +315,36 @@
     document.querySelector(".food-items").addEventListener("click",function(e)
     {
         var target=e.target,
-            url=target.dataset["url"],
             frame=document.getElementById("iframe");
-        view.style.opacity="1";
-        frame.style.opacity="0";
-        setTimeout(function(){
-            frame.src=url;
+        console.log(target.className)
+        if(target.className.trim()==="food-code"||target.className.trim()==="food-api")
+        {
+            var dialogDom=document.querySelector(".dialog-content"),
+                codeDom=document.getElementById("html-code"),
+                surl=target.parentElement.dataset["url"];
+            frame.src=surl;
+
+            dialogDom.style.display="block"
+            frame.onload=function()
+            {
+                var html=frame.contentDocument.body.parentElement.outerHTML;
+                codeDom.innerText=html
+                addClass(dialogDom,"dialog-content-active")
+            }
+
+        }
+        else
+        {
+            var url=target.dataset["url"];
+            view.style.opacity="1";
+            frame.style.opacity="0";
             setTimeout(function(){
-                frame.style.opacity="1";
+                frame.src=url;
+                setTimeout(function(){
+                    frame.style.opacity="1";
+                },500)
             },500)
-        },500)
+        }
     })
 </script>
 </html>

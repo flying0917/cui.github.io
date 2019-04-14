@@ -140,8 +140,8 @@
                     }
 
                     contentDom.innerHTML=temHtml;
-                    document.body.appendChild(contentDom);
                     bindEvent();
+                    document.body.appendChild(contentDom);
                 }
             },
             onCancel=function()
