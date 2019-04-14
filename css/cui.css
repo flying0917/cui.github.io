@@ -2399,12 +2399,15 @@ body,html
     -webkit-flex:1;
     flex:1;
     height:2.3rem;
+    overflow:hidden;
 }
 .cui-list-title
 {
     font-size:.8rem;
+    height:1.3rem;
     font-weight:bold;
-    white-space: normal;
+    width:100%;
+    white-space: normal !important;
     line-height: 1.3rem;
     text-overflow:ellipsis;
     overflow:hidden;
@@ -2413,6 +2416,10 @@ body,html
 {
     font-size:.6rem;
     color:gray;
+    width:100%;
+    height:1rem;
+    line-height: 1rem;
+    overflow:hidden;
 }
 .cui-list-item .cui-list-right
 {
@@ -2446,7 +2453,8 @@ body,html
 }
 .cui-list-sm .cui-list-center
 {
-    height:auto;
+    height:1.3rem;
+    line-height: 1.3rem;
 }
 
 .cui-list-setting .cui-list-item
@@ -2460,5 +2468,6 @@ body,html
 }
 .cui-list-setting .cui-list-center
 {
-    height:auto;
+    height:1.1rem;
+    line-height: 1.1rem;
 }
