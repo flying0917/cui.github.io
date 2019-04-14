@@ -2358,33 +2358,107 @@ body,html
 /*列表*/
 .cui-list
 {
-
+    margin-bottom:.5rem;
+    background-color:white;
 }
 .cui-list .cui-list-item
 {
     min-height:2rem;
-    background-color:white;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    align-items: center;
+    word-break: break-all;
 }
-.cui-list-item>div
+.cui-list-item
 {
-    position:absolute;
+    border-bottom:1px solid #f3f2f2;
+}
+.cui-list-item:last-child
+{
+    border-bottom:none;
 }
 .cui-list-item .cui-list-icon
 {
     height:2.5rem;
     width:2.5rem;
-    background-color:red;
-    left:0;
+    background-color:gray;
+    margin:.5rem;
+    overflow:hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.cui-list-icon img
+{
+    width:100%;
 }
 .cui-list-item .cui-list-center
 {
-    left:2.5rem;
-    right:2.5rem;
+    -webkit-box-flex: 1;
+    -webkit-flex:1;
+    flex:1;
+    height:2.3rem;
+}
+.cui-list-title
+{
+    font-size:.8rem;
+    font-weight:bold;
+    white-space: normal;
+    line-height: 1.3rem;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.cui-list-other
+{
+    font-size:.6rem;
+    color:gray;
 }
 .cui-list-item .cui-list-right
 {
-    height:2.5rem;
+    height:2.3rem;
     width:2.5rem;
-    background-color:red;
-    right:0;
+    margin:.5rem;
+}
+.cui-list-link .cui-list-right
+{
+    background-position:center right;
+    background-repeat: no-repeat;
+    background-size:.8rem;
+    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABcUlEQVRYR8XXv0rHMBAH8O+1ryA+ibuLgyiCDj8n30AQKU2aTTdpM4jgQ7g5Obm46OhDOIuriL/mJMMPQgeTJmnbtX/u016auyMsfJAvvtZ6uyzLdVVVX75rY857AV3XfQDYMsbsKaXeYoL8d08I4BzAPYBvIjoQQrzkRHgBNljbtpdEdAvgh4j2cyKCAFMiggFDBDMfNU3znJqOUYAB4peZD1MRowEW0XWdAnADIBkRBRgijDEnSqmnmHREA1wEM6+Z+TgGkQTIgUgGDBFFUZwKIR5D05EFMFgTPRGtQhHZALGIrACL0FpfMfM1gB7ArpTyNakYheZyc50DYAA7Usr32QDOBtUbY86UUg++F8iWAjf47ItwE9xuSLP/hm7wmN0wKQWpwe36iAa4FXH2YrRoOXb6w+ReYHQK3OZ09pZsqs44aBE6wbPPBl5A27YXRHRnB5MppiMvYPHRzA6nRGTquv70FZaY894vEPPQMff8ASP9+CFHGBMaAAAAAElFTkSuQmCC)
+}
+
+.cui-list-right-top,.cui-list-right-bottom
+{
+    font-size:.6rem;
+    text-align: right;
+    color:gray;
+}
+.cui-list-right-top
+{
+    height:1.3rem;
+}
+
+.cui-list-sm .cui-list-icon,.cui-list-sm .cui-list-right
+{
+    height:1.5rem;
+    width:1.5rem;
+}
+.cui-list-sm .cui-list-center
+{
+    height:auto;
+}
+
+.cui-list-setting .cui-list-item
+{
+    margin-left:.5rem;
+}
+.cui-list-setting .cui-list-icon,.cui-list-setting .cui-list-right
+{
+    height:1.3rem;
+    width:1.3rem;
+}
+.cui-list-setting .cui-list-center
+{
+    height:auto;
 }
