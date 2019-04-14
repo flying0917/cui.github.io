@@ -182,10 +182,12 @@
                 renderContent();
                 setTimeout(function(){
                     that.addClass(contentDom,"cui-dialog-active");
+                    that.defaults.onSuccess(that.defaults.msg);
                     if(that.defaults.type==="toast"&&that.defaults.duration)
                     {
                         setTimeout(function(){
                             that.hide();
+                            that.defaults.onCancel(that.defaults.msg);
                         },parseInt(that.defaults.duration)?parseInt(that.defaults.duration):1000);
                     }
                 },100)
