@@ -2360,6 +2360,7 @@ body,html
 {
     margin-bottom:.5rem;
     background-color:white;
+    font-family:微软雅黑;
 }
 .cui-list .cui-list-item
 {
@@ -2400,6 +2401,8 @@ body,html
     flex:1;
     height:2.3rem;
     overflow:hidden;
+    font-weight: bold;
+    color:#4e4a4a;
 }
 .cui-list-title
 {
@@ -2420,6 +2423,7 @@ body,html
     height:1rem;
     line-height: 1rem;
     overflow:hidden;
+    font-weight: normal;
 }
 .cui-list-item .cui-list-right
 {
@@ -2470,4 +2474,5 @@ body,html
 {
     height:1.1rem;
     line-height: 1.1rem;
+
 }
