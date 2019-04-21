@@ -8,12 +8,18 @@
 
 </head>
 <body>
-<div class="cui-content">
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAlert()">alert</div>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showConfirm()">confirm</div>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPrompt()">prompt</div>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showToast()">toast</div>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAnyCall()">其他样式</div>
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+    <div class="cui-header cui-header-sky">
+        <span class="cui-iconfont cui-icon-return" onclick="history.back()"></span>
+        <span class="cui-header-title">dialog弹窗</span>
+    </div>
+    <div class="cui-flex-con">
+        <div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAlert()">alert</div>
+        <div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showConfirm()">confirm</div>
+        <div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPrompt()">prompt</div>
+        <div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showToast()">toast</div>
+        <div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showAnyCall()">其他样式</div>
+    </div>
 </div>
 
 <script src="../js/cui-dialog.js"></script>

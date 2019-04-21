@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cui Moile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="./css/cui.css">
+	<style>
+		.cui-row>a
+		{
+			height:4rem;
+			background-color:white;
+			border:.5px solid #f7f7f7;
+			font-size:12px;
+			text-align: center;
+			padding-top:20px;
+			color:gray;
+		}
+	</style>
+</head>
+<body>
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-header-title">cui demo</span>
+	</div>
+	<div class="cui-flex-con" style="background-color:#f7f7f7">
+		<div class="cui-row">
+			<a href="./course/form.html" class="cui-col-4">表单</a>
+			<a href="./course/card.html" class="cui-col-4">卡片</a>
+			<a href="./course/timetree.html" class="cui-col-4">时间树</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/flow.html" class="cui-col-4">瀑布流</a>
+			<a href="./course/radio_checkbox_switch.html" class="cui-col-4">单选/多选/开关</a>
+			<a href="./course/grid.html" class="cui-col-4">栅格</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/header.html" class="cui-col-4">头部</a>
+			<a href="./course/button.html" class="cui-col-4">按钮</a>
+			<a href="./course/tabbar.html" class="cui-col-4">导航</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/swiper.html" class="cui-col-4">轮播插件</a>
+			<a href="./course/validate.html" class="cui-col-4">表单验证插件</a>
+			<a href="./course/refresh.html" class="cui-col-4">下拉刷新</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/picker.html" class="cui-col-4">picker插件</a>
+			<a href="./course/popModal.html" class="cui-col-4">信息提示插件</a>
+			<a href="./course/dialog.html" class="cui-col-4">dialog插件</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/actionsheet.html" class="cui-col-4">操作表插件</a>
+			<a href="./course/loading-scroll.html" class="cui-col-4">滚动到底部插件</a>
+		</div>
+	</div>
+</div>
+<script>
+	function IsPC() {
+		var userAgentInfo = navigator.userAgent;
+		var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+		var flag = true;
+		for (var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) {
+				flag = false;
+				break;
+			}
+		}
+		console.log(flag)
+		return flag;
+	}
+	if(IsPC())
+	{
+		location.href="index.html"
+	}
+</script>
+
+</body>
+</html>

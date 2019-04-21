@@ -7,67 +7,36 @@
 	<link rel="stylesheet" href="../css/cui.css">
 </head>
 <body>
-<div class="cui-content">
-	<form class="cui-form">
-		<a  href="javascript:void(0);" class="cui-input cui-input-link">
-			<div class="label">手机</div>
-			<input placeholder="请选择手机" value="" id="test">
-		</a>
-
-		<a  href="javascript:void(0);" class="cui-input cui-input-link">
-			<div class="label">时间</div>
-			<input placeholder="请选择时间" value="" id="time">
-		</a>
-
-		<a  href="javascript:void(0);" class="cui-input cui-input-link">
-			<div class="label">日期</div>
-			<input placeholder="请选择时间" value="" id="date">
-		</a>
-
-		<a  href="javascript:void(0);" class="cui-input cui-input-link">
-			<div class="label">地区</div>
-			<input placeholder="请选择地区" value="" id="place">
-		</a>
-	</form>
-	<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPicker()">点击显示picker</div>
-</div>
-<!--<div class="cui-picker">
-	<div class="cui-picker-shelter">
-		<div class="cui-picker-content">
-			<div class="cui-picker-header">
-				<div class="cui-picker-header-left">取消</div>
-				<div class="cui-picker-header-title">请选择</div>
-				<div class="cui-picker-header-right">确认</div>
-			</div>
-			<div class="cui-picker-item">
-				<div class="cui-picker-item-list" id="test1">
-					<div class="cui-picker-item-select" id="test">
-						<div class="cui-picker-item-option">1</div>
-						<div class="cui-picker-item-option">2</div>
-						<div class="cui-picker-item-option">3</div>
-						<div class="cui-picker-item-option">4</div>
-						<div class="cui-picker-item-option">5</div>
-						<div class="cui-picker-item-option">6</div>
-						<div class="cui-picker-item-option">7</div>
-						<div class="cui-picker-item-option">8</div>
-						<div class="cui-picker-item-option">9</div>
-						<div class="cui-picker-item-option">10</div>
-						<div class="cui-picker-item-option">11</div>
-						<div class="cui-picker-item-option">12</div>
-						<div class="cui-picker-item-option">13</div>
-						<div class="cui-picker-item-option">14</div>
-					</div>
-					<div class="cui-picker-item-selected"></div>
-				</div>
-
-				<div class="cui-picker-item-list"></div>
-
-				<div class="cui-picker-item-list"></div>
-			</div>
-
-		</div>
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-iconfont cui-icon-return" onclick="history.back()"></span>
+		<span class="cui-header-title">picker插件</span>
 	</div>
-</div>-->
+	<div class="cui-flex-con">
+		<form class="cui-form">
+			<a  href="javascript:void(0);" class="cui-input cui-input-link">
+				<div class="label">手机</div>
+				<input placeholder="请选择手机" value="" id="test">
+			</a>
+
+			<a  href="javascript:void(0);" class="cui-input cui-input-link">
+				<div class="label">时间</div>
+				<input placeholder="请选择时间" value="" id="time">
+			</a>
+
+			<a  href="javascript:void(0);" class="cui-input cui-input-link">
+				<div class="label">日期</div>
+				<input placeholder="请选择时间" value="" id="date">
+			</a>
+
+			<a  href="javascript:void(0);" class="cui-input cui-input-link">
+				<div class="label">地区</div>
+				<input placeholder="请选择地区" value="" id="place">
+			</a>
+		</form>
+		<div class="cui-btn cui-btn-primary cui-btn-block" style="margin:5px;" onclick="showPicker()">点击显示picker</div>
+	</div>
+</div>
 
 </body>
 <script src="../js/place.js"></script>

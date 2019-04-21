@@ -14,10 +14,19 @@
 		{
 			text-align: center;
 		}
+		.cui-flex-con
+		{
+			position:relative;
+		}
 	</style>
 </head>
 <body>
-<div class="cui-content" style="text-align: center;">
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-iconfont cui-icon-return" onclick="history.back()"></span>
+		<span class="cui-header-title">popModal</span>
+	</div>
+	<div class="cui-flex-con">
 		<h3>方向（direction）</h3>
 		<div class="cui-btn cui-btn-primary" id="test3" style="margin-top:100px;">popModal（up）</div>
 		<br>
@@ -35,8 +44,8 @@
 
 		<div class="cui-btn cui-btn-primary" id="test6" style="margin-top:70px;"  >popModal(width:50)</div>
 		<br>
-        <div class="cui-btn cui-btn-primary" id="test12" style="margin-top:70px;"  >popModal(铺满按钮 width:-1;)</div>
-        <br>
+		<div class="cui-btn cui-btn-primary" id="test12" style="margin-top:70px;"  >popModal(铺满按钮 width:-1;)</div>
+		<br>
 		<h3 style="margin-top:100px;">对齐方式(verticalAlign)</h3>
 		<div class="cui-btn cui-btn-primary" id="test7" style="margin-top:70px;"  >popModal(middle)</div>
 		<br>
@@ -51,9 +60,7 @@
 
 		<div class="cui-btn cui-btn-primary" id="test11" style="margin-top:70px;"  >popModal(right)</div>
 		<br>
-
-
-
+	</div>
 </div>
 <script src="../js/cui-popmodal.js"></script>
 <script>

@@ -368,5 +368,19 @@ body,html
 .language-haml
 {
     display:block;
-    height:100%;
+    height:390px;
+}
+.page-item:last-child
+{
+    opacity:0;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.wrap-next .page-item:last-child
+{
+    opacity:1;
 }

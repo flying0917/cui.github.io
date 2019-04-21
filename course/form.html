@@ -7,31 +7,38 @@
 	<link rel="stylesheet" href="../css/cui.css">
 </head>
 <body>
-<div class="cui-content">
-	<form class="cui-form">
-		<a href="javascript:void(0);" class="cui-input">
-			<label>姓名</label>
-			<input placeholder="请输入姓名">
-		</a>
-		<a  href="javascript:void(0);" class="cui-input">
-			<label>密码</label>
-			<input type="password" placeholder="请输入密码">
-		</a>
-		<a  href="javascript:void(0);" class="cui-input">
-			<div class="label">电话号码</div>
-			<input placeholder="请输入电话号码">
-		</a>
-		<a href="javascript:void(0);" class="cui-input cui-input-btn">
-			<label>验证码</label>
-			<input placeholder="验证码" maxlength="6">
-			<span class="cui-btn cui-btn-sm cui-btn-radius cui-btn-primary">获取验证码</span>
-		</a>
-		<a href="javascript:void(0);" class="cui-input  cui-textarea">
-			<label>备注</label>
-			<textarea placeholder="请输入备注"></textarea>
-		</a>
 
-	</form>
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-iconfont cui-icon-return" onclick="history.back()"></span>
+		<span class="cui-header-title">表单</span>
+	</div>
+	<div class="cui-flex-con">
+		<form class="cui-form">
+			<a href="javascript:void(0);" class="cui-input">
+				<label>姓名</label>
+				<input placeholder="请输入姓名">
+			</a>
+			<a  href="javascript:void(0);" class="cui-input">
+				<label>密码</label>
+				<input type="password" placeholder="请输入密码">
+			</a>
+			<a  href="javascript:void(0);" class="cui-input">
+				<div class="label">电话号码</div>
+				<input placeholder="请输入电话号码">
+			</a>
+			<a href="javascript:void(0);" class="cui-input cui-input-btn">
+				<label>验证码</label>
+				<input placeholder="验证码" maxlength="6">
+				<span class="cui-btn cui-btn-sm cui-btn-radius cui-btn-primary">获取验证码</span>
+			</a>
+			<a href="javascript:void(0);" class="cui-input  cui-textarea">
+				<label>备注</label>
+				<textarea placeholder="请输入备注"></textarea>
+			</a>
+
+		</form>
+	</div>
 </div>
 
 
