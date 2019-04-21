@@ -1,98 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>头部例子</title>
+	<title>cui Moile</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="../css/cui.css">
+	<link rel="stylesheet" href="./css/cui.css">
+	<style>
+		.cui-row>a
+		{
+			height:4rem;
+			background-color:white;
+			border:.5px solid #f7f7f7;
+			font-size:12px;
+			text-align: center;
+			padding-top:20px;
+			color:gray;
+		}
+	</style>
 </head>
 <body>
-<div class="cui-content">
-	<!--标题-->
-	<div class="cui-header">
-		<span class="cui-header-title">我是标题</span>
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-header-title">cui demo</span>
 	</div>
-	<!--标题end-->
-
-	<!--带箭头-->
-	<div class="cui-header" style="margin-top:20px;">
-		<span class="cui-iconfont cui-icon-return"></span>
-		<span class="cui-header-title">我是标题我是标题我是标题我是标题我是标题我是标题我是标题</span>
-	</div>
-	<!--带箭头end-->
-
-	<!--带按钮的-->
-	<div class="cui-header" style="margin-top:20px;">
-		<span class="cui-iconfont cui-icon-return">返回</span>
-		<span class="cui-header-title">我是标题</span>
-		<span class="cui-header-btn cui-iconfont cui-icon-add"></span>
-		<span class="cui-header-btn cui-iconfont cui-icon-eit"></span>
-	</div>
-	<!--带按钮end-->
-
-	<!--带搜索-->
-	<div class="cui-header cui-flex-wrap" style="margin-top:20px;">
-		<span class="cui-iconfont cui-icon-return"></span>
-		<div class="cui-header-search cui-flex-con">
-			<div class="cui-searchbar">
-				<input type="text" placeholder="请输入关键字">
-				<span class="cui-searchbar-btn"></span>
-			</div>
+	<div class="cui-flex-con" style="background-color:#f7f7f7">
+		<div class="cui-row">
+			<a href="./course/form.html" class="cui-col-4">表单</a>
+			<a href="./course/card.html" class="cui-col-4">卡片</a>
+			<a href="./course/timetree.html" class="cui-col-4">时间树</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/flow.html" class="cui-col-4">瀑布流</a>
+			<a href="./course/radio_checkbox_switch.html" class="cui-col-4">单选/多选/开关</a>
+			<a href="./course/grid.html" class="cui-col-4">栅格</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/header.html" class="cui-col-4">头部</a>
+			<a href="./course/button.html" class="cui-col-4">按钮</a>
+			<a href="./course/tabbar.html" class="cui-col-4">导航</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/swiper.html" class="cui-col-4">轮播插件</a>
+			<a href="./course/validate.html" class="cui-col-4">表单验证插件</a>
+			<a href="./course/refresh.html" class="cui-col-4">下拉刷新</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/picker.html" class="cui-col-4">picker插件</a>
+			<a href="./course/popModal.html" class="cui-col-4">信息提示插件</a>
+			<a href="./course/dialog.html" class="cui-col-4">dialog插件</a>
+		</div>
+		<div class="cui-row">
+			<a href="./course/actionsheet.html" class="cui-col-4">操作表插件</a>
+			<a href="./course/loading-scroll.html" class="cui-col-4">滚动到底部插件</a>
 		</div>
 	</div>
-	<!--带搜索end-->
-
-	<!--带搜索-->
-	<div class="cui-header cui-flex-wrap cui-header-danger" style="margin-top:20px;">
-		<div class="cui-header-search cui-flex-con">
-			<div class="cui-searchbar">
-				<input type="text" placeholder="请输入关键字">
-			</div>
-		</div>
-	</div>
-	<!--带搜索end-->
-
-	<!--带按钮的-->
-	<div class="cui-header cui-header-primary" style="margin-top:20px;">
-		<span class="cui-iconfont cui-icon-return">返回</span>
-		<span class="cui-header-title">我是标题</span>
-		<div class="cui-header-enter">
-			下一步
-			<span class="cui-header-btn cui-iconfont cui-icon-enter"></span>
-		</div>
-	</div>
-	<!--带按钮end-->
-
-	<!--标题 主题色-->
-	<div class="cui-header cui-header-primary" style="margin-top:20px;">
-		<span class="cui-header-title">我是标题</span>
-	</div>
-	<!--标题 主题色end-->
-
-	<!--标题 红色-->
-	<div class="cui-header cui-header-danger" style="margin-top:20px;">
-		<span class="cui-header-title">我是标题</span>
-	</div>
-	<!--标题 红色end-->
-
-	<!--标题 橙色-->
-	<div class="cui-header cui-header-warning" style="margin-top:20px;">
-		<span class="cui-header-title">我是标题</span>
-	</div>
-	<!--标题 橙色end-->
-
-	<!--标题 天空蓝-->
-	<div class="cui-header cui-header-sky" style="margin-top:20px;">
-		<span class="cui-header-title">我是标题</span>
-	</div>
-	<!--标题 天空蓝end-->
-
-	<!--标题 天空蓝-->
-	<div class="cui-header cui-header-sky cui-header-bangs" style="margin-top:20px;">
-		<span class="cui-header-title">我是标题</span>
-	</div>
-	<!--标题 天空蓝end-->
 </div>
+<script>
+	function IsPC() {
+		var userAgentInfo = navigator.userAgent;
+		var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+		var flag = true;
+		for (var v = 0; v < Agents.length; v++) {
+			if (userAgentInfo.indexOf(Agents[v]) > 0) {
+				flag = false;
+				break;
+			}
+		}
+		console.log(flag)
+		return flag;
+	}
+	if(IsPC())
+	{
+		location.href="index.html"
+	}
+</script>
 
 </body>
 </html>

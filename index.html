@@ -146,7 +146,6 @@
             </div>
             <div class="dialog-header">
                 <a class="active">查看代码</a>
-                <a>api</a>
             </div>
             <div class="dialog-wrap">
                 <div class="dialog-haml">
@@ -160,7 +159,26 @@
 <script src="prism/prism.js"></script>
 <script>
 
-    function addClass(dom,clsName)
+
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        console.log(flag)
+        return flag;
+    }
+    if(!IsPC())
+    {
+        location.href="index-mobile.html"
+    }
+
+        function addClass(dom,clsName)
     {
         var clsArr=dom.className.split(" ");
         if(clsArr.indexOf(clsName)===-1)

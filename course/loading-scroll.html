@@ -4,6 +4,7 @@
 	<title>scroll loading例子</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../css/cui.css">
 	<style type="text/css">
 		li
 		{
@@ -153,38 +154,47 @@
 	</style>
 </head>
 <body>
-<div class="test">
+<div class="cui-content cui-flex-wrap cui-flex-vertical">
+	<div class="cui-header cui-header-sky">
+		<span class="cui-iconfont cui-icon-return" onclick="history.back()"></span>
+		<span class="cui-header-title">加载更多和下拉刷新</span>
+	</div>
+	<div class="cui-flex-con">
+		<div class="test">
 
-		<ul id="po">
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-			<li>23432</li>
-		</ul>
-		<div class="cui-loading-content">
+			<ul id="po">
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+				<li>23432</li>
+			</ul>
+			<div class="cui-loading-content">
 
+			</div>
 		</div>
+	</div>
 </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="../js/cui-scroll.js"></script>
