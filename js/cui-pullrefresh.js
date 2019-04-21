@@ -132,6 +132,7 @@
                         //是否大于下拉的距离的触发点
                         if(offsetTop>that.triggerDistance)
                         {
+                            wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY("+that.triggerDistance+"px)";
                             headerTextDom.innerText=that.contentover;
                             headerImgDom.src=that.contentoverIcon;
                         }
@@ -150,7 +151,7 @@
                     start=false;
                     wrapContentDom.style.transition=wrapContentDom.style.webkitTransition="all .5s";
                     //是否大于下拉的距离的触发点
-                    if(offsetTop>that.triggerDistance)
+                    if(offsetTop>=that.triggerDistance)
                     {
                         //显示刷新中的动画
                         wrapContentDom.style.transform=wrapContentDom.style.webkitTransform="translateY("+refreshHeaderHeight+"px)";

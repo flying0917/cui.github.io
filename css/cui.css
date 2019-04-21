@@ -948,6 +948,12 @@ body,html
     width:100%;
     text-align: center;
 }
+.cui-refresh-header span
+{
+    font-size:.6rem;
+    display:inline-block;
+    width:3rem;
+}
 .cui-refresh-header img
 {
     height:100%;
