@@ -12,7 +12,7 @@
 
 ## 问题反馈
 
-明确的问题更__推荐__直接提[issue反馈](https://github.com/flying0917/cui.github.io/issues)。
+如果在使用中遇到bug，欢迎提出，本人会在第一时间修复，感谢[issue反馈](https://github.com/flying0917/cui.github.io/issues)。
 
 也可以在qq 1502424388 交流或邮件咨询 flying0917@gmail.com
 
