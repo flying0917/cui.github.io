@@ -361,3 +361,12 @@ body,html
     overflow:auto;
 
 }
+.dialog-haml
+{
+    height:100%;
+}
+.language-haml
+{
+    display:block;
+    height:100%;
+}
