@@ -151,6 +151,19 @@
 		{
 			white-space:normal !important;
 		}
+		#po
+		{
+			background-color:#f9f9f9;
+		}
+		#po li
+		{
+			height:5rem;
+			background-color:white;
+			margin-bottom:2px;
+			text-align: center;
+			line-height: 5rem;
+			font-size:12px;
+		}
 	</style>
 </head>
 <body>
@@ -163,30 +176,16 @@
 		<div class="test">
 
 			<ul id="po">
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
-				<li>23432</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
+				<li>00000</li>
 			</ul>
 			<div class="cui-loading-content">
 
@@ -219,36 +218,30 @@
     var timeout="";
     var p=1;
     var length=5;
+    var ok=true;
 
-
+	var index=1;
     function message(cb){
-        var callback=cb&&(typeof cb==="function")?cb:function(){};
-        //显示加载中
-        load.showloading();
-        var url="http://www.paishowtong.com/?r=item/housinginfo/SearchTwoHouse&page="+p+"&page_length="+length+"&sort_type=&sort_order="
-        $.get(url,function(ret){
-            var str="";
-            if (ret.isSuccess) {
+    	if(ok)
+		{
+			ok=false;
+			var callback=cb&&(typeof cb==="function")?cb:function(){};
+			//显示加载中
+			load.showloading();
+			setTimeout(function(){
+				var str="";
+				for(var i=0;i<10;i++)
+				{
+					str+="<li>"+index+"</li>";
+				}
+				index++;
+				$("#po").append(str);
+				load.hideloading();
+				ok=true;
+				callback();
+			},2000)
+		}
 
-                if (ret.data.length) {
-                    for(var i=0;i<ret.data.length;i++)
-                    {
-                        str+="<li>"+ret.data[i].desc+"</li>";
-                    }
-
-                    $("#po").append(str);
-                    p++;
-                    load.hideloading();
-                }
-                else if(ret.data.length===0&&p!==1)//判断是否还有内容
-                {
-                    //显示加载已经完成（没有内容了）
-                    load.finishloading();
-                }
-                callback();
-            }
-        });
-        // alert("已经到最底部了！");
     }
 </script>
 </html>
