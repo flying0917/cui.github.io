@@ -100,6 +100,7 @@ body,html
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+
 }
 .cui-flex-con
 {
@@ -107,6 +108,7 @@ body,html
     -webkit-flex: 1;
     flex: 1;
     overflow:hidden;
+    position:relative;
 }
 .cui-flex-vertical
 {
