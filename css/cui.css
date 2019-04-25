@@ -92,6 +92,7 @@ body,html
     height:100%;
     position:relative;
     overflow-x:hidden;
+    overflow-y:auto;
     -webkit-overflow-scrolling:touch;
 }
 /*一些公用的css*/
