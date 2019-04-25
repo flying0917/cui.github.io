@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8976e751-405f-40c4-ba69-ca55c62bf990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/course/refresh.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/refresh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cui.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cui.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,11 +107,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+                <state relative-caret-position="314">
+                  <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -158,11 +159,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/refresh.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="477">
-                  <caret line="58" column="9" lean-forward="true" selection-start-line="41" selection-end-line="58" selection-end-column="9" />
+                <state relative-caret-position="152">
+                  <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -259,8 +260,8 @@
         <option value="$PROJECT_DIR$/course/tabbar.html" />
         <option value="$PROJECT_DIR$/index-mobile.html" />
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/course/refresh.html" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
       </list>
     </option>
   </component>
@@ -441,12 +442,12 @@
       <workItem from="1555751066969" duration="1761000" />
       <workItem from="1555847792257" duration="13836000" />
       <workItem from="1555917079831" duration="56000" />
-      <workItem from="1556164693798" duration="3841000" />
+      <workItem from="1556164693798" duration="4061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30787000" />
+    <option name="totallyTimeSpent" value="31007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="806" extended-state="6" />
@@ -750,17 +751,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
+    <entry file="file://$PROJECT_DIR$/course/refresh.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        <state relative-caret-position="152">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/refresh.html">
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="58" column="9" lean-forward="true" selection-start-line="41" selection-end-line="58" selection-end-column="9" />
+        <state relative-caret-position="314">
+          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
         </state>
       </provider>
     </entry>
