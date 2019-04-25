@@ -107,6 +107,7 @@ body,html
     -webkit-flex: 1;
     flex: 1;
     overflow:hidden;
+    height:100%;
 }
 .cui-flex-vertical
 {
