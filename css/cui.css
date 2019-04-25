@@ -107,7 +107,7 @@ body,html
     -webkit-flex: 1;
     flex: 1;
     overflow:hidden;
-    height:100%;
+    height:1px;/*兼容ios子元素用min-height：100%时会没有高度*/
 }
 .cui-flex-vertical
 {
