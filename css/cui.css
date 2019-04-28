@@ -1844,6 +1844,7 @@ body,html
     height:100%;
     z-index:9999;
     overflow:hidden;
+    font-size:.7rem;
     -webkit-transition: all 0.6s;
     -moz-transition: all 0.6s;
     -ms-transition: all 0.6s;
@@ -1992,6 +1993,9 @@ body,html
     text-align: center;
     line-height: 50px;
     color:gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .cui-picker-item-select .cui-picker-item-option-active
 {
