@@ -1895,6 +1895,7 @@ body,html
 }
 .cui-picker-item
 {
+    background-color:red;
     -webkit-box-flex:1;
     -webkit-flex:1;
     flex:1;
