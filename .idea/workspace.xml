@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8976e751-405f-40c4-ba69-ca55c62bf990" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/cui-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/loading-scroll.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/loading-scroll.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6868601">
+    <splitter split-orientation="horizontal" split-proportion="0.57764506">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -70,11 +70,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="511" column="77" selection-start-line="511" selection-start-column="77" selection-end-line="511" selection-end-column="77" />
+                <state relative-caret-position="295">
+                  <caret line="516" column="29" lean-forward="true" selection-start-line="516" selection-start-column="29" selection-end-line="516" selection-end-column="29" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
@@ -105,11 +105,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+                <state relative-caret-position="405">
+                  <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -118,7 +118,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="340">
@@ -170,11 +170,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/course/refresh.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                <state relative-caret-position="245">
+                  <caret line="17" column="9" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -238,8 +238,8 @@
       <find>cui-picker-item</find>
       <find>itemsDomArr</find>
       <find>itemsContentDom</find>
-      <find>.cui-picker</find>
       <find>速度</find>
+      <find>.cui-picker</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -268,7 +268,6 @@
         <option value="$PROJECT_DIR$/course/swiper.html" />
         <option value="$PROJECT_DIR$/course/timetree.html" />
         <option value="$PROJECT_DIR$/course/validate.html" />
-        <option value="$PROJECT_DIR$/course/loading-scroll.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../MAMP/htdocs/user.php" />
         <option value="$PROJECT_DIR$/course/icon.html" />
@@ -279,6 +278,7 @@
         <option value="$PROJECT_DIR$/course/refresh.html" />
         <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-picker.js" />
+        <option value="$PROJECT_DIR$/course/loading-scroll.html" />
       </list>
     </option>
   </component>
@@ -462,12 +462,12 @@
       <workItem from="1556164693798" duration="9095000" />
       <workItem from="1556253977343" duration="3103000" />
       <workItem from="1556349724285" duration="1270000" />
-      <workItem from="1556462127020" duration="3828000" />
+      <workItem from="1556462127020" duration="4179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44242000" />
+    <option name="totallyTimeSpent" value="44593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="798" extended-state="6" />
@@ -681,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5580">
@@ -761,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/refresh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/picker.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -787,11 +773,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="511" column="77" selection-start-line="511" selection-start-column="77" selection-end-line="511" selection-end-column="77" />
+        <state relative-caret-position="295">
+          <caret line="516" column="29" lean-forward="true" selection-start-line="516" selection-start-column="29" selection-end-line="516" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/refresh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/loading-scroll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
         </state>
       </provider>
     </entry>
