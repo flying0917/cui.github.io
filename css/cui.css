@@ -1895,10 +1895,21 @@ body,html
 }
 .cui-picker-item
 {
-    background-color:red;
     -webkit-box-flex:1;
     -webkit-flex:1;
     flex:1;
+    position:relative;
+}
+.cui-picker-item-content
+{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    top:0;
+    left:0;
 }
 .cui-picker .cui-picker-header
 {

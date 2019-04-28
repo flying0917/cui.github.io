@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8976e751-405f-40c4-ba69-ca55c62bf990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/refresh.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/refresh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/tabbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/tabbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/cui.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cui-pullrefresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-pullrefresh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cui-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-picker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4641638">
+    <splitter split-orientation="horizontal" split-proportion="0.76194537">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -62,13 +60,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/picker.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="130">
+                  <caret line="626" column="21" lean-forward="true" selection-start-line="626" selection-start-column="21" selection-end-line="626" selection-end-column="21" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -110,11 +120,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/cui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="1903" column="1" lean-forward="true" selection-start-line="1903" selection-start-column="1" selection-end-line="1903" selection-end-column="1" />
+                <state relative-caret-position="213">
+                  <caret line="1900" column="22" selection-start-line="1900" selection-start-column="22" selection-end-line="1900" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -162,11 +172,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/course/refresh.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -228,6 +238,8 @@
       <find>wrapContentDom</find>
       <find>touch</find>
       <find>cui-picker-item</find>
+      <find>itemsDomArr</find>
+      <find>itemsContentDom</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -263,9 +275,10 @@
         <option value="$PROJECT_DIR$/course/header.html" />
         <option value="$PROJECT_DIR$/index-mobile.html" />
         <option value="$PROJECT_DIR$/course/tabbar.html" />
-        <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
         <option value="$PROJECT_DIR$/course/refresh.html" />
+        <option value="$PROJECT_DIR$/js/cui-picker.js" />
+        <option value="$PROJECT_DIR$/css/cui.css" />
       </list>
     </option>
   </component>
@@ -449,12 +462,12 @@
       <workItem from="1556164693798" duration="9095000" />
       <workItem from="1556253977343" duration="3103000" />
       <workItem from="1556349724285" duration="1270000" />
-      <workItem from="1556462127020" duration="1377000" />
+      <workItem from="1556462127020" duration="3095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41791000" />
+    <option name="totallyTimeSpent" value="43509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="798" extended-state="6" />
@@ -737,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/cui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="1903" column="1" lean-forward="true" selection-start-line="1903" selection-start-column="1" selection-end-line="1903" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-pullrefresh.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -757,18 +763,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/course/refresh.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course/picker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="626" column="21" lean-forward="true" selection-start-line="626" selection-start-column="21" selection-end-line="626" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="1900" column="22" selection-start-line="1900" selection-start-column="22" selection-end-line="1900" selection-end-column="22" />
         </state>
       </provider>
     </entry>

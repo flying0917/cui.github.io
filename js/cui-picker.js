@@ -414,8 +414,10 @@
                                     '\t\t\t\t<div class="cui-picker-header-title">'+that.defaults.title+'</div>\n' +
                                     '\t\t\t\t<div class="cui-picker-header-right">确认</div>\n' +
                                     '\t\t\t</div>\n' +
-                                    '\t\t\t<div class="cui-picker-item">\n'
-                                            +itemHtml+
+                                    '\t\t\t<div class="cui-picker-item">\n'+
+                                        '\t\t\t<div class="cui-picker-item-content">\n'
+                                                +itemHtml+
+                                        '\t\t\t</div>\n' +
                                     '\t\t\t</div>\n' +
                                     '\t\t</div>\n' +
                                     '\t</div>\n' ;
@@ -625,7 +627,7 @@
                 //新赋值
                 newParam?that.extend(that.defaults,newParam):"";
                 renderContent();
-                var itemsContentDom=pickerDom.children[0].children[0].children[1].children;
+                var itemsContentDom=pickerDom.children[0].children[0].children[1].children[0].children;
                 //获取初始top
                 initTop=itemsContentDom[0].children[1].offsetTop;
                 itemOptionHeight=itemsContentDom[0].children[0].children[0].offsetHeight;
@@ -656,6 +658,7 @@
                     bindTouchEvent(j,itemsContentDom[j]);
                 }
 
+                console.log(itemsDomArr)
 
                 //获取确认按钮
                 var headerDom=pickerDom.children[0].children[0].children[0];
