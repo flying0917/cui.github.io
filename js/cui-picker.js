@@ -509,7 +509,7 @@
                     if(itemsDomArr[index].moveY)
                     {
                         //根据速度 添加缓冲
-                        continueMoveY=+(parseInt(itemsDomArr[index].speed)*9);
+                        continueMoveY=+(parseInt(itemsDomArr[index].speed)*10);
                         //缓冲移动距离
                         var shouldY=calcOffseTop(itemsDomArr[index].dom.offsetHeight,itemOptionHeight,itemsDomArr[index].nowY+continueMoveY);
                         //目前选择索引
