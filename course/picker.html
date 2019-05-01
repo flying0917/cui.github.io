@@ -21,12 +21,12 @@
 
 			<a  href="javascript:void(0);" class="cui-input cui-input-link">
 				<div class="label">时间</div>
-				<input placeholder="请选择时间" value="" id="time">
+				<input placeholder="请选择时间" value="5:00" id="time">
 			</a>
 
 			<a  href="javascript:void(0);" class="cui-input cui-input-link">
-				<div class="label">日期</div>
-				<input placeholder="请选择时间" value="" id="date">
+				<div class="label">日期时间</div>
+				<input placeholder="请选择时间" value="1989-6-4 1:0"  id="date">
 			</a>
 
 			<a  href="javascript:void(0);" class="cui-input cui-input-link">
@@ -51,9 +51,13 @@
 
 	function showPicker()
 	{
+		//自定义data
 		picker1.showPicker({data:[
 				[
-					{name:"广东",value:"广东",id:"1"}
+					"one",
+					"two",
+					"three",
+					"four"
 				],
 				[
 					{name:"广州",value:"广州",id:"2"},

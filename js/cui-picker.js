@@ -355,8 +355,11 @@
                                     //默认值视图
                                     if(valueArr)
                                     {
+                                        //时间类型的选择器 对值小于10的前面加0
+                                        (that.defaults.type.indexOf("date")!==-1||that.defaults.type.indexOf("time")!==-1)?(valueArr[x]=((valueArr[x]+"").length===1)?"0"+valueArr[x]:valueArr[x]+""):"";
                                         if(valueArr[x]===itemArr[x][y]+"")
                                         {
+                                            console.log(valueArr[x])
                                             cls="cui-picker-item-option-active";
                                             //默认值滑动高度
                                             defaultOffseTop=50*y;
@@ -599,11 +602,12 @@
             {
                 if(that.defaults.type||!(that.defaults.separate instanceof Array)||!that.defaults.separate.length)
                 {
+                    var date=new Date();
                     switch (that.defaults.type)
                     {
-                        case "date":that.defaults.separate=["-","-"];break;
-                        case "datetime":that.defaults.separate=["-","-"," ",":"];break;
-                        case "time":that.defaults.separate=[":"];break;
+                        case "date":that.defaults.separate=["-","-"];valueArr=[date.getFullYear()+"",parseInt(date.getMonth())+1+"",date.getDate()+""];break;
+                        case "datetime":that.defaults.separate=["-","-"," ",":"];valueArr=[date.getFullYear()+"",parseInt(date.getMonth())+1+"",date.getDate()+"",date.getHours()+"",date.getMinutes()+""];break;
+                        case "time":that.defaults.separate=[":"];valueArr=[date.getHours()+"",date.getMinutes()+""];break;
                     }
                 }
                 //获取默认值
@@ -611,11 +615,13 @@
                 {
                     valueArr=handleFormat(that.defaults.value.trim()).trim().split(" ");
                 }
-                else if(domInput)
+                else if(domInput&&domInput.value)
                 {
                     var inputvalue=handleFormat(domInput.value.trim());
                     valueArr=inputvalue?inputvalue.split(" "):null;
                 }
+                console.log(valueArr)
+
             };
         //显示picker
         that.showPicker=function(newParam)
