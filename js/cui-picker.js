@@ -403,10 +403,11 @@
 
 
                             itemHtml+=  '\t\t\t\t\t<div class="cui-picker-item-list">\n'+
+                                                    '<div class="cui-picker-item-selected">'+
                                             '\t\t\t\t\t<div style="-webkit-transform: translateY(-'+defaultOffseTop+'px)" class="cui-picker-item-select">\n'
                                                             +optionHtml+
                                             '\t\t\t\t\t</div>\n' +
-                                            '\t\t\t\t\t<div class="cui-picker-item-selected"></div>\n'+
+                                            '\t\t\t\t\t</div>\n'+
                                         '\t\t\t\t\t</div>\n';
 
                         }
@@ -634,13 +635,14 @@
                 newParam?that.extend(that.defaults,newParam):"";
                 renderContent();
                 var itemsContentDom=pickerDom.children[0].children[0].children[1].children[0].children;
+                console.log(itemsContentDom)
                 //获取初始top
-                initTop=itemsContentDom[0].children[1].offsetTop;
-                itemOptionHeight=itemsContentDom[0].children[0].children[0].offsetHeight;
+                //initTop=itemsContentDom[0].children[1].offsetTop;
+                itemOptionHeight=itemsContentDom[0].children[0].children[0].children[0].offsetHeight;
                 //获取item dom
                 for(var j=0;j<itemsContentDom.length;j++)
                 {
-                    itemsContentDom[j].children[0].style.top=initTop+"px";
+                    //itemsContentDom[j].children[0].style.top=initTop+"px";
 
                     var value=valueArr?valueArr[j]:(itemsContentDom[j].children[0].children[0]?itemsContentDom[j].children[0].children[0].dataset['value']:"");
                     //给要返回的结果数组赋值（已经选中的值）
@@ -648,11 +650,11 @@
                     selectedValueArr[j]=value;
                     itemsDomArr.push(
                         {
-                            dom:itemsContentDom[j].children[0],
+                            dom:itemsContentDom[j].children[0].children[0],
                             startY:0,
                             moveY:0,
                             nowY:0,
-                            selectedTop:initTop,
+                            selectedTop:0,
                             speed:0,
                             time:0,
                             timeInterval:null,
