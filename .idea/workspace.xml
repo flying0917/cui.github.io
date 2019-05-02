@@ -113,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="636" column="84" selection-start-line="636" selection-start-column="84" selection-end-line="636" selection-end-column="84" />
+            <state relative-caret-position="371">
+              <caret line="655" column="35" lean-forward="true" selection-start-line="655" selection-start-column="35" selection-end-line="655" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -154,8 +154,8 @@
       <find>initTop</find>
       <find>bindTouchEvent</find>
       <find>itemsContentDom</find>
-      <find>itemsDomArr</find>
       <find>itemOptionHeight</find>
+      <find>itemsDomArr</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -382,12 +382,12 @@
       <workItem from="1556462127020" duration="6143000" />
       <workItem from="1556508139888" duration="3092000" />
       <workItem from="1556693087843" duration="6074000" />
-      <workItem from="1556781125691" duration="4534000" />
+      <workItem from="1556781125691" duration="5683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60257000" />
+    <option name="totallyTimeSpent" value="61406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-53" y="23" width="1440" height="801" extended-state="0" />
@@ -707,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="636" column="84" selection-start-line="636" selection-start-column="84" selection-end-line="636" selection-end-column="84" />
+        <state relative-caret-position="371">
+          <caret line="655" column="35" lean-forward="true" selection-start-line="655" selection-start-column="35" selection-end-line="655" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
