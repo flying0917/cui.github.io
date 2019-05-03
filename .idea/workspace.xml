@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8976e751-405f-40c4-ba69-ca55c62bf990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cui-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cui-picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mobile.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mobile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-mobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-mobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,26 +26,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-97">
+              <caret line="195" column="1" selection-start-line="195" selection-start-column="1" selection-end-line="195" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="1490" column="13" selection-start-line="642" selection-start-column="8" selection-end-line="1490" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="154" column="113" selection-start-line="154" selection-start-column="87" selection-end-line="154" selection-end-column="113" />
               <folding>
-                <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/course/picker.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -78,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index-mobile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+            <state relative-caret-position="226">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -110,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="636" column="84" selection-start-line="636" selection-start-column="84" selection-end-line="636" selection-end-column="84" />
+            <state relative-caret-position="208">
+              <caret line="306" column="64" selection-start-line="306" selection-start-column="64" selection-end-line="306" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -126,8 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>html</find>
-      <find>page-item</find>
       <find>onl</find>
       <find>cui-flex-c</find>
       <find>ret</find>
@@ -154,8 +155,10 @@
       <find>initTop</find>
       <find>bindTouchEvent</find>
       <find>itemsContentDom</find>
-      <find>itemsDomArr</find>
       <find>itemOptionHeight</find>
+      <find>itemsDomArr</find>
+      <find>valueIndexArr</find>
+      <find>.mobile-aa</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -169,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/course/actionsheet.html" />
         <option value="$PROJECT_DIR$/course/button.html" />
         <option value="$PROJECT_DIR$/course/card.html" />
@@ -183,11 +185,9 @@
         <option value="$PROJECT_DIR$/course/swiper.html" />
         <option value="$PROJECT_DIR$/course/timetree.html" />
         <option value="$PROJECT_DIR$/course/validate.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../MAMP/htdocs/user.php" />
         <option value="$PROJECT_DIR$/course/icon.html" />
         <option value="$PROJECT_DIR$/course/header.html" />
-        <option value="$PROJECT_DIR$/index-mobile.html" />
         <option value="$PROJECT_DIR$/course/tabbar.html" />
         <option value="$PROJECT_DIR$/js/cui-pullrefresh.js" />
         <option value="$PROJECT_DIR$/course/refresh.html" />
@@ -195,17 +195,20 @@
         <option value="$PROJECT_DIR$/course/picker.html" />
         <option value="$PROJECT_DIR$/css/cui.css" />
         <option value="$PROJECT_DIR$/js/cui-picker.js" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index-mobile.html" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-53" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-61" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="height" value="799" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -228,6 +231,11 @@
               <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="cui.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cui.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="cui-vue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cui.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -285,8 +293,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.picker.html">
-    <configuration name="index-mobile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/index-mobile.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="loading-scroll.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cui.github.io/course/loading-scroll.html" useBuiltInWebServerPort="true">
@@ -303,11 +311,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.picker.html" />
         <item itemvalue="JavaScript Debug.loading-scroll.html" />
         <item itemvalue="JavaScript Debug.refresh.html" />
         <item itemvalue="JavaScript Debug.tabbar.html" />
-        <item itemvalue="JavaScript Debug.index-mobile.html" />
       </list>
     </recent_temporary>
   </component>
@@ -382,15 +390,15 @@
       <workItem from="1556462127020" duration="6143000" />
       <workItem from="1556508139888" duration="3092000" />
       <workItem from="1556693087843" duration="6074000" />
-      <workItem from="1556781125691" duration="4534000" />
+      <workItem from="1556781125691" duration="14062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60257000" />
+    <option name="totallyTimeSpent" value="69785000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-53" y="23" width="1440" height="801" extended-state="0" />
+    <frame x="-10" y="23" width="1440" height="799" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21745351" />
@@ -553,17 +561,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/user.php" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fonts/new_icon/demo_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -589,18 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index-mobile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/popModal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -612,13 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="372" column="21" selection-start-line="372" selection-start-column="21" selection-end-line="372" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -691,7 +669,7 @@
     <entry file="file://$PROJECT_DIR$/course/picker.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -707,10 +685,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cui-picker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="636" column="84" selection-start-line="636" selection-start-column="84" selection-end-line="636" selection-end-column="84" />
+        <state relative-caret-position="208">
+          <caret line="306" column="64" selection-start-line="306" selection-start-column="64" selection-end-line="306" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="195" column="1" selection-start-line="195" selection-start-column="1" selection-end-line="195" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="154" column="113" selection-start-line="154" selection-start-column="87" selection-end-line="154" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index-mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

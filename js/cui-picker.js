@@ -7,7 +7,7 @@
             domInput=null,
             pickerDom=null,
             initTop=0,
-            itemOptionHeight=0,
+            itemOptionHeight=50,//选择项的高度
             valueArr=null,//默认值数组
             valueIndexArr=[],//默认值的索引
             selectedValueArr=[],//已经选择的值
@@ -638,7 +638,7 @@
                 console.log(itemsContentDom)
                 //获取初始top
                 //initTop=itemsContentDom[0].children[1].offsetTop;
-                itemOptionHeight=itemsContentDom[0].children[0].children[0].children[0].offsetHeight;
+                //itemOptionHeight=itemsContentDom[0].children[0].children[0].children[0].offsetHeight;
                 //获取item dom
                 for(var j=0;j<itemsContentDom.length;j++)
                 {

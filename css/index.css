@@ -209,7 +209,7 @@ body,html
 }
 .mobile-aa
 {
-    height:531px;
+    height:581px;
     width:300px;
     position:absolute;
     top:0;
@@ -221,7 +221,7 @@ body,html
 .mobile-view
 {
     width:272px;
-    height:340px;
+    height:390px;
     position:absolute;
     top:80px;
     left:14px;
@@ -383,4 +383,10 @@ body,html
 .wrap-next .page-item:last-child
 {
     opacity:1;
+}
+
+
+.food-item-vue
+{
+    background-color:#41b883 !important;
 }
